@@ -1,5 +1,22 @@
 @charset "UTF-8";
 
+@font-face {
+    font-family: normal;
+    src: url(../Fonts/Segoe\ UI.ttf);
+}
+@font-face {
+    font-family: bold;
+    src: url(../Fonts/Segoe\ UI\ Bold.ttf);
+}
+@font-face {
+    font-family: bold italic;
+    src: url(../Fonts/Segoe\ UI\ Bold\ Italic.ttf);
+}
+@font-face {
+    font-family: italic;
+    src: url(../Fonts/Segoe\ UI\ Italic.ttf);
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -7,6 +24,7 @@
 body, html{
     width: 100vw;
     height: 100vh;
+    font-family: normal;
 }
 main{
     height: 100vh;
@@ -32,10 +50,16 @@ div.logo{
 }
 
 div.logo > img{
-    width: 300px;
-    padding: 20px;
+    width: 75%;
+    padding: 30px;
 }
 
 div.logo > p{
     font-weight: bold;
+    padding-bottom: 20px;
+}
+
+div.logo > hr{
+    width: 230px;
+    margin: 0 auto;
 }
