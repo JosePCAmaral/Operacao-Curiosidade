@@ -151,6 +151,7 @@ input[type="button"]{
     color: white;
     font-weight: bolder;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.393);
+    cursor: pointer;
 }
 
 input[type="button"]:hover{
@@ -174,7 +175,7 @@ input[type="button"]:hover{
 
     div#form{
         width: 40%;
-        height: 80%;
+        height: 90%;
         left: 25%;
         border-radius: 20px;
         box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.347);
@@ -185,7 +186,7 @@ input[type="button"]:hover{
     }
 
     div.logo > img{
-        padding-top: 20px;
+        padding-top: 65px;
     }
 
     div.carrossel{
@@ -257,4 +258,52 @@ input[type="button"]:hover{
     input#radio4:checked ~ .cavalo {
         transform: translateX(-300%);
     }
+    
+    div.navegação-auto div{
+        padding: 15px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: 1s;
+    }
+
+    div.navegação-auto{
+        position: absolute;
+        width: 35%;
+        display: flex;
+        justify-content: center;
+        padding-left: 40px;
+        margin-top: 47.5%; 
+    }
+
+    div.navegação-auto div:not(:last-child){
+        margin-right: 10px;
+    }
+
+    #radio1:checked ~ .navegação-auto .auto-bnt1{
+        background-color: gray;
+    }
+
+    #radio2:checked ~ .navegação-auto .auto-bnt2{
+        background-color: gray;
+    }
+
+    #radio3:checked ~ .navegação-auto .auto-bnt3{
+        background-color: gray;
+    }
+
+    #radio4:checked ~ .navegação-auto .auto-bnt4{
+        background-color: gray;
+    }
+
+    div.logofor{
+        margin-top: 25%;
+        text-align: center;
+    }
+
+    span{
+        color: #6b1bc6;
+    }
+
+
 }
+
