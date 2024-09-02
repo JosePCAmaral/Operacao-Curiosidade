@@ -218,15 +218,16 @@ input[type="button"]:hover{
         width: 80%;
     }
 
-    div.navegação-manual{
+    div.navegação-manual, div.navegação-auto{
         position: absolute;
-        width: 35%;
+        padding-top: 650px;
+        left: 72.5%;
+        transform: translateX(-50%);
         display: flex;
         justify-content: center;
-        padding-left: 40px;
     }
 
-    div.navegação-manual > label.btn-manual{
+    div.navegação-manual > label.btn-manual > label.btn-manual, div.navegação-auto div {
         border: 2px solid rgba(0, 0, 0, 0.438);
         padding: 15px;
         border-radius: 50%;
@@ -235,11 +236,11 @@ input[type="button"]:hover{
         transition: 1s;
     }
 
-    label.btn-manual:not(:last-child){
+    label.btn-manual > label.btn-manual:not(:last-child), div.navegação-auto div:not(:last-child){
         margin-right: 10px;
     }
 
-    label.btn-manual:hover{
+    label.btn-manual, div.navegação-auto div:hover{
         background-color: rgb(89, 82, 82);
     }
 
@@ -257,26 +258,6 @@ input[type="button"]:hover{
 
     input#radio4:checked ~ .cavalo {
         transform: translateX(-300%);
-    }
-    
-    div.navegação-auto div{
-        padding: 15px;
-        border-radius: 50%;
-        cursor: pointer;
-        transition: 1s;
-    }
-
-    div.navegação-auto{
-        position: absolute;
-        width: 35%;
-        display: flex;
-        justify-content: center;
-        padding-left: 40px;
-        margin-top: 47.5%; 
-    }
-
-    div.navegação-auto div:not(:last-child){
-        margin-right: 10px;
     }
 
     #radio1:checked ~ .navegação-auto .auto-bnt1{
