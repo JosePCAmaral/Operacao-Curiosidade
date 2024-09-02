@@ -218,16 +218,18 @@ input[type="button"]:hover{
         width: 80%;
     }
 
-    div.navegação-manual, div.navegação-auto{
+    div.navegação-manual{
         position: absolute;
-        padding-top: 650px;
-        left: 72.5%;
-        transform: translateX(-50%);
+        width: 35%;
         display: flex;
         justify-content: center;
+        padding-left: 40px;
+        top: 77%;
+        transform: translateY(-50%);
+        z-index: 10;
     }
 
-    div.navegação-manual > label.btn-manual > label.btn-manual, div.navegação-auto div {
+    div.navegação-manual > label.btn-manual{
         border: 2px solid rgba(0, 0, 0, 0.438);
         padding: 15px;
         border-radius: 50%;
@@ -236,12 +238,40 @@ input[type="button"]:hover{
         transition: 1s;
     }
 
-    label.btn-manual > label.btn-manual:not(:last-child), div.navegação-auto div:not(:last-child){
+    label.btn-manual:not(:last-child){
         margin-right: 10px;
     }
 
-    label.btn-manual, div.navegação-auto div:hover{
+    label.btn-manual:hover{
         background-color: rgb(89, 82, 82);
+    }
+
+    div.navegação-auto{
+        position: absolute;
+        width: 35%;
+        display: flex;
+        justify-content: center;
+        padding-left: 40px;
+        top: 77%;
+        transform: translateY(10%);
+        z-index: 5;
+        opacity: 0.5;
+    }
+
+    div.navegação-auto div {
+        border: 2px solid rgba(0, 0, 0, 0.438);
+        padding: 15px;
+        border-radius: 50%;
+        cursor: pointer;
+        transition: opacity 0.5s, background-color 1s;
+    }
+
+    div.navegação-auto div:hover {
+        opacity: 1;
+    }
+
+    div.navegação-auto div:not(:last-child) {
+        margin-right: 10px;
     }
 
     input#radio1:checked ~ .primeiro {
@@ -258,6 +288,10 @@ input[type="button"]:hover{
 
     input#radio4:checked ~ .cavalo {
         transform: translateX(-300%);
+    }
+
+    div.navegação-auto div:not(:last-child){
+        margin-right: 10px;
     }
 
     #radio1:checked ~ .navegação-auto .auto-bnt1{
