@@ -111,7 +111,7 @@ div.cont-imput > span{
 }
 
 div.cont-imput > input{
-    width: 650px;
+    width: 600px;
     height: 60px;
     border-radius: 8px;
     border: 2px solid rgba(128, 128, 128, 0.314);
@@ -160,22 +160,32 @@ div.cont-botao{
 
 #toggleBt{
     background-color: rgb(180, 179, 179);
-    width: 35%;
-    height: 50%;
+    width: 60px;
+    height: 30px;
     border-radius: 15px;
-    display: flex;
-    justify-content:flex-start;
-    align-content: center;
     align-self: center;
+    position: relative;
+    transition: background-color 0.3s ease;
 }
  
 #toggle{
     background-color: white;
     border-radius: 50%;
-    width: 65%;
-    border: 2px solid rgb(180, 179, 179);
-    display: flex;
-   
+    width: 28px;
+    height: 26px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: left 0.3s ease;
+}
+
+#toggleBt.active{
+    background-color: #6b1bc6;
+    justify-content: flex-end;
+}
+
+#toggleBt.active #toggle{
+    left: calc(100% - 30px);
 }
 
 #notIcon{
@@ -189,16 +199,51 @@ div.cont-botao{
 
 div.cont-sino{
     padding-top: 55px;
-    padding-left: 50px;
+    padding-left: 15px;
     color: #6b1bc6;
+    cursor: pointer;
+}
+
+div.perfilzinho{
+    position: relative;
+    margin-top: 30px;
+    margin-left: 50px;
+    width: 250px;
+    height: 70px;
+    background-color: #6b1bc6;
+    border-radius: 10px;
+    border: 2px solid #cbabf0;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.245);
+}
+
+div.perfilzinho > img{
+    width: 45px;
+    height: 45px;
+    margin-top: 10px;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+div.perfilzinho > p{
+    display: inline-block;
+    color: white;
+    margin-left: 10px;
+    position: absolute;
+    top: 19%;
+    left: 30%;
+    font-size: 0.8em;
 }
 
 
-div.perfilzinho{
-    margin-top: 38px;
-    margin-left: 50px;
-    width: 250px;
-    height: 60px;
-    background-color: #6b1bc6;
-    border-radius: 10px;
+div.perfilzinho > span{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    color: white;
+    cursor: pointer;
+}
+
+div.perfilzinho > span:hover{
+    color: #cbabf0;
 }
