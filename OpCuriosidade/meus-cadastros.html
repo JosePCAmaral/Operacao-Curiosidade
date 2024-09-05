@@ -4,8 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meus Cadastros</title>
+    <link rel="stylesheet" href="estilos/meus-cadastros.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
-    <h1>Meus cadastros</h1>
+    <header class="filtro">
+        <div class="form">
+            <div class="selects">
+                <div>
+                    <p><label for="icodigo">Código</label></p>
+                    <select name="codigo" id="icodigo">
+                        <option value="1">24-00012</option>
+                    </select>
+                </div>
+                <div>
+                    <p><label for="istatus">Status</label></p>
+                    <select name="status" id="istatus">
+                        <option value="1">Ativo</option>
+                        <option value="2">Inativo</option>
+                    </select>
+                </div>
+                <div>
+                    <p><label for="inome">Nome</label></p>
+                    <select name="nome" id="inome">
+                        <option value="1">-</option>
+                    </select>
+                </div>
+                <div>
+                    <p><label for="iperiodo">Período</label></p>
+                    <select name="periodo" id="iperiodo">
+                        <option value="1">00/00/0000 - 00/00/0000</option>
+                    </select>
+                </div>
+            </div>
+            <div class="buttons">
+                <input type="button" value="Limpar">
+                <input type="button" value="Filtrar">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="ordem">
+
+        </div>
+        <div class="cadastros">
+
+        </div>
+    </main>
+    <footer class="paginas">
+
+    </footer>
 </body>
 </html>
