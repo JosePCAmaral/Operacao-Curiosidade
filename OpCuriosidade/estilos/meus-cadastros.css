@@ -44,12 +44,12 @@ header > div.form{
     height: 60%;
     top: 40%;
     border-radius: 10px;
-    border : 2px solid rgba(128, 128, 128, 0.314);;
+    border : 2px solid rgba(128, 128, 128, 0.314);
 }
 
 div.selects{
     display: flex;
-    width: 80%;
+    width: 78%;
     height: 100%;
     padding-top: 13px;
     padding-left: 20px;
@@ -63,15 +63,294 @@ div.selects > div > p{
     margin-bottom: 5px;
 }
 
-div.selects > div > select#icodigo{
-    width: 100px;
+div.selects > div > select{
     height: 30px;
     padding-left: 10px;
+    border-radius: 8px;
+    border: 2px solid rgba(128, 128, 128, 0.314);
+    cursor: pointer;
+}
+
+select#icodigo{
+    width: 100px;
+}
+
+select#istatus{
+    width: 90px;
+}
+
+select#inome, select#iperiodo{
+    width: 200px;
+}
+
+div.selects > div > select:hover{
+    border: 2px solid rgba(128, 128, 128, 0.519);
+}
+
+div.buttons{
+    width: 22%;
+    height: 100%;
+    display: flex;
+}
+
+div.buttons > input#limpar{
+    background-color: white;
+    color: #6b1bc6;
+    border: 2px solid #6b1bc6;
+    margin-right: 10px;
+}
+
+div.buttons > input{
+    margin-top: 40px;
+    width: 45%;
+    height: 40%;
+    background-color: #6b1bc6;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+div.buttons > input#limpar:hover{
+    background-color: rgba(128, 128, 128, 0.086);
+}
+
+div.buttons > input:hover{
+    background-color: #7f42c4;
+}
+
+main{
+    padding-top: 10px;
+    width: 100%;
+    height: 63%;
+    padding-left: 37px;
+}
+
+div.ordem{
+    display: flex;
+    width: 93%;
+    height: 12%;
+    border-radius: 5px;
+    border:2px solid rgba(128, 128, 128, 0.314);
+}
+
+div.ordem > div#nome{
+    padding-left: 45px;
+}
+
+div.ordem > div#email{
+    padding-left: 200px;
+}
+
+div.ordem > div#data{
+    padding-left: 180px;
+}
+
+div.ordem > div{
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+div.ordem > div > p{
+    position: relative;
+    cursor: pointer;
+}
+
+div.ordem > div > P > span{
+    position: absolute;
+    top: 20%;
+    padding-left: 3px;
+    font-size: 16px;
+}
+
+div.cadastros{
+    margin-top: 5px;
+    width: 93%;
+    height: 85%;
+}
+
+div.cadastros > div.dados{
+    display: flex;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    width: 100%;
+    height: 16%;
+    border: 2px solid rgba(128, 128, 128, 0.314);
+    border-radius: 10px;
+    padding-top: 15px;
+    padding-left: 25px;
+}
+
+div.dados > p.nome{
+    padding-left: 53px;
+    width: 320px;
+}
+
+div.dados > p.email{
+    width: 255px;
+}
+
+div.dados > p.data{
+    width: 160px;
+}
+
+div.dados > p.status{
+    width: 50px;
+    padding-left: 5px;
+    height: 70%;
+    color: rgb(41, 157, 41);
+    background-color: rgba(0, 128, 0, 0.193);
+    border: 2px solid rgb(68, 174, 68);
+    border-radius: 20px;
+}
+
+div.dados > p.status#inativo{
+    color: rgb(186, 6, 6);
+    background-color: rgba(255, 0, 0, 0.232);
+    border: 2px solid rgb(110, 10, 10);
+    width: 60px;
+}
+
+div.dados > p.botao#inativo{
+    margin-left: 35px;
+}
+
+div.dados > p.botao{
+    position: relative;
+    background-color: #6b1bc6;
+    color: white;
+    height: 70%;
+    width: 110px;
+    padding-left: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 45px;
+}
+
+div.dados > p > span{
+    position: absolute;
+    font-size: 20px;
+    top: 9%;
+    left: 5%;
+}
+
+div.dados > p.botao:hover{
+    background-color: #7f42c4;
+}
+
+footer.paginas{
+    width: 100%;
+    height: 5%;
+    padding-left: 40px;
+}
+
+footer.paginas > div{
+    display: flex;
+    width: 93%;
+    height: 100%;
+    border-radius: 5px;
+    border: 2px solid rgba(128, 128, 128, 0.314);
+    background-color: rgba(128, 128, 128, 0.086);
+    padding-top: 4px;
+}
+
+div.selecionar > p.sele{
+    padding-left: 20px;
+}
+
+div.selecionar > p.sele > select{
     border-radius: 5px;
     border: 2px solid rgba(128, 128, 128, 0.314);
 }
 
-div.buttons{
-    width: 20%;
-    height: 100%;
+div.selecionar > p.sele > select:hover{
+    border: 2px solid rgba(128, 128, 128, 0.519);
+}
+
+div.selecionar > p.pag{
+    padding-left: 600px;
+}
+
+div.selecionar > p.first{
+    background-color: rgba(128, 128, 128, 0.086);
+    border: 2px solid rgba(128, 128, 128, 0.314);
+    border-radius: 5px;
+    width: 20px;
+    height: 85%;
+    color: black;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+div.selecionar > p.first:hover{
+    background-color: rgba(128, 128, 128, 0.314);
+}
+
+div.selecionar > p.first > span{
+    font-size: 16px;
+}
+
+div.selecionar > p.back{
+    background-color: rgba(128, 128, 128, 0.086);
+    border: 2px solid rgba(128, 128, 128, 0.314);
+    border-radius: 5px;
+    width: 20px;
+    height: 85%;
+    color: black;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+div.selecionar > p.back:hover{
+    background-color: rgba(128, 128, 128, 0.314);
+}
+
+div.selecionar > p.back > span{
+    font-size: 20px;
+}
+
+div.selecionar > p.next{
+    background-color: #6b1bc6;
+    border-radius: 5px;
+    width: 20px;
+    height: 85%;
+    color: white;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+div.selecionar > p.next:hover{
+    background-color: #7f42c4;
+}
+
+div.selecionar > p.next > span{
+    padding-top: 1px;
+    font-size: 20px;
+}
+
+div.selecionar > p.last{
+    background-color: #6b1bc6;
+    border-radius: 5px;
+    width: 20px;
+    height: 85%;
+    color: white;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+div.selecionar > p.last:hover{
+    background-color: #7f42c4;
+}
+
+div.selecionar > p.last > span{
+    padding-top: 3px;
+    font-size: 16px;
+}
+
+img{
+    float: right;
+    padding-top: 15px;
+    padding-right: 72px;
 }
