@@ -141,6 +141,8 @@ const btnclosemodal = document.getElementById('close')
 window.addEventListener('message', function(event) {
     if (event.data === 'openCompartModal') {
         document.querySelector('.modal').style.display = 'flex';
+    }else if (event.data === 'openExcluirModal') {
+        document.getElementsByClassName('modal-excluir')[0].style.display = 'block';
     }
 });
 
@@ -221,3 +223,21 @@ E3.addEventListener('click', function(){
     e3.style.display = 'block';
     abrirModal(abrirModalzinho3)
 });
+
+
+
+
+
+var can = document.getElementById('can');
+var rem = document.getElementById('rem');
+
+var modalExcluir = document.getElementsByClassName('modalExcluir');
+
+can.addEventListener('click', function(){
+    document.getElementsByClassName('modal-excluir')[0].style.display = 'none';
+});
+
+rem.addEventListener('click', function(){
+    document.getElementsByClassName('modal-excluir')[0].style.display = 'none';
+});
+

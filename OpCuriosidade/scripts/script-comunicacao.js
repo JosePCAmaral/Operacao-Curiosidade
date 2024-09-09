@@ -27,3 +27,28 @@ compartButton5.addEventListener('click', function() {
 });
 
 
+const excluirButton = document.getElementById('exc');
+const excluirButton2 = document.getElementById('exc2');
+const excluirButton3 = document.getElementById('exc3');
+const excluirButton4 = document.getElementById('exc4');
+const excluirButton5 = document.getElementById('exc5');
+
+excluirButton.addEventListener('click', function() {
+    window.parent.postMessage('openExcluirModal', '*');
+});
+
+excluirButton2.addEventListener('click', function() {
+    window.parent.postMessage('openExcluirModal', '*');
+});
+
+excluirButton3.addEventListener('click', function() {
+    window.parent.postMessage('openExcluirModal', '*');
+});
+
+excluirButton4.addEventListener('click', function() {
+    window.parent.postMessage('openExcluirModal', '*');
+});
+
+excluirButton5.addEventListener('click', function() {
+    window.parent.postMessage('openExcluirModal', '*');
+});

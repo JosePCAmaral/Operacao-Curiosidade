@@ -92,3 +92,4 @@ function selecionaPagina(){
 window.addEventListener('message', function(event) {
     window.parent.postMessage(event.data, '*');
 });
+
