@@ -135,3 +135,15 @@ function selecionaPagina(){
         ifr.src = "relatorios.html";
     }
 }
+
+const btnclosemodal = document.getElementById('close')
+
+window.addEventListener('message', function(event) {
+    if (event.data === 'openCompartModal') {
+        document.querySelector('.modal').style.display = 'flex';
+    }
+});
+
+btnclosemodal.addEventListener('click', function() {
+    document.querySelector('.modal').style.display = 'none';
+});
