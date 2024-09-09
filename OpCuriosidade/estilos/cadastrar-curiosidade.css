@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: normal;
+    src: url(../Fonts/Segoe\ UI.ttf);
+}
+@font-face {
+    font-family: bold;
+    src: url(../Fonts/Segoe\ UI\ Bold.ttf);
+}
+@font-face {
+    font-family: bold italic;
+    src: url(../Fonts/Segoe\ UI\ Bold\ Italic.ttf);
+}
+@font-face {
+    font-family: italic;
+    src: url(../Fonts/Segoe\ UI\ Italic.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+    width: 98vw;
+    height: 100vh;
+    font-family: normal;
+}
+
+main{
+    margin-top: 20px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+section.cor{
+    width: 5%;
+    background-color: red;
+    border-radius: 10px 10px 10px 10px;
+}
+
+section.cadastrar{
+    width: 95%;
+    height: 100%;
+}
