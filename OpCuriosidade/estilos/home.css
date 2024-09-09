@@ -264,8 +264,8 @@ div.perfilzinho > span:hover{
 div.modal-comp{
     background-color: #fff;
     border-radius: 10px;
-    width: 600px;
-    height: 70%;
+    width: 550px;
+    height: 60%;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -288,5 +288,208 @@ div.container > div.cor{
 div.container > div.comp{
     width: 95%;
     height: 100%;
-    background-color: aqua;
+}
+
+div.comp > div.cima > h1{
+    font-size: 1.5em;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div.comp > div.cima > p{
+    display: inline-block;
+    background-color: rgba(128, 128, 128, 0.289);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 130px;
+}
+
+div.comp > div.cima > hr{
+    width: 100%;
+}
+
+div.comp > div.meio {
+    margin-left: 20px;
+}
+
+div.comp > div.meio > p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+div.comp > div.meio > p > span{
+    color: #6b1bc6;
+    font-weight: bold;
+}
+
+p.cont-input{
+    position: relative;
+}
+
+p.cont-input > span{
+    position: absolute;
+    left: 440px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6b1bc6;
+}
+
+div.comp > div.meio > p > input{
+    width: 480px;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid rgba(128, 128, 128, 0.289);
+    padding-left: 10px;
+}
+
+div.comp > div.meio > p > input:hover{
+    border: 3px solid #6b1bc674;
+}
+
+div.comp > div.meio > p > input:focus{
+    border: 3px solid #6b1bc6b4;
+    outline: none;
+}
+
+div.baixo{
+    width: 100%;
+    height: 200px;
+}
+
+div.baixo > div{
+    position: relative;
+    margin-left: 20px;
+    width: 92%;
+    height: 60px;
+    border: 1px solid rgba(0, 0, 0, 0.248);
+    border-radius: 10px;
+}
+
+div.baixo > div > img{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+div.baixo > div > p{
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 70px;
+}
+
+div.opcao-v-e > div.visualizar1{
+    display: none;
+    background-color: white;
+    color: #6b1bc6;
+    border: 2px solid #6b1bc6;
+    border-radius: 10px;
+    width: 110px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    right: 10px;
+    cursor: pointer;
+}
+
+div.opcao-v-e > div.visualizar2{
+    background-color: white;
+    color: #6b1bc6;
+    border: 2px solid #6b1bc6;
+    border-radius: 10px;
+    width: 110px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    right: 10px;
+    cursor: pointer;
+}
+
+div.opcao-v-e > div.visualizar3{
+    background-color: white;
+    color: #6b1bc6;
+    border: 2px solid #6b1bc6;
+    border-radius: 10px;
+    width: 110px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    right: 10px;
+    cursor: pointer;
+}
+
+div.opcao-v-e > div.visualizar1 > p{
+    padding-left: 10px;
+}
+
+div.opcao-v-e > div.visualizar2 > p{
+    padding-left: 10px;
+}
+
+div.opcao-v-e > div.visualizar3 > p{
+    padding-left: 10px;
+}
+
+div.opcao-v-e > div.editar1{
+    background-color: #6b1bc6;
+    color: white;
+    border: 2px solid #6b1bc6;
+    border-radius: 10px;
+    width: 110px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    right: 10px;
+    cursor: pointer;
+}
+
+div.opcao-v-e > div.editar2{
+    display: none;
+    background-color: #6b1bc6;
+    color: white;
+    border: 2px solid #6b1bc6;
+    border-radius: 10px;
+    width: 110px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    right: 10px;
+    cursor: pointer;
+}
+
+div.opcao-v-e > div.editar3{
+    display: none;
+    background-color: #6b1bc6;
+    color: white;
+    border: 2px solid #6b1bc6;
+    border-radius: 10px;
+    width: 110px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    right: 10px;
+    cursor: pointer;
+}
+
+div.opcao-v-e > div.editar1 > p{
+    padding-left: 25px;
+}
+
+div.opcao-v-e > div.editar2 > p{
+    padding-left: 25px;
+}
+
+div.opcao-v-e > div.editar3 > p{
+    padding-left: 25px;
 }
