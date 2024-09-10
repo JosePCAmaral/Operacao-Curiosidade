@@ -9,46 +9,166 @@
 </head>
 <body>
     <main>
-        <section class="cor">
+        <section class="cor" id="cor">
 
         </section>
         <section class="cadastrar">
-            <div class="header">
-                <h1>Cadastro de Operação Curiosidade</h1>
-                <p><span class="material-symbols-outlined" id="close">close</span></p>
-                <hr>
-                <div>
-                    <div>
+            <div class="main">
+                <div class="header">
+                    <h1>Cadastro de Operação Curiosidade</h1>
+                    <p><span class="material-symbols-outlined" id="close">close</span></p>
+                    <hr>
+                </div>
+                <div class="conf-img">
+                    <div class="person">
                         <span class="material-symbols-outlined">person</span>
                     </div>
-                    <div>
-                        <div>
+                    <div class="opc-img">
+                        <div class="opc-atu">
                             <span class="material-symbols-outlined">sync</span>
                             <p>Atualizar a imagem</p>
                         </div>
-                        <div>
+                        <div class="opc-rem">
                             <span class="material-symbols-outlined">delete</span>
                             <p>Remover a imagem</p>
                         </div>
                     </div>
-                    <div>
-                        
+                    <div class="cont-botao">
+                        <p>Inativo</p>
+                        <div id="toggleBt">
+                            <a href="javascript:void(0);" id="toggle">
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="fatos-dados">
-
+            <div class="caixa">
+                <div class="parte-colorido">
+                    <div class="frase">
+                        <span class="material-symbols-outlined">id_card</span>
+                        <p>Fatos e Dados</p>
+                    </div>
+                </div>
+                <div class="forms">
+                    <div class="flex">
+                        <div class="input" id="nome">
+                            <p><label for="inome">Nome</label></p>
+                            <input type="text" id="inome" name="nome" placeholder="Lorem Ipsum da Silva">
+                        </div>
+                        <div class="input" id="idade">
+                            <p><label for="iidade">Idade</label></p>
+                            <input type="number" name="idade" id="iidade" placeholder="00">
+                        </div>
+                        <div class="input" id="email">
+                            <p><label for="ie-mail">E-mail</label></p>
+                            <input type="email" name="e-mail" id="ie-mail" placeholder="lorem.ipsun@lorem.br">
+                        </div>
+                        <div class="input" id="nusuario">
+                            <p><label for="inome-usuário">Nome Usuário</label></p>
+                            <input type="text" id="inome-usuário" name="nome-usuário" placeholder="@lorem">
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="input" id="estadocivil">
+                            <p><label for="iestadocivil">Estado Civil</label></p>
+                            <input type="text" id="iestadocivil" name="estadocivil" placeholder="lorem">
+                        </div>
+                        <div class="input" id="datanascimento">
+                            <p><label for="idata-nascimento">Data Nascimento</label></p>
+                            <input type="date" name="data-nascimento" id="idata-nascimento">
+                        </div>
+                        <div class="input" id="endereco">
+                            <p><label for="iendereoo">Endereço</label></p>
+                            <input type="text" id="iendereco" name="endereco" placeholder="Rua lorem ipsum">
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="input" id="profissao">
+                            <p><label for="iprofissao">Ocupação/profissão</label></p>
+                            <input type="text" id="iprofissao" name="profissao" placeholder="loremIpsumador">
+                        </div>
+                        <div class="input" id="formacao">
+                            <p><label for="iformacao">Formação acadêmica</label></p>
+                            <input type="text" id="iformacao" name="formacao" placeholder="loremIpsum">
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="tabela" id="interesses">
-
+            <div class="caixa" id="interesses">
+                <div class="parte-colorido">
+                    <div class="frase">
+                        <span class="material-symbols-outlined">school</span>
+                        <p>Interesses</p>
+                    </div>
+                    <div class="quant">
+                        <p><span>4</span>Interesses</p>
+                    </div>
+                    <div class="add">
+                        <span class="material-symbols-outlined">add_box</span>
+                    </div>
+                </div>
+                <div class="forms">
+                    <ul>
+                        <li><label for="ii1" class="custom-marker">1</label><input class="curiosidade" type="text" name="i1" id="ii1"></li>
+                        <li><label for="ii2" class="custom-marker">2</label><input class="curiosidade" type="text" name="i2" id="ii2"></li>
+                        <li><label for="ii3" class="custom-marker">3</label><input class="curiosidade" type="text" name="i3" id="ii3"></li>
+                        <li><label for="ii4" class="custom-marker">4</label><input class="curiosidade" type="text" name="14" id="ii4"></li>
+                    </ul>
+                </div>
             </div>
-            <div class="tabela" id="valores">
-                
+            <div class="caixa" id="valores">
+                <div class="parte-colorido">
+                    <div class="frase">
+                        <span class="material-symbols-outlined">favorite</span>
+                        <p>Sentimentos</p>
+                    </div>
+                    <div class="quant" id="v">
+                        <p><span>4</span>Valores</p>
+                    </div>
+                    <div class="add">
+                        <span class="material-symbols-outlined">add_box</span>
+                    </div>
+                </div>
+                <div class="forms">
+                    <ul>
+                        <li><label class="custom-marker">1</label><input class="curiosidade" type="text" name="" id=""></li>
+                        <li><div class="custom-marker">2</div><input class="curiosidade" type="text" name="" id=""></li>
+                        <li><div class="custom-marker">3</div><input class="curiosidade" type="text" name="" id=""></li>
+                        <li><div class="custom-marker">4</div><input class="curiosidade" type="text" name="" id=""></li>
+                    </ul>
+                </div>
             </div>
-            <div class="tabela" id="sentimentos">
-                
+            <div class="caixa" id="sentimentos">
+                <div class="parte-colorido">
+                    <div class="frase">
+                        <span class="material-symbols-outlined">psychiatry</span>
+                        <p>Valores</p>
+                    </div>
+                    <div class="quant" id="s">
+                        <p><span>4</span>Sentimentos</p>
+                    </div>
+                    <div class="add">
+                        <span class="material-symbols-outlined">add_box</span>
+                    </div>
+                </div>
+                <div class="forms">
+                    <ul>
+                        <li><label class="custom-marker">1</label><input class="curiosidade" type="text" name="" id=""></li>
+                        <li><div class="custom-marker">2</div><input class="curiosidade" type="text" name="" id=""></li>
+                        <li><div class="custom-marker">3</div><input class="curiosidade" type="text" name="" id=""></li>
+                        <li><div class="custom-marker">4</div><input class="curiosidade" type="text" name="" id=""></li>
+                    </ul>
+                </div>
             </div>
+            
         </section>
     </main>
+    <footer>
+        <div>
+            <span class="material-symbols-outlined">save</span>
+            <p>Salvar</p>
+        </div>
+    </footer>
+    <script src="scripts/script-cadastrar"></script>
 </body>
 </html>

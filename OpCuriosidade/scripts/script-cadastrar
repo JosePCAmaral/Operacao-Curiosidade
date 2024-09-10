@@ -1,0 +1,17 @@
+document.getElementById('toggleBt').addEventListener('click', function() {
+    this.classList.toggle('active');
+});
+
+document.getElementById('toggleBt').addEventListener('click', function() {
+    const corElemento = document.getElementById('cor');
+    const corAtual = window.getComputedStyle(corElemento).backgroundColor;
+    const textoStatus = document.querySelector('.cont-botao p');
+
+    if (corAtual === 'rgb(0, 182, 24)') {
+        corElemento.style.backgroundColor = 'red';
+        textoStatus.textContent = 'Inativo';
+    } else if (corAtual === 'rgb(255, 0, 0)') {
+        corElemento.style.backgroundColor = '#00b618';
+        textoStatus.textContent = 'Ativo';
+    }
+});
