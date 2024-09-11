@@ -260,3 +260,9 @@ contadorNotf.addEventListener('click', function(){
     iframe.contentWindow.postMessage('trocaTela', '*');
     document.getElementsByClassName('modal-notf')[0].style.display = 'none';
 });
+
+var expandOpcPerfil = document.getElementById('expan-perfil-opt');
+
+expandOpcPerfil.addEventListener('click', function(){
+    document.getElementsByClassName('modal-perfil')[0].style.display = 'block';
+});
