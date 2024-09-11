@@ -201,6 +201,9 @@ div.cont-sino{
     padding-top: 55px;
     padding-left: 15px;
     color: #6b1bc6;
+}
+
+div.cont-sino > span{
     cursor: pointer;
 }
 
@@ -759,6 +762,14 @@ div.modal-notf{
     display: inline-block;
     margin-left: 10px;
     font-size: 1em;
+    cursor: pointer;
+}
+
+.notificacoes-header > span#close-notf{
+    background-color: rgba(128, 128, 128, 0.289);
+    border-radius: 10px;
+    margin-left: 180px;
+    cursor: pointer;
 }
 
 .notificacao{
@@ -778,9 +789,14 @@ div.modal-notf{
 .usuario img {
     width: 50px;
     height: 50px;
-    border-radius: 50%;
+    border-radius: 10px;
     margin-right: 10px;
     margin-left: 10px;
+}
+
+.usuario > div > p{
+    font-size: 14px;
+    color: gray;
 }
 
 .nome {
@@ -792,14 +808,9 @@ div.modal-notf{
     text-align: right;
 }
 
-.info p {
-    margin: 0;
-    font-size: 14px;
-    color: gray;
-}
-
 .tempo {
     font-size: 16px;
+    margin-right: 5px;
     font-weight: bold;
     color: #6b1bc6;
 }

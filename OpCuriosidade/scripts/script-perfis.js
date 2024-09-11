@@ -5,7 +5,6 @@ var ifr = document.getElementById('iframe');
 
 var selectedDiv = uc;
 
-// Estilo inicial corrigido
 uc.style.backgroundColor = 'rgba(143, 143, 254, 0.432)';
 
 function ultCad(){
@@ -41,7 +40,6 @@ function resetStyles() {
     cc.style.backgroundColor = 'white';
 }
 
-// Hover effects
 uc.onmouseover = function() {
     if (selectedDiv !== uc) {
         uc.style.backgroundColor = 'rgba(143, 143, 254, 0.432)';
@@ -93,3 +91,11 @@ window.addEventListener('message', function(event) {
     window.parent.postMessage(event.data, '*');
 });
 
+window.addEventListener('message', function(event) {
+    console.log('Mensagem recebida:', event.data);
+
+    if (event.data === 'trocaTela') {
+        console.log('Mensagem "trocaTela" recebida, alterando seleção para cc.');
+        comco();
+    }
+});

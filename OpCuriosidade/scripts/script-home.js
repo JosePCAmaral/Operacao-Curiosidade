@@ -229,9 +229,6 @@ E3.addEventListener('click', function(){
 });
 
 
-
-
-
 var can = document.getElementById('can');
 var rem = document.getElementById('rem');
 
@@ -245,3 +242,21 @@ rem.addEventListener('click', function(){
     document.getElementsByClassName('modal-excluir')[0].style.display = 'none';
 });
 
+var sino = document.getElementById('sino');
+var closesino = document.getElementById('close-notf');
+
+sino.addEventListener('click', function(){
+    document.getElementsByClassName('modal-notf')[0].style.display = 'block';
+});
+
+closesino.addEventListener('click', function(){
+    document.getElementsByClassName('modal-notf')[0].style.display = 'none';
+});
+
+var contadorNotf = document.getElementById('contador-notf');
+
+contadorNotf.addEventListener('click', function(){
+    var iframe = document.getElementById('iframe');
+    iframe.contentWindow.postMessage('trocaTela', '*');
+    document.getElementsByClassName('modal-notf')[0].style.display = 'none';
+});
