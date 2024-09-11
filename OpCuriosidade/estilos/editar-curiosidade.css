@@ -1,0 +1,420 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: normal;
+    src: url(../Fonts/Segoe\ UI.ttf);
+}
+@font-face {
+    font-family: bold;
+    src: url(../Fonts/Segoe\ UI\ Bold.ttf);
+}
+@font-face {
+    font-family: bold italic;
+    src: url(../Fonts/Segoe\ UI\ Bold\ Italic.ttf);
+}
+@font-face {
+    font-family: italic;
+    src: url(../Fonts/Segoe\ UI\ Italic.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+    width: 98vw;
+    height: fit-content;
+    font-family: normal;
+}
+
+main{
+    height: fit-content;
+    width: 100%;
+    display: flex;
+}
+
+section.cor{
+    width: 5%;
+    background-color: red;
+    border-radius: 10px 10px 10px 10px;
+    height: auto;
+    align-self: stretch;
+}
+
+section.cadastrar{
+    width: 95%;
+    height: 100%;
+}
+
+div.cont-botao{
+    padding-top: 35px;
+    width: 10%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-content: flex-start;
+    align-self: center;
+}
+
+#toggleBt{
+    background-color: red;
+    width: 60px;
+    height: 30px;
+    border-radius: 15px;
+    align-self: center;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+ 
+#toggle{
+    background-color: white;
+    border-radius: 50%;
+    width: 28px;
+    height: 26px;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: left 0.3s ease;
+}
+
+#toggleBt.active{
+    background-color: #00b618;
+    justify-content: flex-end;
+}
+
+#toggleBt.active #toggle{
+    left: calc(100% - 30px);
+}
+
+#notIcon{
+    width: 1.5vw;
+}
+
+#paintIcon{
+    width: 100%;
+    margin: auto;
+}
+
+div.header{
+    position: relative;
+}
+
+div.header > h1{
+    padding-top: 20px;
+    padding-left: 20px;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+div.header > span{
+    position: absolute;
+    background-color: rgba(128, 128, 128, 0.33);
+    border-radius: 10px;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+div.conf-img{
+    padding-top: 20px;
+    position: relative;
+}
+
+div.conf-img > div.person{
+    background-color: #6b1bc65e;
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-left: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+div.person > span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 45px;
+}
+
+div.opc-img{
+    display: inline-block;
+    position: absolute;
+}
+
+div.opc-img > div.opc-atu{
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 14px;
+    margin-left: 20px;
+    border: 2px solid #6b1bc65e;
+    border-radius: 5px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+div.opc-img > div.opc-atu > span{
+    color: #6b1bc6;
+}
+
+div.opc-img > div.opc-rem{
+    display: flex;
+    margin-left: 20px;
+    border: 2px solid #6b1bc65e;
+    border-radius: 5px;
+    padding-right: 10px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+div.opc-img > div.opc-rem > span{
+    color: #6b1bc6;
+}
+
+div.cont-botao{
+    display: inline-block;
+    position: absolute;
+    right: 5px;
+    top: 40%;
+    transform: translatey(-50%);
+}
+
+div.cont-botao > p{
+    padding-left: 7px;
+    padding-bottom: 5px;
+}
+
+div.caixa{
+    width: 97%;
+    height: fit-content;
+    padding-bottom: 10px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.251);
+    border: 1px solid #6b1bc64a;
+}
+
+div#primeira-caixa{
+    padding-bottom: 40px;
+}
+
+div.caixa > div.parte-colorido{
+    position: relative;
+    width: 100%;
+    height: 70px;
+    background-color: #6b1bc6;
+    border-radius: 20px 20px 0px 0px;
+    display: flex;
+}
+
+div.frase{
+    color: white;
+    display: flex;
+    padding-top: 15px;
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+div.frase > span{
+    font-size: 40px;
+}
+
+div.frase > p{
+    padding-top: 3px;
+    padding-left: 10px;
+}
+
+div.quant{
+    position: absolute;
+    top: 50%;
+    right: 8%;
+    transform: translate(-50%, -50%);
+    background-color: #e9e3f0;
+    color: #6b1bc6;
+    padding-top: 2px;
+    padding-left: 7px;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+}
+
+div.quant > p > span{
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+div#v{
+    padding-left: 16px;
+}
+
+div#s{
+    width: 120px;
+    padding-left: 9px;
+}
+
+div.add{
+    background-color: #e9e3f0;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    padding-left: 3px;
+    padding-top: 3px;
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    transform: translate(-50%, -50%);
+    color: #6b1bc6;
+    cursor: pointer;
+}
+
+div.flex{
+    padding-top: 30px;
+    padding-left: 50px;
+    
+    display: flex;
+}
+
+div.input{
+    color: #6b1bc6;
+    font-weight: bold;
+    padding-right: 20px;
+}
+
+div.input > input{
+    height: 40px;
+    border: 2px solid rgba(98, 98, 98, 0.314);
+    border-radius: 7px;
+    margin-top: 5px;
+    padding-left: 10px;
+}
+
+div.input > input:hover{
+    border: 2px solid #6b1bc674;
+}
+
+div.input > input:focus{
+    border: 2px solid #6b1bc6b4;
+    outline: none;
+}
+
+div.input > input::placeholder{
+    color: rgb(128, 128, 128);
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+div#nome > input{
+    width: 300px;
+}
+
+div#idade > input{
+    width: 45px;
+    padding-left: 7px;
+}
+
+div#email > input{
+    width: 300px;
+}
+
+div#nusuario > input{
+    width: 200px;
+}
+
+div#estadocivil > input{
+    width: 200px;
+}
+
+div#datanascimento > input{
+    width: 250px;
+}
+
+div#endereco > input{
+    width: 300px;
+}
+
+div#profissao > input{
+    width: 400px;
+}
+
+div#formacao > input{
+    width: 450px;
+}
+
+footer{
+    margin-top: 20px;
+    width: 100%;
+    height: 60px;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    padding-right: 40px;
+}
+
+footer > a{
+    display: flex;
+    background-color: #6b1bc6;
+    color: white;
+    width: 100px;
+    height: 40px;
+    float: right;
+    padding-top: 7px;
+    padding-left: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+footer > a > span{
+    padding-right: 2px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.255);
+    height: 70px;
+    width: 95%;
+    margin-left: 2.5%;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding-left: 20px;
+}
+
+.custom-marker {
+    width: 40px;
+    height: 30px;
+    background-color: #6b1bc6;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 40%;
+    margin-right: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input.curiosidade{
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-left: 1px solid rgba(0, 0, 0, 0.255);
+    border-radius: 0px 10px 10px 0px;
+}
+
+input.curiosidade:focus{
+    outline: none;
+}

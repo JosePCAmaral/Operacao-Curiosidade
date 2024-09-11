@@ -143,6 +143,10 @@ window.addEventListener('message', function(event) {
         document.querySelector('.modal').style.display = 'flex';
     }else if (event.data === 'openExcluirModal') {
         document.getElementsByClassName('modal-excluir')[0].style.display = 'block';
+    }else if(event.data === 'closeModalEditar'){
+        document.getElementsByClassName('modal-editar')[0].style.display = 'none';
+    }else if(event.data === 'openEditarModal'){
+        document.getElementsByClassName('modal-editar')[0].style.display = 'block';
     }
 });
 

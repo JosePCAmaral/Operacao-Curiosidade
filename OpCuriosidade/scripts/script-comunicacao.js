@@ -52,3 +52,29 @@ excluirButton4.addEventListener('click', function() {
 excluirButton5.addEventListener('click', function() {
     window.parent.postMessage('openExcluirModal', '*');
 });
+
+const editarButton = document.getElementById('edit');
+const editarButton2 = document.getElementById('edit2');
+const editarButton3 = document.getElementById('edit3');
+const editarButton4 = document.getElementById('edit4');
+const editarButton5 = document.getElementById('edit5');
+
+editarButton.addEventListener('click', function() {
+    window.parent.postMessage('openEditarModal', '*');
+});
+
+editarButton2.addEventListener('click', function() {
+    window.parent.postMessage('openEditarModal', '*');
+});
+
+editarButton3.addEventListener('click', function() {
+    window.parent.postMessage('openEditarModal', '*');
+});
+
+editarButton4.addEventListener('click', function() {
+    window.parent.postMessage('openEditarModal', '*');
+});
+
+editarButton5.addEventListener('click', function() {
+    window.parent.postMessage('openEditarModal', '*');
+});
