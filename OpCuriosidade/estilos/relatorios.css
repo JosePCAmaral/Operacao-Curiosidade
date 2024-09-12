@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: normal;
+    src: url(../Fonts/Segoe\ UI.ttf);
+}
+@font-face {
+    font-family: bold;
+    src: url(../Fonts/Segoe\ UI\ Bold.ttf);
+}
+@font-face {
+    font-family: bold italic;
+    src: url(../Fonts/Segoe\ UI\ Bold\ Italic.ttf);
+}
+@font-face {
+    font-family: italic;
+    src: url(../Fonts/Segoe\ UI\ Italic.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    width: 100vw;
+    height: 100vh;
+    font-family: normal;
+    overflow: hidden;
+}
+
+main{
+    padding-top: 30px;
+    width: 100%;
+    height: 88%;
+    padding-left: 37px;
+}
+
+div.ordem{
+    display: flex;
+    width: 93%;
+    height: 50px;
+    border-radius: 5px;
+    border:2px solid rgba(128, 128, 128, 0.314);
+}
+
+div.ordem > div#nome{
+    padding-left: 45px;
+}
+
+div.ordem > div#email{
+    padding-left: 300px;
+}
+
+div.ordem > div#data{
+    padding-left: 180px;
+}
+
+div.ordem > div{
+    padding-top: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+div.ordem > div > p{
+    position: relative;
+    cursor: pointer;
+}
+
+div.ordem > div > P > span{
+    position: absolute;
+    top: 20%;
+    padding-left: 3px;
+    font-size: 16px;
+}
+
+div.cadastros{
+    margin-top: 5px;
+    width: 93%;
+    height: 85%;
+}
+
+div.cadastros > div.dados{
+    display: flex;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    width: 100%;
+    height: 57px;
+    border: 2px solid rgba(128, 128, 128, 0.314);
+    border-radius: 10px;
+    padding-left: 25px;
+    cursor: pointer;
+}
+
+div.dados > p.codigo{
+    padding-top: 15px;
+}
+
+div.dados > p.nome{
+    padding-top: 5px;
+    padding-left: 53px;
+    width: 515px;
+}
+
+div.dados > p.email{
+    padding-top: 15px;
+    width: 295px;
+}
+
+div.dados > p.data{
+    padding-top: 15px;
+    width: 150px;
+}
+
+img{
+    float: right;
+    padding-top: 15px;
+    padding-right: 72px;
+}

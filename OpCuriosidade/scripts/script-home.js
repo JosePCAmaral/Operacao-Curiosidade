@@ -159,6 +159,8 @@ window.addEventListener('message', function(event) {
         document.getElementsByClassName('modalzinho5-mc')[0].style.display = 'block';
     }else if(event.data === 'openMCModalzinho6'){
         document.getElementsByClassName('modalzinho6-mc')[0].style.display = 'block';
+    }else if(event.data === 'abrirRelatorio'){
+        ifr.src = "relatorio.html"
     }
 });
 
