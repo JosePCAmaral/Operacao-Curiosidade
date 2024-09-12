@@ -213,8 +213,20 @@ div.dados > p.status#inativo{
     width: 60px;
 }
 
-div.dados > p.botao#inativo{
+div.dados > p.botaoInativo{
     margin-left: 35px;
+    position: relative;
+    background-color: #6b1bc6;
+    color: white;
+    height: 70%;
+    width: 110px;
+    padding-left: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+div.dados > p.botaoInativo:hover{
+    background-color: #7f42c4;
 }
 
 div.dados > p.botao{
