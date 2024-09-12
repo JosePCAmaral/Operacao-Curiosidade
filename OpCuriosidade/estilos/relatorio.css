@@ -29,6 +29,29 @@ body, html{
     font-family: normal;
 }
 
+div.voltar{
+    padding-left: 10px;
+    padding-top: 5px;
+    display: flex;
+    width: 300px;
+    height: 35px;
+    margin-left: 35px;
+    position: absolute;
+    top: 17%;
+    border-radius: 10px;
+    border: 1px solid #6b1bc6;
+    color: #6b1bc6;
+    cursor: pointer;
+}
+
+div.voltar > p{
+    padding-left: 5px;
+}
+
+div.voltar:hover{
+    background-color: rgba(128, 128, 128, 0.086);
+}
+
 header{
     width: 100%;
     height: 22%;
@@ -49,7 +72,7 @@ header > div.form{
 
 div.selects{
     display: flex;
-    width: 78%;
+    width: 70%;
     height: 100%;
     padding-top: 13px;
     padding-left: 20px;
@@ -88,7 +111,7 @@ div.selects > div > select:hover{
 }
 
 div.buttons{
-    width: 22%;
+    width: 30%;
     height: 100%;
     display: flex;
 }
@@ -97,7 +120,6 @@ div.buttons > input#limpar{
     background-color: white;
     color: #6b1bc6;
     border: 2px solid #6b1bc6;
-    margin-right: 10px;
 }
 
 div.buttons > input{
@@ -110,6 +132,7 @@ div.buttons > input{
     border-radius: 10px;
     font-size: 1em;
     cursor: pointer;
+    margin-right: 10px;
 }
 
 div.buttons > input#limpar:hover{
@@ -145,6 +168,10 @@ div.ordem > div#email{
 
 div.ordem > div#data{
     padding-left: 180px;
+}
+
+div.ordem > div#tipo{
+    padding-left: 100px;
 }
 
 div.ordem > div{
@@ -192,25 +219,29 @@ div.dados > p.email{
     width: 255px;
 }
 
-div.dados > p.data{
-    width: 160px;
+div.dados > p.data#administro{
+    width: 197px;
 }
 
-div.dados > p.status{
-    width: 50px;
-    padding-left: 5px;
+div.dados > p.data{
+    width: 210px;
+}
+
+div.dados > p.tipo{
+    width: 90px;
+    padding-left: 8px;
     height: 70%;
-    color: rgb(41, 157, 41);
-    background-color: rgba(0, 128, 0, 0.193);
-    border: 2px solid rgb(68, 174, 68);
+    color: white;
+    background-color: #7f42c4;
+    border: 2px solid #6b1bc6;
     border-radius: 20px;
 }
 
-div.dados > p.status#inativo{
-    color: rgb(186, 6, 6);
-    background-color: rgba(255, 0, 0, 0.232);
-    border: 2px solid rgb(110, 10, 10);
-    width: 60px;
+div.dados > p.tipo#inativo{
+    color: white;
+    background-color: #6b1bc6;
+    border: 2px solid #6b1bc6;
+    width: 120px;
 }
 
 div.dados > p.botaoInativo{

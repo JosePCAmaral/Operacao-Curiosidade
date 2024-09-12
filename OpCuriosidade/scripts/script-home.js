@@ -161,6 +161,8 @@ window.addEventListener('message', function(event) {
         document.getElementsByClassName('modalzinho6-mc')[0].style.display = 'block';
     }else if(event.data === 'abrirRelatorio'){
         ifr.src = "relatorio.html"
+    }else if(event.data === 'abrirRelatorios'){
+        ifr.src = "relatorios.html"
     }
 });
 
