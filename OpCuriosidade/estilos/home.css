@@ -873,6 +873,10 @@ div.confg-perfil{
     cursor: pointer;
 }
 
+a.sair{
+    text-decoration: none;
+}
+
 div.confg-perfil > p{
     margin-left: 15px;
 }

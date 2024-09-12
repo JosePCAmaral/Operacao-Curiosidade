@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configurações</title>
+</head>
+<body>
+    <main>
+        <section class="menu">
+            <header>
+                <div class="pri" id="uc" onclick="ultCad()">
+                    <span class="material-symbols-outlined">history_toggle_off</span>
+                    <p>Ultimas cadastradas</p>
+                </div>
+                <div id="cm" onclick="cadmin()">
+                    <span class="material-symbols-outlined">diversity_3</span>
+                    <p>Compartilhadas por min</p>
+                </div>
+                <div id="cc" onclick="comco()">
+                    <span class="material-symbols-outlined">diversity_3</span>
+                    <p>Compartilhadas comigo</p>
+                </div>
+            </header>
+        </section>
+        <section class="main">
+            <div class="iframe">
+                <iframe src="perfis-ult.html" frameborder="0" id="iframe"></iframe>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
