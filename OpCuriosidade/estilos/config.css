@@ -221,6 +221,7 @@ div.alt-senha > div.senha > input::placeholder{
     align-items: center;
     font-size: 1em;
     color: #6b1bc6;
+    cursor: pointer;
 }
 
 .custom-checkbox input {

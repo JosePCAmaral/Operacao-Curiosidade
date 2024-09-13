@@ -11,28 +11,28 @@
     <main>
         <section class="menu">
             <header>
-                <div class="pri" id="mp">
+                <div class="pri" id="mp" onclick="MeuPerf()">
                     <span class="material-symbols-outlined">account_circle</span>
                     <p>Meu Perfil</p>
                 </div>
-                <div class="seg" id="oc">
+                <div class="seg" id="oc" onclick="OpCompart()">
                     <span class="material-symbols-outlined">ios_share</span>
                     <p>Opção de Compartilhamento</p>
                 </div>
-                <div class="ter" id="gu">
+                <div class="ter" id="gu" onclick="GerenUsu()">
                     <span class="material-symbols-outlined">manage_accounts</span>
                     <p>Gerenciar Usuários</p>
                 </div>
-                <div id="ta">
+                <div id="ta" onclick="TriAudi()">
                     <span class="material-symbols-outlined">frame_inspect</span>
                     <p>Trilha de Auditoroa</p>
             </header>
         </section>
-        <section class="main">
-            <div class="iframe">
+        <section class="main" >
+            <div class="iframe" id="diframe">
                 <iframe src="meu-pefil.html" frameborder="0" id="iframe"></iframe>
             </div>
-            <div class="alterar">
+            <div class="alterar" id="alterar">
                 <h1>Sua Foto</h1>
                 <div class="cont-foto">
                     <div class="person">
@@ -75,5 +75,6 @@
             </div>
         </section>
     </main>
+    <script src="scripts/script-cnf.js"></script>
 </body>
 </html>
