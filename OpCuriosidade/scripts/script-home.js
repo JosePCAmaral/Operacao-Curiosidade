@@ -6,6 +6,7 @@ var vg = document.getElementById('vg');
 var cc = document.getElementById('cc');
 var mc = document.getElementById('mc');
 var re = document.getElementById('re');
+var co = document.getElementById('cf');
 var ifr = document.getElementById('iframe');
 
 
@@ -20,6 +21,7 @@ function visaoGeral(){
         selectedDiv = vg;
         vg.style.backgroundColor = '#6b1bc6';
         vg.style.color = 'white';
+        co.style.display = 'none';
         selecionaPagina();
     }
 }
@@ -30,6 +32,7 @@ function cadastrarCuri(){
         selectedDiv = cc;
         cc.style.backgroundColor = '#6b1bc6';
         cc.style.color = 'white';
+        co.style.display = 'none';
         selecionaPagina();
     }
 }
@@ -40,6 +43,7 @@ function meuCad(){
         selectedDiv = mc;
         mc.style.backgroundColor = '#6b1bc6';
         mc.style.color = 'white';
+        co.style.display = 'none';
         selecionaPagina();
     }
 }
@@ -50,6 +54,17 @@ function relatorios(){
         selectedDiv = re;
         re.style.backgroundColor = '#6b1bc6';
         re.style.color = 'white';
+        co.style.display = 'none';
+        selecionaPagina();
+    }
+}
+
+function configuracoes(){
+    if (selectedDiv !== co) {
+        resetStyles();
+        selectedDiv = co;
+        co.style.backgroundColor = '#6b1bc6';
+        co.style.color = 'white';
         selecionaPagina();
     }
 }
@@ -66,6 +81,9 @@ function resetStyles() {
     
     re.style.backgroundColor = 'white';
     re.style.color = '#6b1bc6';
+
+    co.style.backgroundColor = 'white';
+    co.style.color = '#6b1bc6';
 }
 
 vg.onmouseover = function() {
@@ -124,6 +142,20 @@ re.onmouseout = function() {
     }
 };
 
+co.onmouseover = function() {
+    if (selectedDiv !== co) {
+        co.style.backgroundColor = 'white';
+        co.style.color = '#6b1bc6';
+    }
+};
+
+co.onmouseout = function() {
+    if (selectedDiv !== co) {
+        co.style.backgroundColor = 'white';
+        co.style.color = '#6b1bc6';
+    }
+};
+
 function selecionaPagina(){
     if(selectedDiv === vg){
         ifr.src = "perfis.html";
@@ -133,6 +165,8 @@ function selecionaPagina(){
         ifr.src = "meus-cadastros.html";
     }else if(selectedDiv === re){
         ifr.src = "relatorios.html";
+    }else if(selectedDiv === co){
+        ifr.src = "configuracoes.html";
     }
 }
 
@@ -398,4 +432,11 @@ mcex5.addEventListener('click', function() {
 mcex6.addEventListener('click', function() {
     document.getElementsByClassName('modalzinho6-mc')[0].style.display = 'none';
     document.getElementsByClassName('modal-excluir')[0].style.display = 'block';
+});
+
+var conf = document.getElementById('Configurações');
+
+conf.addEventListener('click', function(){
+    co.style.display = 'block';
+    configuracoes();
 });

@@ -1,0 +1,158 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: normal;
+    src: url(../Fonts/Segoe\ UI.ttf);
+}
+@font-face {
+    font-family: bold;
+    src: url(../Fonts/Segoe\ UI\ Bold.ttf);
+}
+@font-face {
+    font-family: bold italic;
+    src: url(../Fonts/Segoe\ UI\ Bold\ Italic.ttf);
+}
+@font-face {
+    font-family: italic;
+    src: url(../Fonts/Segoe\ UI\ Italic.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: fit-content;
+    font-family: normal;
+    overflow-x: hidden;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+}
+
+section.CaixaDados{
+    margin-left: 7%;
+    width: 85%;
+    height: fit-content;
+}
+
+h1{
+    color: #6b1bc6;
+}
+
+div.dados{
+    margin-top: 20px;
+}
+
+div.flex{
+    display: flex;
+    margin-bottom: 10px;
+}
+
+div.dado{
+    margin-right: 10px;
+}
+
+div.dado > p.P{
+    color: #6b1bc6;
+    font-weight: bold;
+}
+
+div.dado > div.R{
+    margin-top: 3px;
+    color: gray;
+    border: 2px solid rgba(128, 128, 128, 0.485);
+    border-radius: 7px;
+    height: 40px;
+}
+
+div.dado > div.R > p{
+    padding-top: 8px;
+    padding-left: 10px;
+}
+
+div.dado > div.R#nome{
+    width: 330px;
+}
+
+div.dado > div.R#email{
+    width: 330px;
+}
+
+div.dado > div.R#nomeusu{
+    width: 150px;
+}
+
+div.dado > div.R#datanasc{
+    width: 300px;
+}
+
+div.dado > div.R#esatdociv{
+    width: 250px;
+}
+
+div.dado > div.R#datanasc2{
+    width: 300px;
+}
+
+div.dado > div.R#endereco{
+    width: 410px;
+}
+
+div.dado > div.R#prof{
+    width: 410px;
+}
+
+div.dado > div.R#forma{
+    width: 300px;
+}
+
+section.ISV{
+    margin-left: 7%;
+    margin-top: 7%;
+}
+
+div.titulo{
+    display: flex;
+    color: #6b1bc6;
+}
+
+div.box{
+    margin-top: 10px;
+    margin-bottom: 50px;
+    width: 94%;
+    height: 100px;
+    border: 2px solid rgba(128, 128, 128, 0.485);
+    border-radius: 10px;
+    display: flex;
+}
+
+div.da{
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    background-color: rgba(143, 143, 254, 0.432);
+    height: 25px;
+    border-radius: 10px;
+    color: #6b1bc6;
+    width: 70px;
+}
+
+div.da > span{
+    padding-left: 5px;
+    padding-top: 6px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+div.da > p{
+    padding-top: 2px;
+    padding-left: 7px;
+}

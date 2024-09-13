@@ -1,0 +1,274 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: normal;
+    src: url(../Fonts/Segoe\ UI.ttf);
+}
+@font-face {
+    font-family: bold;
+    src: url(../Fonts/Segoe\ UI\ Bold.ttf);
+}
+@font-face {
+    font-family: bold italic;
+    src: url(../Fonts/Segoe\ UI\ Bold\ Italic.ttf);
+}
+@font-face {
+    font-family: italic;
+    src: url(../Fonts/Segoe\ UI\ Italic.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: normal;
+    overflow: hidden;
+}
+
+main{
+    height: 100%;
+    width: 100%;
+}
+
+section.menu{
+    width: 100%;
+    height: 10%;
+}
+
+section.menu > header > div.pri{
+    margin-left: 70px;
+    width: 170px;
+    width: 110px;
+}
+
+section.menu > header > div.seg{
+    width: 220px;
+}
+
+section.menu > header > div.ter{
+    width: 160px;
+}
+
+section.menu > header > div{
+    display: inline-block;
+    margin-top: 30px;
+    margin-left: 5px;
+    color: #6b1bc6;
+    border-radius: 10px;
+    width: 180px;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+}
+
+section.menu > header > div:hover{
+    background-color: rgba(143, 143, 254, 0.432);
+}
+
+section.menu > header > div > p{
+    display: inline-block;
+    font-size: 0.9em;
+    padding-left: 30px;
+}
+
+section.menu > header > div > span{
+    display: inline-block;
+    font-size: 0.99em;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    transform: translate(20%,30%);
+}
+
+section.main{
+    display: flex;
+    width: 100%;
+    height: 90%;
+}
+
+section.main > div.iframe{
+    width: 70%;
+    height: 100%;
+}
+
+section.main > div.iframe > iframe{
+    width: 100%;
+    height: 100%;
+}
+
+div.alterar{
+    width: 30%;
+    height: 100%;
+}
+
+div.alterar > h1{
+    color: #6b1bc6;
+    font-size: 1.5em;
+    padding-left: 20px;
+}
+
+div.cont-foto{
+    display: flex;
+}
+
+div.cont-foto{
+    padding-top: 20px;
+    position: relative;
+}
+
+div.cont-foto > div.person{
+    background-color: #6b1bc65e;
+    width: 80px;
+    height: 80px;
+    border-radius: 10px;
+    margin-left: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+div.person > span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 45px;
+}
+
+div.opc-img{
+    display: inline-block;
+    position: absolute;
+    top: 12%;
+    left: 25%;
+}
+
+div.opc-img > div.opc-atu{
+    display: flex;
+    margin-bottom: 10px;
+    margin-top: 16px;
+    margin-left: 20px;
+    border: 2px solid #6b1bc65e;
+    border-radius: 5px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+div.opc-img > div.opc-atu > span{
+    color: #6b1bc6;
+}
+
+div.opc-img > div.opc-rem{
+    display: flex;
+    margin-left: 20px;
+    border: 2px solid #6b1bc65e;
+    border-radius: 5px;
+    padding-right: 10px;
+    padding-left: 5px;
+    cursor: pointer;
+}
+
+div.opc-img > div.opc-rem > span{
+    color: #6b1bc6;
+}
+
+div.alt-senha{
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+div.alt-senha > h1{
+    color: #6b1bc6;
+    font-size: 1.5em;
+    padding-bottom: 20px;
+}
+
+div.alt-senha > div.senha{
+    color: #6b1bc6;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+div.alt-senha > div.senha > input{
+    width: 80%;
+    height: 30px;
+    border: 2px solid rgba(128, 128, 128, 0.314);
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+div.alt-senha > div.senha > input:hover{
+    border: 3px solid #6b1bc674;
+}
+
+div.alt-senha > div.senha > input:focus{
+    border: 3px solid #6b1bc6b4;
+    outline: none;
+}
+
+div.alt-senha > div.senha > input::placeholder{
+    color: rgba(128, 128, 128, 0.474);
+}
+
+
+.custom-checkbox {
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+    color: #6b1bc6;
+}
+
+.custom-checkbox input {
+    display: none;
+}
+
+.custom-checkbox .checkmark {
+    width: 16px;
+    height: 16px;
+    background-color: #6b1bc6;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 8px;
+    position: relative;
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+    content: '✓';
+    color: white;
+    font-size: 12px;
+}
+
+a{
+    margin-top: 40px;
+    margin-left: 5px;
+    display: flex;
+    background-color: #6b1bc6;
+    color: white;
+    width: 280px;
+    height: 40px;
+    padding-top: 7px;
+    padding-left: 110px;
+    border-radius: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a > span{
+    padding-right: 5px;
+}
+
+div.img{
+    margin-top: 80px;
+}
+
+div.img > img{
+    width: 290px;
+}
+
