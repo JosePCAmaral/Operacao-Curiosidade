@@ -121,3 +121,7 @@ function selecionaPagina(){
         ifr.src = "perfis-cc.html";
     }
 }
+
+window.addEventListener('message', function(event) {
+    window.parent.postMessage(event.data, '*');
+});

@@ -5,3 +5,9 @@ function marcarTodos(checkbox) {
         item.checked = checkbox.checked;
     });
 }
+
+const cad = document.getElementById('cadastrarUsu');
+
+cad.addEventListener('click', function(){
+    window.parent.postMessage('OpenModalCadastrarUsuario', '*');
+});

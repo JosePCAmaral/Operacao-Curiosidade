@@ -197,6 +197,10 @@ window.addEventListener('message', function(event) {
         ifr.src = "relatorio.html"
     }else if(event.data === 'abrirRelatorios'){
         ifr.src = "relatorios.html"
+    }else if(event.data === 'CloseModalCadastrarUsuario'){
+        document.getElementsByClassName('cadastrar-usuario')[0].style.display = 'none';
+    }else if(event.data === 'OpenModalCadastrarUsuario'){
+        document.getElementsByClassName('cadastrar-usuario')[0].style.display = 'block';
     }
 });
 

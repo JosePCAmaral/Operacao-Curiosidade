@@ -278,8 +278,11 @@ div.add{
 div.flex{
     padding-top: 30px;
     padding-left: 50px;
-    
     display: flex;
+}
+
+div.flex#csenha{
+    padding-bottom: 30px;
 }
 
 div.input{
@@ -321,7 +324,7 @@ div#idade > input{
 }
 
 div#email > input{
-    width: 300px;
+    width: 315px;
 }
 
 div#nusuario > input{
@@ -329,7 +332,7 @@ div#nusuario > input{
 }
 
 div#estadocivil > input{
-    width: 200px;
+    width: 210px;
 }
 
 div#datanascimento > input{
@@ -341,11 +344,15 @@ div#endereco > input{
 }
 
 div#profissao > input{
-    width: 400px;
+    width: 380px;
 }
 
 div#formacao > input{
-    width: 450px;
+    width: 700px;
+}
+
+div#senhaAtual > input{
+    width: 700px;
 }
 
 footer{
@@ -374,47 +381,4 @@ footer > a{
 
 footer > a > span{
     padding-right: 2px;
-}
-
-ul {
-    list-style-type: none;
-}
-
-li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.255);
-    height: 70px;
-    width: 95%;
-    margin-left: 2.5%;
-    margin-top: 10px;
-    border-radius: 10px;
-    padding-left: 20px;
-}
-
-.custom-marker {
-    width: 40px;
-    height: 30px;
-    background-color: #6b1bc6;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 40%;
-    margin-right: 20px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-input.curiosidade{
-    height: 100%;
-    width: 100%;
-    border: none;
-    border-left: 1px solid rgba(0, 0, 0, 0.255);
-    border-radius: 0px 10px 10px 0px;
-}
-
-input.curiosidade:focus{
-    outline: none;
 }
