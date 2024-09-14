@@ -9,16 +9,13 @@
 </head>
 <body>
     <header class="filtro">
-        <div class="voltar" id="voltar">
-            <span class="material-symbols-outlined">refresh</span>
-            <p>Voltar para a listagem de relatórios</p>
-        </div>
         <div class="form">
             <div class="selects">
                 <div>
-                    <p><label for="icodigo">Código</label></p>
+                    <p><label for="icodigo">Status</label></p>
                     <select name="codigo" id="icodigo">
-                        <option value="1">24-00012</option>
+                        <option value="1">Ativo</option>
+                        <option value="2">Inativo</option>
                     </select>
                 </div>
                 <div>
@@ -29,7 +26,7 @@
                     </select>
                 </div>
                 <div>
-                    <p><label for="inome">Nome</label></p>
+                    <p><label for="inome">Nome ou Código</label></p>
                     <select name="nome" id="inome">
                         <option value="1">-</option>
                     </select>
@@ -44,60 +41,94 @@
             <div class="buttons">
                 <input type="button" value="Limpar" id="limpar">
                 <input type="button" value="Filtrar" id="filtrar">
-                <input type="button" value="Imprimir" id="Imprimir">
+                <input type="button" value="Cadastrar Usuário" id="Imprimir">
             </div>
         </div>
     </header>
     <main>
         <div class="ordem">
+            <div>
+                <input type="checkbox" name="selecionar" id="selecionar" onclick="marcarTodos(this)">
+            </div>
             <div><p>Código<span class="material-symbols-outlined">swap_vert</span></p></div>
             <div id="nome"><p> Nome<span class="material-symbols-outlined">swap_vert</span></p></div>
             <div id="email"><p>E-mail<span class="material-symbols-outlined">swap_vert</span></p></div>
             <div id="data"><p>Data de criação<span class="material-symbols-outlined">swap_vert</span></p></div>
+            <div id="status"><p>Status<span class="material-symbols-outlined">swap_vert</span></p></div>
             <div id="tipo"><p>Tipo<span class="material-symbols-outlined">swap_vert</span></p></div>
         </div>
         <div class="cadastros">
             <div class="dados">
+                <div class="box">
+                    <input type="checkbox" name="selecionar" id="selecionar" class="checkbox-item">
+                </div>
                 <p class="codigo">24-00016</p>
                 <p class="nome">Rosangela Maria Pereira</p>
                 <p class="email">rosangela.pereira@fakemail.br</p>
                 <p class="data">04/09/2024</p>
+                <p class="status" id="inativo">Inativo</p>
                 <p class="tipo">Operador</p>
+                <p class="botao" id="btn1"><span class="material-symbols-outlined">more_vert</span>Detalhes</p>
             </div>
             <div class="dados">
+                <div class="box">
+                    <input type="checkbox" name="selecionar" id="selecionar" class="checkbox-item">
+                </div>
                 <p class="codigo">24-00017</p>
                 <p class="nome">Lisa Kin Almeida</p>
                 <p class="email">lisa.almeida@fakemail.br</p>
-                <p class="data" id="administro">04/09/2024</p>
-                <p class="tipo" id="inativo">Administrador</p>
+                <p class="data">04/09/2024</p>
+                <p class="status">Ativo</p>
+                <p class="tipo" id="adm">Administrador</p>
+                <p class="botaoAdm" id="btn2"><span class="material-symbols-outlined">more_vert</span>Detalhes</p>
             </div>
             <div class="dados">
+                <div class="box">
+                    <input type="checkbox" name="selecionar" id="selecionar" class="checkbox-item">
+                </div>
                 <p class="codigo">24-00018</p>
                 <p class="nome">Paulo Rosa de Oliveira</p>
                 <p class="email">paulo.oliveira@fakemail.br</p>
-                <p class="data" id="administro">04/09/2024</p>
-                <p class="tipo" id="inativo">Administrador</p>
+                <p class="data">04/09/2024</p>
+                <p class="status">Ativo</p>
+                <p class="tipo" id="adm">Administrador</p>
+                <p class="botaoAdm" id="btn3"><span class="material-symbols-outlined">more_vert</span>Detalhes</p>
             </div>
             <div class="dados">
+                <div class="box">
+                    <input type="checkbox" name="selecionar" id="selecionar" class="checkbox-item">
+                </div>
                 <p class="codigo">24-00019</p>
                 <p class="nome">Rogério da Silva</p>
                 <p class="email">rogerio.silva@fakemail.br</p>
                 <p class="data">04/09/2024</p>
+                <p class="status" id="inativo">Inativo</p>
                 <p class="tipo">Operador</p>
+                <p class="botao" id="btn4"><span class="material-symbols-outlined">more_vert</span>Detalhes</p>
             </div>
             <div class="dados">
+                <div class="box">
+                    <input type="checkbox" name="selecionar" id="selecionar" class="checkbox-item">
+                </div>
                 <p class="codigo">24-00020</p>
                 <p class="nome">Fernando de Paula Silva</p>
                 <p class="email">fernando.silva@fakemail.br</p>
                 <p class="data">04/09/2024</p>
+                <p class="status">Ativo</p>
                 <p class="tipo">Operador</p>
+                <p class="botao" id="btn5"><span class="material-symbols-outlined">more_vert</span>Detalhes</p>
             </div>
             <div class="dados">
+                <div class="box">
+                    <input type="checkbox" name="selecionar" id="selecionar" class="checkbox-item">
+                </div>
                 <p class="codigo">24-83564</p>
                 <p class="nome">Eduardo Junior</p>
                 <p class="email">eduardo.junior@fakemail.br</p>
                 <p class="data">05/04/2024</p>
+                <p class="status">Ativo</p>
                 <p class="tipo">Operador</p>
+                <p class="botao" id="btn6"><span class="material-symbols-outlined">more_vert</span>Detalhes</p>
             </div>
         </div>
     </main>
@@ -114,5 +145,6 @@
         </div>
     </footer>
     <img src="imagens/Sem título.png" alt="">
+    <script src="scripts/script-gerir.js"></script>
 </body>
 </html>

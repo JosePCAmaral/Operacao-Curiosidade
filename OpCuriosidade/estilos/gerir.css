@@ -29,32 +29,9 @@ body, html{
     font-family: normal;
 }
 
-div.voltar{
-    padding-left: 10px;
-    padding-top: 5px;
-    display: flex;
-    width: 300px;
-    height: 35px;
-    margin-left: 35px;
-    position: absolute;
-    top: 17%;
-    border-radius: 10px;
-    border: 1px solid #6b1bc6;
-    color: #6b1bc6;
-    cursor: pointer;
-}
-
-div.voltar > p{
-    padding-left: 5px;
-}
-
-div.voltar:hover{
-    background-color: rgba(128, 128, 128, 0.086);
-}
-
 header{
     width: 100%;
-    height: 22%;
+    height: 18%;
     position: relative;
 }
 
@@ -64,15 +41,15 @@ header > div.form{
     position: absolute;
     margin-left: 3%;
     width: 90%;
-    height: 60%;
-    top: 40%;
+    height: 75%;
+    top: 25%;
     border-radius: 10px;
     border : 2px solid rgba(128, 128, 128, 0.314);
 }
 
 div.selects{
     display: flex;
-    width: 70%;
+    width: 67%;
     height: 100%;
     padding-top: 13px;
     padding-left: 20px;
@@ -95,11 +72,11 @@ div.selects > div > select{
 }
 
 select#icodigo{
-    width: 100px;
+    width: 80px;
 }
 
-select#istatus{
-    width: 90px;
+select#itipo{
+    width: 130px;
 }
 
 select#inome, select#iperiodo{
@@ -111,7 +88,7 @@ div.selects > div > select:hover{
 }
 
 div.buttons{
-    width: 30%;
+    width: 33%;
     height: 100%;
     display: flex;
 }
@@ -120,11 +97,19 @@ div.buttons > input#limpar{
     background-color: white;
     color: #6b1bc6;
     border: 2px solid #6b1bc6;
+    width: 150px;
+}
+
+div.buttons > input#filtrar{
+    background-color: white;
+    color: #6b1bc6;
+    border: 2px solid #6b1bc6;
+    width: 150px;
 }
 
 div.buttons > input{
     margin-top: 40px;
-    width: 45%;
+    width: 100%;
     height: 40%;
     background-color: #6b1bc6;
     color: white;
@@ -132,10 +117,14 @@ div.buttons > input{
     border-radius: 10px;
     font-size: 1em;
     cursor: pointer;
-    margin-right: 10px;
+    margin-right: 5px;
 }
 
 div.buttons > input#limpar:hover{
+    background-color: rgba(128, 128, 128, 0.086);
+}
+
+div.buttons > input#filtrar:hover{
     background-color: rgba(128, 128, 128, 0.086);
 }
 
@@ -145,14 +134,16 @@ div.buttons > input:hover{
 
 main{
     padding-top: 10px;
-    width: 100%;
+    width: 90%;
     height: 63%;
-    padding-left: 37px;
+    margin-left: 37px;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
 div.ordem{
     display: flex;
-    width: 93%;
+    width: 1420px;
     height: 12%;
     border-radius: 5px;
     border:2px solid rgba(128, 128, 128, 0.314);
@@ -168,6 +159,10 @@ div.ordem > div#email{
 
 div.ordem > div#data{
     padding-left: 180px;
+}
+
+div.ordem > div#status{
+    padding-left: 80px;
 }
 
 div.ordem > div#tipo{
@@ -202,12 +197,42 @@ div.cadastros > div.dados{
     display: flex;
     margin-top: 1px;
     margin-bottom: 1px;
-    width: 100%;
+    width: 1420px;
     height: 16%;
     border: 2px solid rgba(128, 128, 128, 0.314);
     border-radius: 10px;
-    padding-top: 15px;
+    padding-top: 10px;
     padding-left: 25px;
+}
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    border: 2px solid #6b1bc6;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="checkbox"]:checked {
+    background-color: #6b1bc6;
+    border: none;
+    position: relative;
+}
+
+input[type="checkbox"]:checked::before {
+    content: '✔';
+    color: white;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: -2px;
+    left: 3px;
+}
+
+div.dados > p.codigo{
+    padding-left: 50px;
 }
 
 div.dados > p.nome{
@@ -219,12 +244,28 @@ div.dados > p.email{
     width: 255px;
 }
 
-div.dados > p.data#administro{
-    width: 197px;
-}
-
 div.dados > p.data{
     width: 210px;
+}
+
+div.dados > p.status{
+    width: 50px;
+    padding-left: 5px;
+    height: 70%;
+    color: rgb(41, 157, 41);
+    background-color: rgba(0, 128, 0, 0.193);
+    border: 2px solid rgb(68, 174, 68);
+    border-radius: 20px;
+    margin-right: 110px;
+}
+
+div.dados > p.status#inativo{
+    color: rgb(186, 6, 6);
+    background-color: rgba(255, 0, 0, 0.232);
+    border: 2px solid rgb(110, 10, 10);
+    width: 60px;
+    padding-left: 5px;
+    margin-right: 100px;
 }
 
 div.dados > p.tipo{
@@ -237,15 +278,15 @@ div.dados > p.tipo{
     border-radius: 20px;
 }
 
-div.dados > p.tipo#inativo{
+div.dados > p.tipo#adm{
     color: white;
     background-color: #6b1bc6;
     border: 2px solid #6b1bc6;
     width: 120px;
 }
 
-div.dados > p.botaoInativo{
-    margin-left: 35px;
+div.dados > p.botaoAdm{
+    margin-left: 60px;
     position: relative;
     background-color: #6b1bc6;
     color: white;
@@ -256,7 +297,7 @@ div.dados > p.botaoInativo{
     cursor: pointer;
 }
 
-div.dados > p.botaoInativo:hover{
+div.dados > p.botaoAdm:hover{
     background-color: #7f42c4;
 }
 
@@ -269,7 +310,7 @@ div.dados > p.botao{
     padding-left: 25px;
     border-radius: 5px;
     cursor: pointer;
-    margin-left: 45px;
+    margin-left: 90px;
 }
 
 div.dados > p > span{

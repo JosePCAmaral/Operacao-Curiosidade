@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cadastrar-usuario</title>
+    <link rel="stylesheet" href="estilos/cadastrar-usuario.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    <main>
+        <section class="cor">
+
+        </section>
+        <section class="cadastrar">
+            <div class="main">
+                <div class="header">
+                        <h1>Cadastrar Usuário</h1>
+                        <span class="material-symbols-outlined" id="close-editar">close</span>
+                    <hr>
+                </div>
+                <div class="conf-img">
+                    <div class="person">
+                        <span class="material-symbols-outlined">person</span>
+                    </div>
+                    <div class="opc-img">
+                        <div class="opc-atu">
+                            <span class="material-symbols-outlined">sync</span>
+                            <p>Atualizar a imagem</p>
+                        </div>
+                        <div class="opc-rem">
+                            <span class="material-symbols-outlined">delete</span>
+                            <p>Remover a imagem</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="caixa" id="primeira-caixa">
+                <div class="parte-colorido">
+                    <div class="frase">
+                        <span class="material-symbols-outlined">id_card</span>
+                        <p>Fatos e Dados</p>
+                    </div>
+                </div>
+                <div class="forms">
+                    <div class="flex">
+                        <div class="input" id="nome">
+                            <p><label for="inome">Nome</label></p>
+                            <input type="text" id="inome" name="nome" placeholder="Lorem Ipsum da Silva">
+                        </div>
+                        <div class="input" id="idade">
+                            <p><label for="iidade">Idade</label></p>
+                            <input type="number" name="idade" id="iidade" placeholder="00">
+                        </div>
+                        <div class="input" id="email">
+                            <p><label for="ie-mail">E-mail</label></p>
+                            <input type="email" name="e-mail" id="ie-mail" placeholder="lorem.ipsun@lorem.br">
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="input" id="nusuario">
+                            <p><label for="inome-usuário">Nome Usuário</label></p>
+                            <input type="text" id="inome-usuário" name="nome-usuário" placeholder="@lorem">
+                        </div>
+                        <div class="input" id="datanascimento">
+                            <p><label for="idata-nascimento">Data Nascimento</label></p>
+                            <input type="date" name="data-nascimento" id="idata-nascimento">
+                        </div>
+                        <div class="input" id="estadocivil">
+                            <p><label for="iestadocivil">Estado Civil</label></p>
+                            <input type="text" id="iestadocivil" name="estadocivil" placeholder="lorem">
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="input" id="endereco">
+                            <p><label for="iendereoo">Endereço</label></p>
+                            <input type="text" id="iendereco" name="endereco" placeholder="Rua lorem ipsum">
+                        </div>
+                        <div class="input" id="profissao">
+                            <p><label for="iprofissao">Ocupação/profissão</label></p>
+                            <input type="text" id="iprofissao" name="profissao" placeholder="loremIpsumador">
+                        </div>
+                    </div>
+                    <div class="flex">
+                        <div class="input" id="formacao">
+                            <p><label for="iformacao">Formação acadêmica</label></p>
+                            <input type="text" id="iformacao" name="formacao" placeholder="loremIpsum">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="caixa">
+                <div class="parte-colorido">
+                    <div class="frase">
+                        <span class="material-symbols-outlined">key</span>
+                        <p>Defina uma Senha</p>
+                    </div>
+                </div>
+                <div class="forms">
+                    <div class="input" id="senhaAtual">
+                        <p><label for="isenha">Senha Atual</label></p>
+                        <input type="password" name="senha" id="isenha">
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <a href="#">
+                    <span class="material-symbols-outlined">save</span>
+                    <p>Salvar</p>
+                </a>
+            </footer>
+        </section>
+    </main>
+</body>
+</html>

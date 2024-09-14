@@ -32,7 +32,6 @@ body, html{
 }
 
 main{
-    margin-top: 20px;
     height: fit-content;
     width: 100%;
     display: flex;
@@ -40,8 +39,8 @@ main{
 
 section.cor{
     width: 5%;
-    background-color: red;
-    border-radius: 10px 10px 10px 10px;
+    background-color: #6b1bc6;
+    border-radius: 10px 0px 0px 10px;
     height: auto;
     align-self: stretch;
 }
@@ -100,6 +99,10 @@ div.cont-botao{
     margin: auto;
 }
 
+div.header{
+    position: relative;
+}
+
 div.header > h1{
     padding-top: 20px;
     padding-left: 20px;
@@ -107,15 +110,14 @@ div.header > h1{
     margin-bottom: 20px;
 }
 
-div.header > p{
-    display: inline-block;
+div.header > span{
+    position: absolute;
     background-color: rgba(128, 128, 128, 0.33);
     border-radius: 10px;
-    margin-left: 660px;
-}
-
-div.header > p > span{
-    padding-top: 3px;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
 }
 
 div.conf-img{
@@ -310,7 +312,7 @@ div.input > input::placeholder{
 }
 
 div#nome > input{
-    width: 330px;
+    width: 300px;
 }
 
 div#idade > input{
@@ -331,19 +333,19 @@ div#estadocivil > input{
 }
 
 div#datanascimento > input{
-    width: 300px;
+    width: 250px;
 }
 
 div#endereco > input{
-    width: 400px;
+    width: 300px;
 }
 
 div#profissao > input{
-    width: 450px;
+    width: 400px;
 }
 
 div#formacao > input{
-    width: 470px;
+    width: 450px;
 }
 
 footer{

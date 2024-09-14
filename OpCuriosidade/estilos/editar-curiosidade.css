@@ -321,7 +321,7 @@ div#idade > input{
 }
 
 div#email > input{
-    width: 300px;
+    width: 315px;
 }
 
 div#nusuario > input{
@@ -329,7 +329,7 @@ div#nusuario > input{
 }
 
 div#estadocivil > input{
-    width: 200px;
+    width: 210px;
 }
 
 div#datanascimento > input{
@@ -341,11 +341,11 @@ div#endereco > input{
 }
 
 div#profissao > input{
-    width: 400px;
+    width: 380px;
 }
 
 div#formacao > input{
-    width: 450px;
+    width: 700px;
 }
 
 footer{
