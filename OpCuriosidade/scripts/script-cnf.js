@@ -118,7 +118,7 @@ function selecionaPagina(){
     }else if(selectedDiv === gu){
         ifr.src = "gerir-usuario.html";
     } else if(selectedDiv === ta){
-        ifr.src = "perfis-cc.html";
+        ifr.src = "trilha.html";
     }
 }
 
