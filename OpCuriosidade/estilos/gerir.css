@@ -257,9 +257,10 @@ div.dados > p.status{
     border: 2px solid rgb(68, 174, 68);
     border-radius: 20px;
     margin-right: 110px;
+    cursor: pointer;
 }
 
-div.dados > p.status#inativo{
+div.dados > p.status#inativo1, div.dados > p.status#inativo2{
     color: red;
     background-color: rgba(255, 0, 0, 0.232);
     border: 2px solid red;

@@ -42,3 +42,34 @@ btn5.addEventListener('click', function() {
 btn6.addEventListener('click', function() {
     window.parent.postMessage('openMCModalzinhoG6', '*');
 });
+
+var btnAtivo1 = document.getElementById('ativo1');
+var btnAtivo2 = document.getElementById('ativo2');
+var btnAtivo3 = document.getElementById('ativo3');
+var btnAtivo4 = document.getElementById('ativo4');
+var btnInativo1 = document.getElementById('inativo1');
+var btnInativo2 = document.getElementById('inativo2');
+
+btnAtivo1.addEventListener('click', function() {
+    window.parent.postMessage('openMCModalzinhoAtivo', '*');
+});
+
+btnAtivo2.addEventListener('click', function() {
+    window.parent.postMessage('openMCModalzinhoAtivo', '*');
+});
+
+btnAtivo3.addEventListener('click', function() {
+    window.parent.postMessage('openMCModalzinhoAtivo', '*');
+});
+
+btnAtivo4.addEventListener('click', function() {    
+    window.parent.postMessage('openMCModalzinhoAtivo', '*');
+});
+
+btnInativo1.addEventListener('click', function() {   
+    window.parent.postMessage('openMCModalzinhoInativo', '*');
+});
+
+btnInativo2.addEventListener('click', function() {   
+    window.parent.postMessage('openMCModalzinhoInativo', '*');
+});

@@ -215,6 +215,10 @@ window.addEventListener('message', function(event) {
         document.getElementsByClassName('modalzinho6-g')[0].style.display = 'block';
     }else if(event.data === 'CloseModalEditarUsuario'){
         document.getElementsByClassName('editar-usuario')[0].style.display = 'none';
+    }else if(event.data === 'openMCModalzinhoAtivo'){
+        document.getElementsByClassName('modal-ativar')[0].style.display = 'block';
+    }else if(event.data === 'openMCModalzinhoInativo'){
+        document.getElementsByClassName('modal-desativar')[0].style.display = 'block';
     }
 });
 
@@ -544,4 +548,41 @@ var closeDesativar = document.getElementById('cancel-close2');
 
 closeDesativar.addEventListener('click', function(){
     document.getElementsByClassName('modal-desativar')[0].style.display = 'none';
+});
+
+var gc1 = document.getElementById('g-c1');
+var gc2 = document.getElementById('g-c2');
+var gc3 = document.getElementById('g-c3');
+var gc4 = document.getElementById('g-c4');
+var gc5 = document.getElementById('g-c5');
+var gc6 = document.getElementById('g-c6');
+
+gc1.addEventListener('click', function() {
+    document.getElementsByClassName('modalzinho1-g')[0].style.display = 'none';
+    document.getElementsByClassName('modal')[0].style.display = 'flex';
+});
+
+gc2.addEventListener('click', function() {
+    document.getElementsByClassName('modalzinho2-g')[0].style.display = 'none';
+    document.getElementsByClassName('modal')[0].style.display = 'flex';
+});
+
+gc3.addEventListener('click', function() {
+    document.getElementsByClassName('modalzinho3-g')[0].style.display = 'none';
+    document.getElementsByClassName('modal')[0].style.display = 'flex';
+});
+
+gc4.addEventListener('click', function() {
+    document.getElementsByClassName('modalzinho4-g')[0].style.display = 'none';
+    document.getElementsByClassName('modal')[0].style.display = 'flex';
+});
+
+gc5.addEventListener('click', function() {
+    document.getElementsByClassName('modalzinho5-g')[0].style.display = 'none';
+    document.getElementsByClassName('modal')[0].style.display = 'flex';
+});
+
+gc6.addEventListener('click', function() {
+    document.getElementsByClassName('modalzinho6-g')[0].style.display = 'none';
+    document.getElementsByClassName('modal')[0].style.display = 'flex';
 });
