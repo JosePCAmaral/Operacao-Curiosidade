@@ -207,9 +207,9 @@ div.dados > p.status{
 }
 
 div.dados > p.status#inativo{
-    color: rgb(186, 6, 6);
+    color: red;
     background-color: rgba(255, 0, 0, 0.232);
-    border: 2px solid rgb(110, 10, 10);
+    border: 2px solid red;
     width: 60px;
 }
 

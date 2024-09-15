@@ -213,6 +213,8 @@ window.addEventListener('message', function(event) {
         document.getElementsByClassName('modalzinho5-g')[0].style.display = 'block';
     }else if(event.data === 'openMCModalzinhoG6'){
         document.getElementsByClassName('modalzinho6-g')[0].style.display = 'block';
+    }else if(event.data === 'CloseModalEditarUsuario'){
+        document.getElementsByClassName('editar-usuario')[0].style.display = 'none';
     }
 });
 
@@ -465,32 +467,81 @@ var ge4 = document.getElementById('g-e4');
 var ge5 = document.getElementById('g-e5');
 var ge6 = document.getElementById('g-e6');
 
-mce1.addEventListener('click', function() {
+ge1.addEventListener('click', function() {
     document.getElementsByClassName('modalzinho1-g')[0].style.display = 'none';
-    document.getElementsByClassName('modal-editar')[0].style.display = 'block';
+    document.getElementsByClassName('editar-usuario')[0].style.display = 'block';
 });
 
 ge2.addEventListener('click', function() {
     document.getElementsByClassName('modalzinho2-g')[0].style.display = 'none';
-    document.getElementsByClassName('modal-editar')[0].style.display = 'block';
+    document.getElementsByClassName('editar-usuario')[0].style.display = 'block';
 });
 
 ge3.addEventListener('click', function() {
     document.getElementsByClassName('modalzinho3-g')[0].style.display = 'none';
-    document.getElementsByClassName('modal-editar')[0].style.display = 'block';
+    document.getElementsByClassName('editar-usuario')[0].style.display = 'block';
 });
 
 ge4.addEventListener('click', function() {
     document.getElementsByClassName('modalzinho4-g')[0].style.display = 'none';
-    document.getElementsByClassName('modal-editar')[0].style.display = 'block';
+    document.getElementsByClassName('editar-usuario')[0].style.display = 'block';
 });
 
 ge5.addEventListener('click', function() {
     document.getElementsByClassName('modalzinho5-g')[0].style.display = 'none';
-    document.getElementsByClassName('modal-editar')[0].style.display = 'block';
+    document.getElementsByClassName('editar-usuario')[0].style.display = 'block';
 });
 
 ge6.addEventListener('click', function() {
     document.getElementsByClassName('modalzinho6-g')[0].style.display = 'none';
-    document.getElementsByClassName('modal-editar')[0].style.display = 'block';
+    document.getElementsByClassName('editar-usuario')[0].style.display = 'block';
+});
+
+var gin1 = document.getElementById('g-in1');
+var gin2 = document.getElementById('g-in2');
+var gin3 = document.getElementById('g-in3');
+var gin4 = document.getElementById('g-in4');
+var gin5 = document.getElementById('g-in5');
+var gin6 = document.getElementById('g-in6');
+
+gin1.addEventListener('click', function() {
+    document.getElementsByClassName('modalzinho1-g')[0].style.display = 'none';
+    document.getElementsByClassName('modal-ativar')[0].style.display = 'block';
+});
+
+gin2.addEventListener('click', function() {
+    document.getElementsByClassName('modalzinho2-g')[0].style.display = 'none';
+    document.getElementsByClassName('modal-desativar')[0].style.display = 'block';
+});
+
+gin3.addEventListener('click', function() {
+    document.getElementsByClassName('modalzinho3-g')[0].style.display = 'none';
+    document.getElementsByClassName('modal-desativar')[0].style.display = 'block';
+});
+
+gin4.addEventListener('click', function() {
+    document.getElementsByClassName('modalzinho4-g')[0].style.display = 'none';
+    document.getElementsByClassName('modal-ativar')[0].style.display = 'block';
+});
+
+gin5.addEventListener('click', function() {
+    document.getElementsByClassName('modalzinho5-g')[0].style.display = 'none';
+    document.getElementsByClassName('modal-desativar')[0].style.display = 'block';
+});
+
+gin6.addEventListener('click', function() {
+    document.getElementsByClassName('modalzinho6-g')[0].style.display = 'none';
+    document.getElementsByClassName('modal-desativar')[0].style.display = 'block';
+});
+
+var closeAtivar = document.getElementById('cancel-close');
+
+closeAtivar.addEventListener('click', function(){
+    document.getElementsByClassName('modal-ativar')[0].style.display = 'none';
+});
+
+var closeDesativar = document.getElementById('cancel-close2');
+
+closeDesativar.addEventListener('click', function(){
+    document.getElementsByClassName('modal-desativar')[0].style.display = 'none';
 });

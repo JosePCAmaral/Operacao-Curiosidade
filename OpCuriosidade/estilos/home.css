@@ -1090,6 +1090,12 @@ div.mc-Excluir{
     border: 2px solid red;
 }
 
+div.mc-Excluir#g-in1, div.mc-Excluir#g-in4{
+    color: green;
+    background-color: rgba(0, 128, 0, 0.401);
+    border: 2px solid green;
+}
+
 div.mc-Excluir > span{
     margin-left: 35px;
 }
@@ -1264,4 +1270,219 @@ div.modalzinho6-g > div.comporta{
     top: 80%;
     left: 80%;
     transform: translate(-50%, -50%);
+}
+
+div.editar-usuario{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+div.cont-editar-usuario{
+    background-color: #fff;
+    border-radius: 10px;
+    width: 900px;
+    height: 90%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+div.cont-editar-usuario > iframe{
+    border-radius: 10px;
+}
+
+
+div.modal-ativar{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+div.cont-modal-ativar{
+    background-color: #fff;
+    border-radius: 10px;
+    width: 500px;
+    height: 25%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+div.cont-modal-ativar > div.cor{
+    width: 5%;
+    height: 100%;
+    background-color: #6b1bc6;
+    border-radius: 10px 0px 0px 10px;
+}
+
+div.cont-modal-ativar > div.corpo{
+    width: 95%;
+    height: 100%;
+}
+
+div.cont-modal-ativar > div.corpo > hr{
+    width: 100%;
+}
+
+div.cont-modal-ativar > div.corpo > h1{
+    font-size: 1.2em;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div.cont-modal-ativar > div.corpo > p{
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+div.cont-modal-ativar > div.corpo > p > span{
+    color: #6b1bc6;
+    font-weight: bold;
+}
+div.cont-modal-ativar > div.corpo > div.botoesAI{
+    display: flex;
+    margin-top: 20px;
+    float: right;
+    margin-right: 20px;
+}
+
+div.cancel{
+    margin-right: 10px;
+    background-color: #6b1bc6;
+    color: white;
+    border-radius: 10px;
+    width: 100px;
+    height: 35px;
+    padding-top: 4px;
+    padding-left: 20px;
+    cursor: pointer;
+}
+
+div.cancel:hover{
+    background-color: #7f42c4;
+}
+
+div.Ativar{
+    display: flex;
+    background-color: rgba(0, 128, 0, 0.419);
+    color: green;
+    border: 2px solid green;
+    border-radius: 10px;
+    width: 100px;
+    height: 35px;
+    padding-top: 3px;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+div.Ativar:hover{
+    background-color: rgba(0, 128, 0, 0.719);
+}
+
+div.Ativar > span{
+    margin-left: 10px;
+}
+
+div.modal-desativar{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+div.cont-modal-desativar{
+    background-color: #fff;
+    border-radius: 10px;
+    width: 500px;
+    height: 28%;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+}
+
+div.cont-modal-desativar > div.cor{
+    width: 5%;
+    height: 100%;
+    background-color: #6b1bc6;
+    border-radius: 10px 0px 0px 10px;
+}
+
+div.cont-modal-desativar > div.corpo{
+    width: 95%;
+    height: 100%;
+}
+
+div.cont-modal-desativar > div.corpo > hr{
+    width: 100%;
+}
+
+div.cont-modal-desativar > div.corpo > h1{
+    font-size: 1.2em;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div.cont-modal-desativar > div.corpo > p{
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+div.cont-modal-desativar > div.corpo > p > span{
+    color: #6b1bc6;
+    font-weight: bold;
+}
+div.cont-modal-desativar > div.corpo > div.botoesAI{
+    display: flex;
+    margin-top: 20px;
+    float: right;
+    margin-right: 20px;
+}
+
+div.desativar{
+    display: flex;
+    background-color: rgba(255, 0, 0, 0.422);
+    color: red;
+    border: 2px solid red;
+    border-radius: 10px;
+    width: 100px;
+    height: 35px;
+    padding-top: 3px;
+    padding-left: 6px;
+    cursor: pointer;
+}
+
+div.desativar:hover{
+    background-color: rgba(255, 0, 0, 0.719);
+}
+
+div.desativar > span{
+    margin-left: 10px;
 }
