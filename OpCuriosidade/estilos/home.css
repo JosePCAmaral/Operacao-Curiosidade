@@ -39,7 +39,7 @@ main{
 }
 
 section.menu{
-    background-color: #ffffff;
+    background-color: white;
     height: 100%;
     width: 18.5%;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.334);
