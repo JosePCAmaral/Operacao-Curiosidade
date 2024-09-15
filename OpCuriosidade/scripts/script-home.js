@@ -201,6 +201,18 @@ window.addEventListener('message', function(event) {
         document.getElementsByClassName('cadastrar-usuario')[0].style.display = 'none';
     }else if(event.data === 'OpenModalCadastrarUsuario'){
         document.getElementsByClassName('cadastrar-usuario')[0].style.display = 'block';
+    }else if(event.data === 'openMCModalzinhoG1'){
+        document.getElementsByClassName('modalzinho1-g')[0].style.display = 'block';
+    }else if(event.data === 'openMCModalzinhoG2'){
+        document.getElementsByClassName('modalzinho2-g')[0].style.display = 'block';
+    }else if(event.data === 'openMCModalzinhoG3'){
+        document.getElementsByClassName('modalzinho3-g')[0].style.display = 'block';
+    }else if(event.data === 'openMCModalzinhoG4'){
+        document.getElementsByClassName('modalzinho4-g')[0].style.display = 'block';
+    }else if(event.data === 'openMCModalzinhoG5'){
+        document.getElementsByClassName('modalzinho5-g')[0].style.display = 'block';
+    }else if(event.data === 'openMCModalzinhoG6'){
+        document.getElementsByClassName('modalzinho6-g')[0].style.display = 'block';
     }
 });
 
@@ -443,4 +455,42 @@ var conf = document.getElementById('Configurações');
 conf.addEventListener('click', function(){
     co.style.display = 'block';
     configuracoes();
+});
+
+
+var ge1 = document.getElementById('g-e1');
+var ge2 = document.getElementById('g-e2');
+var ge3 = document.getElementById('g-e3');
+var ge4 = document.getElementById('g-e4');
+var ge5 = document.getElementById('g-e5');
+var ge6 = document.getElementById('g-e6');
+
+mce1.addEventListener('click', function() {
+    document.getElementsByClassName('modalzinho1-g')[0].style.display = 'none';
+    document.getElementsByClassName('modal-editar')[0].style.display = 'block';
+});
+
+ge2.addEventListener('click', function() {
+    document.getElementsByClassName('modalzinho2-g')[0].style.display = 'none';
+    document.getElementsByClassName('modal-editar')[0].style.display = 'block';
+});
+
+ge3.addEventListener('click', function() {
+    document.getElementsByClassName('modalzinho3-g')[0].style.display = 'none';
+    document.getElementsByClassName('modal-editar')[0].style.display = 'block';
+});
+
+ge4.addEventListener('click', function() {
+    document.getElementsByClassName('modalzinho4-g')[0].style.display = 'none';
+    document.getElementsByClassName('modal-editar')[0].style.display = 'block';
+});
+
+ge5.addEventListener('click', function() {
+    document.getElementsByClassName('modalzinho5-g')[0].style.display = 'none';
+    document.getElementsByClassName('modal-editar')[0].style.display = 'block';
+});
+
+ge6.addEventListener('click', function() {
+    document.getElementsByClassName('modalzinho6-g')[0].style.display = 'none';
+    document.getElementsByClassName('modal-editar')[0].style.display = 'block';
 });

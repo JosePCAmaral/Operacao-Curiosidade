@@ -1077,8 +1077,8 @@ div.mc-Compartilhar{
 
 div.mc-Excluir{
     display: flex;
-    background-color: red;
-    color: white;
+    background-color: rgba(255, 0, 0, 0.229);
+    color: red;
     border-radius: 10px;
     width: 130px;
     height: 35px;
@@ -1087,10 +1087,11 @@ div.mc-Excluir{
     margin-top: 5px;
     padding-top: 5px;
     padding-left: 10px;
+    border: 2px solid red;
 }
 
 div.mc-Excluir > span{
-    margin-left: 45px;
+    margin-left: 35px;
 }
 
 div.cadastrar-usuario{
@@ -1121,3 +1122,146 @@ div.cont-casdastro-usuario > iframe{
     border-radius: 10px;
 }
 
+div.modalzinho1-g{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+div.modalzinho1-g > div.comporta{
+    background-color: #fff;
+    border-radius: 10px;
+    width: 140px;
+    height: 130px;
+    position: absolute;
+    top: 45%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+div.modalzinho2-g{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+div.modalzinho2-g > div.comporta{
+    background-color: #fff;
+    border-radius: 10px;
+    width: 140px;
+    height: 130px;
+    position: absolute;
+    top: 52%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+div.modalzinho3-g{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+div.modalzinho3-g > div.comporta{
+    background-color: #fff;
+    border-radius: 10px;
+    width: 140px;
+    height: 130px;
+    position: absolute;
+    top: 59%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+div.modalzinho4-g{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+div.modalzinho4-g > div.comporta{
+    background-color: #fff;
+    border-radius: 10px;
+    width: 140px;
+    height: 130px;
+    position: absolute;
+    top: 66%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+div.modalzinho5-g{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+div.modalzinho5-g > div.comporta{
+    background-color: #fff;
+    border-radius: 10px;
+    width: 140px;
+    height: 130px;
+    position: absolute;
+    top: 73%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+div.modalzinho6-g{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+div.modalzinho6-g > div.comporta{
+    background-color: #fff;
+    border-radius: 10px;
+    width: 140px;
+    height: 130px;
+    position: absolute;
+    top: 80%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
