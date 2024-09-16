@@ -1,6 +1,4 @@
-document.getElementById('toggleBt').addEventListener('click', function() {
-    this.classList.toggle('active');
-});
+
 
 var vg = document.getElementById('vg');
 var cc = document.getElementById('cc');
@@ -457,6 +455,12 @@ mcex6.addEventListener('click', function() {
 });
 
 var conf = document.getElementById('Configurações');
+var perf = document.getElementById('perfil');
+
+perf.addEventListener('click', function(){
+    co.style.display = 'block';
+    configuracoes();
+});
 
 conf.addEventListener('click', function(){
     co.style.display = 'block';

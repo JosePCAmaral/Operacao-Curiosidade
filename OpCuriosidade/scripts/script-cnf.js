@@ -1,5 +1,4 @@
 var mp = document.getElementById('mp');
-var oc = document.getElementById('oc');
 var gu = document.getElementById('gu');
 var ta = document.getElementById('ta');
 var ifr = document.getElementById('iframe');
@@ -18,17 +17,6 @@ function MeuPerf(){
         selecionaPagina();
         difr.style.width = '70%';
         alt.style.display = 'block';
-    }
-}
-
-function OpCompart(){
-    if (selectedDiv !== oc) {
-        resetStyles();
-        selectedDiv = oc;
-        oc.style.backgroundColor = 'rgba(143, 143, 254, 0.432)';
-        selecionaPagina();
-        difr.style.width = '100%';
-        alt.style.display = 'none';
     }
 }
 
@@ -57,7 +45,6 @@ function TriAudi(){
 
 function resetStyles() {
     mp.style.backgroundColor = 'white';
-    oc.style.backgroundColor = 'white';
     gu.style.backgroundColor = 'white';
     ta.style.backgroundColor = 'white';
 }
@@ -71,18 +58,6 @@ mp.onmouseover = function() {
 mp.onmouseout = function() {
     if (selectedDiv !== mp) {
         mp.style.backgroundColor = 'white';
-    }
-};
-
-oc.onmouseover = function() {
-    if (selectedDiv !== oc) {
-        oc.style.backgroundColor = 'rgba(143, 143, 254, 0.432)';
-    }
-};
-
-oc.onmouseout = function() {
-    if (selectedDiv !== oc) {
-        oc.style.backgroundColor = 'white';
     }
 };
 
@@ -113,8 +88,6 @@ ta.onmouseout = function() {
 function selecionaPagina(){
     if(selectedDiv === mp){
         ifr.src = "meu-pefil.html";
-    }else if(selectedDiv === oc){
-        ifr.src = "perfis-cm.html";
     }else if(selectedDiv === gu){
         ifr.src = "gerir-usuario.html";
     } else if(selectedDiv === ta){
