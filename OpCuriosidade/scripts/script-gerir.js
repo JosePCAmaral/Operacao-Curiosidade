@@ -51,25 +51,25 @@ var btnInativo1 = document.getElementById('inativo1');
 var btnInativo2 = document.getElementById('inativo2');
 
 btnAtivo1.addEventListener('click', function() {
-    window.parent.postMessage('openMCModalzinhoAtivo', '*');
+    window.parent.postMessage('openMCModalzinhoInativo', '*');
 });
 
 btnAtivo2.addEventListener('click', function() {
-    window.parent.postMessage('openMCModalzinhoAtivo', '*');
+    window.parent.postMessage('openMCModalzinhoInativo', '*');
 });
 
 btnAtivo3.addEventListener('click', function() {
-    window.parent.postMessage('openMCModalzinhoAtivo', '*');
+    window.parent.postMessage('openMCModalzinhoInativo', '*');
 });
 
 btnAtivo4.addEventListener('click', function() {    
-    window.parent.postMessage('openMCModalzinhoAtivo', '*');
+    window.parent.postMessage('openMCModalzinhoInativo', '*');
 });
 
 btnInativo1.addEventListener('click', function() {   
-    window.parent.postMessage('openMCModalzinhoInativo', '*');
+    window.parent.postMessage('openMCModalzinhoAtivo', '*');
 });
 
 btnInativo2.addEventListener('click', function() {   
-    window.parent.postMessage('openMCModalzinhoInativo', '*');
+    window.parent.postMessage('openMCModalzinhoAtivo', '*');
 });
