@@ -51,6 +51,7 @@ section.menu > div.opc > img{
     width: 100%;
     background-color: #6b1bc6;
     border-radius: 0px 10px 10px 0px;
+    object-fit: cover;
 }
 
 hr{
@@ -408,6 +409,10 @@ div.opcao-v-e > div.visualizar > p{
     padding-left: 10px;
 }
 
+div.opcao-v-e > div.visualizar > p > span{
+    padding-left: 5px;
+}
+
 
 div.opcao-v-e > div.editar{
     display: none;
@@ -426,6 +431,10 @@ div.opcao-v-e > div.editar{
 
 div.opcao-v-e > div.editar > p{
     padding-left: 25px;
+}
+
+div.opcao-v-e > div.editar > p > span{
+    padding-left: 12px;
 }
 
 .modalzinho1{
