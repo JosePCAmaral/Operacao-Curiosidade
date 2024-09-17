@@ -87,11 +87,11 @@ ta.onmouseout = function() {
 
 function selecionaPagina(){
     if(selectedDiv === mp){
-        ifr.src = "meu-pefil.html";
+        ifr.src = "../My-Profile/meu-pefil.html";
     }else if(selectedDiv === gu){
-        ifr.src = "gerir-usuario.html";
+        ifr.src = "../Manage-User/gerir-usuario.html";
     } else if(selectedDiv === ta){
-        ifr.src = "trilha.html";
+        ifr.src = "../Trail/trilha.html";
     }
 }
 

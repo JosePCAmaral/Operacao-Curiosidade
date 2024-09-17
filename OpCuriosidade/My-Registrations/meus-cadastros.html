@@ -1,18 +1,14 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>relatorio</title>
-    <link rel="stylesheet" href="estilos/relatorio.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <title>Meus Cadastros</title>
+    <link rel="stylesheet" href="meus-cadastros.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
 </head>
 <body>
     <header class="filtro">
-        <div class="voltar" id="voltar">
-            <span class="material-symbols-outlined">refresh</span>
-            <p>Voltar para a listagem de relatórios</p>
-        </div>
         <div class="form">
             <div class="selects">
                 <div>
@@ -22,10 +18,10 @@
                     </select>
                 </div>
                 <div>
-                    <p><label for="itipo">Tipo</label></p>
-                    <select name="tipo" id="itipo">
-                        <option value="1" id="ativo">Administrador</option>
-                        <option value="2" id="inativo">Operador</option>
+                    <p><label for="istatus">Status</label></p>
+                    <select name="status" id="istatus">
+                        <option value="1" id="ativo">Ativo</option>
+                        <option value="2" id="inativo">Inativo</option>
                     </select>
                 </div>
                 <div>
@@ -44,7 +40,6 @@
             <div class="buttons">
                 <input type="button" value="Limpar" id="limpar">
                 <input type="button" value="Filtrar" id="filtrar">
-                <input type="button" value="Imprimir" id="Imprimir">
             </div>
         </div>
     </header>
@@ -54,7 +49,7 @@
             <div id="nome"><p> Nome<span class="material-symbols-outlined">swap_vert</span></p></div>
             <div id="email"><p>E-mail<span class="material-symbols-outlined">swap_vert</span></p></div>
             <div id="data"><p>Data de criação<span class="material-symbols-outlined">swap_vert</span></p></div>
-            <div id="tipo"><p>Tipo<span class="material-symbols-outlined">swap_vert</span></p></div>
+            <div id="status"><p>Status<span class="material-symbols-outlined">swap_vert</span></p></div>
         </div>
         <div class="cadastros">
             <div class="dados">
@@ -62,42 +57,48 @@
                 <p class="nome">Rosangela Maria Pereira</p>
                 <p class="email">rosangela.pereira@fakemail.br</p>
                 <p class="data">04/09/2024</p>
-                <p class="tipo">Operador</p>
+                <p class="status">Ativo</p>
+                <p class="botao" id="btn1"><span class="material-symbols-outlined">more_vert</span>Detalhes</p>
             </div>
             <div class="dados">
                 <p class="codigo">24-00017</p>
                 <p class="nome">Lisa Kin Almeida</p>
                 <p class="email">lisa.almeida@fakemail.br</p>
-                <p class="data" id="administro">04/09/2024</p>
-                <p class="tipo" id="inativo">Administrador</p>
+                <p class="data">04/09/2024</p>
+                <p class="status" id="inativo">Inativo</p>
+                <p class="botaoInativo"  id="btn2"><span class="material-symbols-outlined">more_vert</span>Detalhes</p>
             </div>
             <div class="dados">
                 <p class="codigo">24-00018</p>
                 <p class="nome">Paulo Rosa de Oliveira</p>
                 <p class="email">paulo.oliveira@fakemail.br</p>
-                <p class="data" id="administro">04/09/2024</p>
-                <p class="tipo" id="inativo">Administrador</p>
+                <p class="data">04/09/2024</p>
+                <p class="status" id="inativo">Inativo</p>
+                <p class="botaoInativo"  id="btn3"><span class="material-symbols-outlined">more_vert</span>Detalhes</p>
             </div>
             <div class="dados">
                 <p class="codigo">24-00019</p>
                 <p class="nome">Rogério da Silva</p>
                 <p class="email">rogerio.silva@fakemail.br</p>
                 <p class="data">04/09/2024</p>
-                <p class="tipo">Operador</p>
+                <p class="status">Ativo</p>
+                <p class="botao" id="btn4"><span class="material-symbols-outlined">more_vert</span>Detalhes</p>
             </div>
             <div class="dados">
                 <p class="codigo">24-00020</p>
                 <p class="nome">Fernando de Paula Silva</p>
                 <p class="email">fernando.silva@fakemail.br</p>
                 <p class="data">04/09/2024</p>
-                <p class="tipo">Operador</p>
+                <p class="status">Ativo</p>
+                <p class="botao" id="btn5"><span class="material-symbols-outlined">more_vert</span>Detalhes</p>
             </div>
             <div class="dados">
                 <p class="codigo">24-83564</p>
                 <p class="nome">Eduardo Junior</p>
                 <p class="email">eduardo.junior@fakemail.br</p>
                 <p class="data">05/04/2024</p>
-                <p class="tipo">Operador</p>
+                <p class="status">Ativo</p>
+                <p class="botao" id="btn6"><span class="material-symbols-outlined">more_vert</span>Detalhes</p>
             </div>
         </div>
     </main>
@@ -113,7 +114,7 @@
             <p class="last"><span class="material-symbols-outlined">last_page</span></p>
         </div>
     </footer>
-    <img src="imagens/Sem título.png" alt="">
-    <script src="scripts/script-relatorio.js"></script>
+    <img src="../imagens/Sem título.png" alt="">
+    <script src="script-mc.js"></script>
 </body>
 </html>

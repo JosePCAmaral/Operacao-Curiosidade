@@ -78,11 +78,11 @@ cc.onmouseout = function() {
 
 function selecionaPagina(){
     if(selectedDiv === uc){
-        ifr.src = "perfis-ult.html";
+        ifr.src = "../Last-Shared/perfis-ult.html";
     }else if(selectedDiv === cm){
-        ifr.src = "perfis-cm.html";
+        ifr.src = "../Shared-By-Me/perfis-cm.html";
     }else if(selectedDiv === cc){
-        ifr.src = "perfis-cc.html";
+        ifr.src = "../Shared-With-Me/perfis-cc.html";
     }
 }
 

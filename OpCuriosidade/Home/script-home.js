@@ -156,15 +156,15 @@ co.onmouseout = function() {
 
 function selecionaPagina(){
     if(selectedDiv === vg){
-        ifr.src = "perfis.html";
+        ifr.src = "../Overview/perfis.html";
     }else if(selectedDiv === cc){
-        ifr.src = "cadastrar-curiosidade.html";
+        ifr.src = "../Operation-Registration/cadastrar-curiosidade.html";
     }else if(selectedDiv === mc){
-        ifr.src = "meus-cadastros.html";
+        ifr.src = "../My-Registrations/meus-cadastros.html";
     }else if(selectedDiv === re){
-        ifr.src = "relatorios.html";
+        ifr.src = "../Reports/relatorios.html";
     }else if(selectedDiv === co){
-        ifr.src = "configuracoes.html";
+        ifr.src = "../Settings/configuracoes.html";
     }
 }
 
