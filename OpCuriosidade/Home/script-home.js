@@ -192,9 +192,9 @@ window.addEventListener('message', function(event) {
     }else if(event.data === 'openMCModalzinho6'){
         document.getElementsByClassName('modalzinho6-mc')[0].style.display = 'block';
     }else if(event.data === 'abrirRelatorio'){
-        ifr.src = "relatorio.html"
+        ifr.src = "../Report/relatorio.html"
     }else if(event.data === 'abrirRelatorios'){
-        ifr.src = "relatorios.html"
+        ifr.src = "../Reports/relatorios.html"
     }else if(event.data === 'CloseModalCadastrarUsuario'){
         document.getElementsByClassName('cadastrar-usuario')[0].style.display = 'none';
     }else if(event.data === 'OpenModalCadastrarUsuario'){
