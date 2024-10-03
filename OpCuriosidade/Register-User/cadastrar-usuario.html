@@ -45,46 +45,46 @@
                 <div class="forms">
                     <div class="flex">
                         <div class="input" id="nome">
-                            <p><label for="inome">Nome</label></p>
-                            <input type="text" id="inome" name="nome" placeholder="Lorem Ipsum da Silva">
+                            <p><label for="iName">Nome</label></p>
+                            <input type="text" id="iName" name="Name" placeholder="Nome completo aqui" required>
                         </div>
                         <div class="input" id="idade">
-                            <p><label for="iidade">Idade</label></p>
-                            <input type="number" name="idade" id="iidade" placeholder="00">
+                            <p><label for="iAge">Idade</label></p>
+                            <input type="number" name="iAge" id="iAge" placeholder="00">
                         </div>
                         <div class="input" id="email">
-                            <p><label for="ie-mail">E-mail</label></p>
-                            <input type="email" name="e-mail" id="ie-mail" placeholder="lorem.ipsun@lorem.br">
+                            <p><label for="iEmail">E-mail</label></p>
+                            <input type="email" name="Email" id="iEmail" placeholder="Email válido" required>
                         </div>
                     </div>
                     <div class="flex">
                         <div class="input" id="nusuario">
-                            <p><label for="inome-usuário">Nome Usuário</label></p>
-                            <input type="text" id="inome-usuário" name="nome-usuário" placeholder="@lorem">
+                            <p><label for="iNameUser">Nome Usuário</label></p>
+                            <input type="text" id="iNameUser" name="NameUser" placeholder="@Apelido" required>
                         </div>
                         <div class="input" id="datanascimento">
-                            <p><label for="idata-nascimento">Data Nascimento</label></p>
-                            <input type="date" name="data-nascimento" id="idata-nascimento">
+                            <p><label for="iDateOfBirth">Data Nascimento</label></p>
+                            <input type="date" name="DateOfBirth" id="iDateOfBirth">
                         </div>
                         <div class="input" id="estadocivil">
-                            <p><label for="iestadocivil">Estado Civil</label></p>
-                            <input type="text" id="iestadocivil" name="estadocivil" placeholder="lorem">
+                            <p><label for="iMaritalStatus">Estado Civil</label></p>
+                            <input type="text" id="iMaritalStatus" name="MaritalStatus" placeholder="Solteiro" required>
                         </div>
                     </div>
                     <div class="flex">
                         <div class="input" id="endereco">
-                            <p><label for="iendereoo">Endereço</label></p>
-                            <input type="text" id="iendereco" name="endereco" placeholder="Rua lorem ipsum">
+                            <p><label for="iAddress">Endereço</label></p>
+                            <input type="text" id="iAddress" name="Address" placeholder="Rua - Numero - Bairro" required>
                         </div>
                         <div class="input" id="profissao">
-                            <p><label for="iprofissao">Ocupação/profissão</label></p>
-                            <input type="text" id="iprofissao" name="profissao" placeholder="loremIpsumador">
+                            <p><label for="iProfession">Ocupação/profissão</label></p>
+                            <input type="text" id="iProfession" name="Profession" placeholder="Seu trabalho" required>
                         </div>
                     </div>
                     <div class="flex">
                         <div class="input" id="formacao">
                             <p><label for="iformacao">Formação acadêmica</label></p>
-                            <input type="text" id="iformacao" name="formacao" placeholder="loremIpsum">
+                            <input type="text" id="iformacao" name="formacao" placeholder="Sua formação acadêmica" required>
                         </div>
                     </div>
                 </div>
@@ -99,11 +99,11 @@
                 <div class="forms">
                     <div class="flex" id="csenha">
                         <div class="input" id="senhaAtual">
-                            <p><label for="isenha">Senha Atual</label></p>
-                            <input type="password" name="senha" id="isenha">
+                            <p><label for="isenha">Senha</label></p>
+                            <input type="password" name="senha" id="isenha" placeholder="Crie uma Senha" required>
                         </div>
                         <label class="custom-checkbox">
-                            <input type="checkbox" checked>
+                            <input type="checkbox">
                             <span class="checkmark"></span>
                             Administrador
                         </label>
@@ -111,9 +111,9 @@
                 </div>
             </div>
             <footer>
-                <a href="#">
+                <a href="#" id="cadastrarUser">
                     <span class="material-symbols-outlined">save</span>
-                    <p>Salvar</p>
+                    <p>Cadastrar</p>
                 </a>
             </footer>
         </section>
