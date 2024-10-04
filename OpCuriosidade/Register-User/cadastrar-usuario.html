@@ -13,109 +13,111 @@
 
         </section>
         <section class="cadastrar">
-            <div class="main">
-                <div class="header">
-                        <h1>Cadastrar Usuário</h1>
-                        <span class="material-symbols-outlined" id="close-editar">close</span>
-                    <hr>
-                </div>
-                <div class="conf-img">
-                    <div class="person">
-                        <span class="material-symbols-outlined">person</span>
+            <form action="" id="userForm">
+                <div class="main">
+                    <div class="header">
+                            <h1>Cadastrar Usuário</h1>
+                            <span class="material-symbols-outlined" id="close-editar">close</span>
+                        <hr>
                     </div>
-                    <div class="opc-img">
-                        <div class="opc-atu">
-                            <span class="material-symbols-outlined">sync</span>
-                            <p>Atualizar a imagem</p>
+                    <div class="conf-img">
+                        <div class="person">
+                            <span class="material-symbols-outlined">person</span>
                         </div>
-                        <div class="opc-rem">
-                            <span class="material-symbols-outlined">delete</span>
-                            <p>Remover a imagem</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="caixa" id="primeira-caixa">
-                <div class="parte-colorido">
-                    <div class="frase">
-                        <span class="material-symbols-outlined">id_card</span>
-                        <p>Fatos e Dados</p>
-                    </div>
-                </div>
-                <div class="forms">
-                    <div class="flex">
-                        <div class="input" id="nome">
-                            <p><label for="iName">Nome</label></p>
-                            <input type="text" id="iName" name="Name" placeholder="Nome completo aqui" required>
-                        </div>
-                        <div class="input" id="idade">
-                            <p><label for="iAge">Idade</label></p>
-                            <input type="number" name="iAge" id="iAge" placeholder="00">
-                        </div>
-                        <div class="input" id="email">
-                            <p><label for="iEmail">E-mail</label></p>
-                            <input type="email" name="Email" id="iEmail" placeholder="Email válido" required>
-                        </div>
-                    </div>
-                    <div class="flex">
-                        <div class="input" id="nusuario">
-                            <p><label for="iNameUser">Nome Usuário</label></p>
-                            <input type="text" id="iNameUser" name="NameUser" placeholder="@Apelido" required>
-                        </div>
-                        <div class="input" id="datanascimento">
-                            <p><label for="iDateOfBirth">Data Nascimento</label></p>
-                            <input type="date" name="DateOfBirth" id="iDateOfBirth">
-                        </div>
-                        <div class="input" id="estadocivil">
-                            <p><label for="iMaritalStatus">Estado Civil</label></p>
-                            <input type="text" id="iMaritalStatus" name="MaritalStatus" placeholder="Solteiro" required>
-                        </div>
-                    </div>
-                    <div class="flex">
-                        <div class="input" id="endereco">
-                            <p><label for="iAddress">Endereço</label></p>
-                            <input type="text" id="iAddress" name="Address" placeholder="Rua - Numero - Bairro" required>
-                        </div>
-                        <div class="input" id="profissao">
-                            <p><label for="iProfession">Ocupação/profissão</label></p>
-                            <input type="text" id="iProfession" name="Profession" placeholder="Seu trabalho" required>
-                        </div>
-                    </div>
-                    <div class="flex">
-                        <div class="input" id="formacao">
-                            <p><label for="iformacao">Formação acadêmica</label></p>
-                            <input type="text" id="iformacao" name="formacao" placeholder="Sua formação acadêmica" required>
+                        <div class="opc-img">
+                            <div class="opc-atu">
+                                <span class="material-symbols-outlined">sync</span>
+                                <p>Atualizar a imagem</p>
+                            </div>
+                            <div class="opc-rem">
+                                <span class="material-symbols-outlined">delete</span>
+                                <p>Remover a imagem</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="caixa">
-                <div class="parte-colorido">
-                    <div class="frase">
-                        <span class="material-symbols-outlined">key</span>
-                        <p>Defina uma Senha</p>
-                    </div>
-                </div>
-                <div class="forms">
-                    <div class="flex" id="csenha">
-                        <div class="input" id="senhaAtual">
-                            <p><label for="isenha">Senha</label></p>
-                            <input type="password" name="senha" id="isenha" placeholder="Crie uma Senha" required>
+                <div class="caixa" id="primeira-caixa">
+                    <div class="parte-colorido">
+                        <div class="frase">
+                            <span class="material-symbols-outlined">id_card</span>
+                            <p>Fatos e Dados</p>
                         </div>
-                        <label class="custom-checkbox">
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                            Administrador
-                        </label>
+                    </div>
+                    <div class="forms">
+                        <div class="flex">
+                            <div class="input" id="nome">
+                                <p><label for="iName">Nome</label></p>
+                                <input type="text" id="iName" name="Name" placeholder="Nome completo aqui" required>
+                            </div>
+                            <div class="input" id="idade">
+                                <p><label for="iAge">Idade</label></p>
+                                <input type="number" name="iAge" id="iAge" placeholder="00">
+                            </div>
+                            <div class="input" id="email">
+                                <p><label for="iEmail">E-mail</label></p>
+                                <input type="email" name="Email" id="iEmail" placeholder="Email válido" required>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="input" id="nusuario">
+                                <p><label for="iNameUser">Nome Usuário</label></p>
+                                <input type="text" id="iNameUser" name="NameUser" placeholder="@Apelido" required>
+                            </div>
+                            <div class="input" id="datanascimento">
+                                <p><label for="iDateOfBirth">Data Nascimento</label></p>
+                                <input type="date" name="DateOfBirth" id="iDateOfBirth">
+                            </div>
+                            <div class="input" id="estadocivil">
+                                <p><label for="iMaritalStatus">Estado Civil</label></p>
+                                <input type="text" id="iMaritalStatus" name="MaritalStatus" placeholder="Solteiro" required>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="input" id="endereco">
+                                <p><label for="iAddress">Endereço</label></p>
+                                <input type="text" id="iAddress" name="Address" placeholder="Rua - Numero - Bairro" required>
+                            </div>
+                            <div class="input" id="profissao">
+                                <p><label for="iProfession">Ocupação/profissão</label></p>
+                                <input type="text" id="iProfession" name="Profession" placeholder="Seu trabalho" required>
+                            </div>
+                        </div>
+                        <div class="flex">
+                            <div class="input" id="formacao">
+                                <p><label for="iTraining">Formação acadêmica</label></p>
+                                <input type="text" id="iTraining" name="Training" placeholder="Sua formação acadêmica" required>
+                            </div>
+                            <div class="input" id="NumberPhone">
+                                <p><label for="iPhoneNumber">Numero de Telefone</label></p>
+                                <input type="text" id="iPhoneNumber" name="PhoneNumber" placeholder="xx xxxxx xxxx" required>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <footer>
-                <a href="#" id="cadastrarUser">
-                    <span class="material-symbols-outlined">save</span>
-                    <p>Cadastrar</p>
-                </a>
-            </footer>
+                <div class="caixa">
+                    <div class="parte-colorido">
+                        <div class="frase">
+                            <span class="material-symbols-outlined">key</span>
+                            <p>Defina uma Senha</p>
+                        </div>
+                    </div>
+                    <div class="forms">
+                        <div class="flex" id="csenha">
+                            <div class="input" id="senhaAtual">
+                                <p><label for="iPassword">Senha</label></p>
+                                <input type="password" name="senha" id="iPassword" placeholder="Crie uma Senha" required>
+                            </div>
+                            <div class="checkbox">
+                                <input type="checkbox" name="Type" id="iType">
+                                <label for="iType">Administrador</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <footer>
+                    <button type="submit"><span class="material-symbols-outlined">save</span>Cadastrar</button>
+                </footer>
+            </form>
         </section>
     </main>
     <script src="cadastrar-usuario.js"></script>
