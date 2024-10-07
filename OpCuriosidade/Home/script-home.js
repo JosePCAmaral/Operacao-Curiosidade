@@ -168,11 +168,14 @@ function selecionaPagina(){
     }
 }
 
-const btnclosemodal = document.getElementById('close')
-
 window.addEventListener('message', function(event) {
+    console.log('Mensagem recebida:', event.data);
     if (event.data === 'openCompartModal') {
-        document.querySelector('.modal').style.display = 'flex';
+        document.querySelector('.modal').style.display = 'block';
+        document.querySelector('.modal-comp').style.display = 'block';
+    }else if (event.data === 'closeModalCompartilhar') {
+        document.querySelector('.modal').style.display = 'none';
+        document.querySelector('.modal-comp').style.display = 'none';
     }else if (event.data === 'openExcluirModal') {
         document.getElementsByClassName('modal-excluir')[0].style.display = 'block';
     }else if(event.data === 'closeModalEditar'){
@@ -199,18 +202,8 @@ window.addEventListener('message', function(event) {
         document.getElementsByClassName('cadastrar-usuario')[0].style.display = 'none';
     }else if(event.data === 'OpenModalCadastrarUsuario'){
         document.getElementsByClassName('cadastrar-usuario')[0].style.display = 'block';
-    }else if(event.data === 'openMCModalzinhoG1'){
-        document.getElementsByClassName('modalzinho1-g')[0].style.display = 'block';
-    }else if(event.data === 'openMCModalzinhoG2'){
-        document.getElementsByClassName('modalzinho2-g')[0].style.display = 'block';
-    }else if(event.data === 'openMCModalzinhoG3'){
-        document.getElementsByClassName('modalzinho3-g')[0].style.display = 'block';
-    }else if(event.data === 'openMCModalzinhoG4'){
-        document.getElementsByClassName('modalzinho4-g')[0].style.display = 'block';
-    }else if(event.data === 'openMCModalzinhoG5'){
-        document.getElementsByClassName('modalzinho5-g')[0].style.display = 'block';
-    }else if(event.data === 'openMCModalzinhoG6'){
-        document.getElementsByClassName('modalzinho6-g')[0].style.display = 'block';
+    }else if(event.data === 'openAtivarInativarModal'){
+        document.getElementsByClassName('modalAtivarInativar')[0].style.display = 'block';
     }else if(event.data === 'CloseModalEditarUsuario'){
         document.getElementsByClassName('editar-usuario')[0].style.display = 'none';
     }else if(event.data === 'openMCModalzinhoAtivo'){
@@ -219,85 +212,6 @@ window.addEventListener('message', function(event) {
         document.getElementsByClassName('modal-desativar')[0].style.display = 'block';
     }
 });
-
-btnclosemodal.addEventListener('click', function() {
-    document.querySelector('.modal').style.display = 'none';
-});
-
-var v1 = document.getElementById('v1');
-var v2 = document.getElementById('v2');
-var v3 = document.getElementById('v3');
-
-var e1 = document.getElementById('e1');
-var e2 = document.getElementById('e2');
-var e3 = document.getElementById('e3');
-
-var abrirModalzinho1 = document.getElementsByClassName('modalzinho1')[0];
-var abrirModalzinho2 = document.getElementsByClassName('modalzinho2')[0];
-var abrirModalzinho3 = document.getElementsByClassName('modalzinho3')[0];
-
-v1.addEventListener('click', function() { abrirModal(abrirModalzinho1); });
-e1.addEventListener('click', function() { abrirModal(abrirModalzinho1); });
-
-v2.addEventListener('click', function() { abrirModal(abrirModalzinho2); });
-e2.addEventListener('click', function() { abrirModal(abrirModalzinho2); });
-
-v3.addEventListener('click', function() { abrirModal(abrirModalzinho3); });
-e3.addEventListener('click', function() { abrirModal(abrirModalzinho3); });
-
-function abrirModal(modal) {
-    if (modal.style.display === 'block') {
-        modal.style.display = 'none';
-    }else{
-        modal.style.display = 'block';
-    }
-}
-
-var V1 = document.getElementById('V1');
-var E1 = document.getElementById('E1');
-
-var V2 = document.getElementById('V2');
-var E2 = document.getElementById('E2');
-
-var V3 = document.getElementById('V3');
-var E3 = document.getElementById('E3');
-
-V1.addEventListener('click', function(){
-    v1.style.display = 'block';
-    e1.style.display = 'none';
-    abrirModal(abrirModalzinho1)
-});
-
-E1.addEventListener('click', function(){
-    v1.style.display = 'none';
-    e1.style.display = 'block';
-    abrirModal(abrirModalzinho1)
-});
-
-V2.addEventListener('click', function(){
-    v2.style.display = 'block';
-    e2.style.display = 'none';
-    abrirModal(abrirModalzinho2)
-});
-
-E2.addEventListener('click', function(){
-    v2.style.display = 'none';
-    e2.style.display = 'block';
-    abrirModal(abrirModalzinho2)
-});
-
-V3.addEventListener('click', function(){
-    v3.style.display = 'block';
-    e3.style.display = 'none';
-    abrirModal(abrirModalzinho3)
-});
-
-E3.addEventListener('click', function(){
-    v3.style.display = 'none';
-    e3.style.display = 'block';
-    abrirModal(abrirModalzinho3)
-});
-
 
 var can = document.getElementById('can');
 var rem = document.getElementById('rem');
@@ -469,77 +383,17 @@ conf.addEventListener('click', function(){
 
 
 var ge1 = document.getElementById('g-e1');
-var ge2 = document.getElementById('g-e2');
-var ge3 = document.getElementById('g-e3');
-var ge4 = document.getElementById('g-e4');
-var ge5 = document.getElementById('g-e5');
-var ge6 = document.getElementById('g-e6');
 
 ge1.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho1-g')[0].style.display = 'none';
-    document.getElementsByClassName('editar-usuario')[0].style.display = 'block';
-});
-
-ge2.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho2-g')[0].style.display = 'none';
-    document.getElementsByClassName('editar-usuario')[0].style.display = 'block';
-});
-
-ge3.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho3-g')[0].style.display = 'none';
-    document.getElementsByClassName('editar-usuario')[0].style.display = 'block';
-});
-
-ge4.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho4-g')[0].style.display = 'none';
-    document.getElementsByClassName('editar-usuario')[0].style.display = 'block';
-});
-
-ge5.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho5-g')[0].style.display = 'none';
-    document.getElementsByClassName('editar-usuario')[0].style.display = 'block';
-});
-
-ge6.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho6-g')[0].style.display = 'none';
+    document.getElementsByClassName('modalAtivarInativar')[0].style.display = 'none';
     document.getElementsByClassName('editar-usuario')[0].style.display = 'block';
 });
 
 var gin1 = document.getElementById('g-in1');
-var gin2 = document.getElementById('g-in2');
-var gin3 = document.getElementById('g-in3');
-var gin4 = document.getElementById('g-in4');
-var gin5 = document.getElementById('g-in5');
-var gin6 = document.getElementById('g-in6');
 
 gin1.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho1-g')[0].style.display = 'none';
+    document.getElementsByClassName('modalAtivarInativar')[0].style.display = 'none';
     document.getElementsByClassName('modal-ativar')[0].style.display = 'block';
-});
-
-gin2.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho2-g')[0].style.display = 'none';
-    document.getElementsByClassName('modal-desativar')[0].style.display = 'block';
-});
-
-gin3.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho3-g')[0].style.display = 'none';
-    document.getElementsByClassName('modal-desativar')[0].style.display = 'block';
-});
-
-gin4.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho4-g')[0].style.display = 'none';
-    document.getElementsByClassName('modal-ativar')[0].style.display = 'block';
-});
-
-gin5.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho5-g')[0].style.display = 'none';
-    document.getElementsByClassName('modal-desativar')[0].style.display = 'block';
-});
-
-gin6.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho6-g')[0].style.display = 'none';
-    document.getElementsByClassName('modal-desativar')[0].style.display = 'block';
 });
 
 var closeAtivar = document.getElementById('cancel-close');
@@ -555,38 +409,8 @@ closeDesativar.addEventListener('click', function(){
 });
 
 var gc1 = document.getElementById('g-c1');
-var gc2 = document.getElementById('g-c2');
-var gc3 = document.getElementById('g-c3');
-var gc4 = document.getElementById('g-c4');
-var gc5 = document.getElementById('g-c5');
-var gc6 = document.getElementById('g-c6');
 
 gc1.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho1-g')[0].style.display = 'none';
-    document.getElementsByClassName('modal')[0].style.display = 'flex';
-});
-
-gc2.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho2-g')[0].style.display = 'none';
-    document.getElementsByClassName('modal')[0].style.display = 'flex';
-});
-
-gc3.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho3-g')[0].style.display = 'none';
-    document.getElementsByClassName('modal')[0].style.display = 'flex';
-});
-
-gc4.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho4-g')[0].style.display = 'none';
-    document.getElementsByClassName('modal')[0].style.display = 'flex';
-});
-
-gc5.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho5-g')[0].style.display = 'none';
-    document.getElementsByClassName('modal')[0].style.display = 'flex';
-});
-
-gc6.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho6-g')[0].style.display = 'none';
+    document.getElementsByClassName('modalAtivarInativar')[0].style.display = 'none';
     document.getElementsByClassName('modal')[0].style.display = 'flex';
 });

@@ -261,7 +261,72 @@ li.user > div#status{
 }
 
 li.user > div#type{
-    width: 130px;
+    width: 160px;
+}
+
+li.user > div#status > p#statusA {
+    width: 50px;
+    padding-left: 5px;
+    height: 70%;
+    color: rgb(41, 157, 41);
+    background-color: rgba(0, 128, 0, 0.193);
+    border: 2px solid rgb(68, 174, 68);
+    border-radius: 20px;
+    margin-right: 110px;
+    cursor: pointer;
+}
+
+li.user > div#status > p#statusI{
+    color: red;
+    background-color: rgba(255, 0, 0, 0.232);
+    border: 2px solid red;
+    width: 60px;
+    height: 70%;
+    padding-left: 5px;
+    margin-right: 100px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+li.user > div#type > p#typeO{
+    width: 90px;
+    padding-left: 8px;
+    height: 70%;
+    color: white;
+    background-color: #7f42c4;
+    border: 2px solid #6b1bc6;
+    border-radius: 20px;
+}
+
+li.user > div#type > p#typeA{
+    color: white;
+    background-color: #6b1bc6;
+    border: 2px solid #6b1bc6;
+    padding-left: 7px;
+    width: 120px;
+    border-radius: 20px;
+}
+
+li.user > div#button > p.botao{
+    position: relative;
+    background-color: #6b1bc6;
+    color: white;
+    height: 70%;
+    width: 110px;
+    padding-left: 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+li.user > div#button >  p > span{
+    position: absolute;
+    font-size: 20px;
+    top: 9%;
+    left: 5%;
+}
+
+li.user > div#button > p.botao:hover{
+    background-color: #7f42c4;
 }
 
 section.listing > footer{

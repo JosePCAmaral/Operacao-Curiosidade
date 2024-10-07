@@ -1,0 +1,318 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: normal;
+    src: url(../Fonts/Segoe\ UI.ttf);
+}
+@font-face {
+    font-family: bold;
+    src: url(../Fonts/Segoe\ UI\ Bold.ttf);
+}
+@font-face {
+    font-family: bold italic;
+    src: url(../Fonts/Segoe\ UI\ Bold\ Italic.ttf);
+}
+@font-face {
+    font-family: italic;
+    src: url(../Fonts/Segoe\ UI\ Italic.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html{
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    font-family: normal;
+}
+
+div.container{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+div.container > div.cor{
+    width: 5%;
+    height: 100%;
+    background-color: #6b1bc6;
+    border-radius: 10px 0px 0px 10px;
+}
+
+div.container > div.comp{
+    width: 95%;
+    height: 100%;
+}
+
+div.comp > div.cima > h1{
+    font-size: 1.5em;
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div.comp > div.cima > p{
+    display: inline-block;
+    background-color: rgba(128, 128, 128, 0.289);
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 130px;
+}
+
+div.comp > div.cima > hr{
+    width: 100%;
+}
+
+div.comp > div.meio {
+    margin-left: 20px;
+}
+
+div.comp > div.meio > p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+div.comp > div.meio > p > span{
+    color: #6b1bc6;
+    font-weight: bold;
+}
+
+p.cont-input{
+    position: relative;
+}
+
+p.cont-input > span{
+    position: absolute;
+    left: 440px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6b1bc6;
+}
+
+div.comp > div.meio > p > input{
+    width: 480px;
+    height: 40px;
+    border-radius: 10px;
+    border: 2px solid rgba(128, 128, 128, 0.289);
+    padding-left: 10px;
+}
+
+div.comp > div.meio > p > input:hover{
+    border: 3px solid #6b1bc674;
+}
+
+div.comp > div.meio > p > input:focus{
+    border: 3px solid #6b1bc6b4;
+    outline: none;
+}
+
+div.baixo{
+    width: 100%;
+    height: 200px;
+}
+
+div.baixo > div{
+    position: relative;
+    margin-left: 20px;
+    width: 92%;
+    height: 60px;
+    border: 1px solid rgba(0, 0, 0, 0.248);
+    border-radius: 10px;
+}
+
+div.baixo > div > img{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+
+div.baixo > div > p{
+    position: absolute;
+    display: inline-block;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 70px;
+}
+
+div.opcao-v-e > div.visualizar{
+    background-color: white;
+    color: #6b1bc6;
+    border: 2px solid #6b1bc6;
+    border-radius: 10px;
+    width: 110px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    right: 10px;
+    cursor: pointer;
+}
+
+div.opcao-v-e > div.visualizar > p{
+    padding-left: 10px;
+}
+
+div.opcao-v-e > div.visualizar > p > span{
+    padding-left: 5px;
+}
+
+
+div.opcao-v-e > div.editar{
+    display: none;
+    background-color: #6b1bc6;
+    color: white;
+    border: 2px solid #6b1bc6;
+    border-radius: 10px;
+    width: 110px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    transform: translatey(-50%);
+    right: 10px;
+    cursor: pointer;
+}
+
+div.opcao-v-e > div.editar > p{
+    padding-left: 25px;
+}
+
+div.opcao-v-e > div.editar > p > span{
+    padding-left: 12px;
+}
+
+.ModalViewEdit{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.ModalViewEdit > div.comporta1{
+    display: none;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 120px;
+    height: 85px;
+    position: absolute;
+    top: 64.5%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+}
+
+.ModalViewEdit > div.comporta1 > div.Visualizar{
+    background-color: white;
+    color: #6b1bc6;
+    border: 2px solid #6b1bc6;
+    border-radius: 10px;
+    width: 110px;
+    height: 35px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.ModalViewEdit > div.comporta1 > div.Editar{
+    background-color: #6b1bc6;
+    color: white;
+    border-radius: 10px;
+    width: 110px;
+    height: 35px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+div.Visualizar > p{
+    padding-top: 3px;
+    padding-left: 20px;
+}
+
+div.Editar > p{
+    padding-top: 5px;
+    padding-left: 35px;
+}
+
+.ModalViewEdit > div.comporta2{
+    display: none;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 120px;
+    height: 85px;
+    position: absolute;
+    top: 72%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+}
+
+.ModalViewEdit > div.comporta2 > div.Visualizar{
+    background-color: white;
+    color: #6b1bc6;
+    border: 2px solid #6b1bc6;
+    border-radius: 10px;
+    width: 110px;
+    height: 35px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.ModalViewEdit > div.comporta2 > div.Editar{
+    background-color: #6b1bc6;
+    color: white;
+    border-radius: 10px;
+    width: 110px;
+    height: 35px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.ModalViewEdit > div.comporta3{
+    display: none;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 120px;
+    height: 85px;
+    position: absolute;
+    top: 80%;
+    left: 63%;
+    transform: translate(-50%, -50%);
+}
+
+.ModalViewEdit > div.comporta3 > div.Visualizar{
+    background-color: white;
+    color: #6b1bc6;
+    border: 2px solid #6b1bc6;
+    border-radius: 10px;
+    width: 110px;
+    height: 35px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+.ModalViewEdit > div.comporta3 > div.Editar{
+    background-color: #6b1bc6;
+    color: white;
+    border-radius: 10px;
+    width: 110px;
+    height: 35px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-top: 5px;
+}

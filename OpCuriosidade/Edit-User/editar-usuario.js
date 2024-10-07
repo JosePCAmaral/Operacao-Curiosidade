@@ -1,5 +1,5 @@
-const closeee = document.getElementById('close-editar');
+const closeEditar = document.getElementById('close-editarUser');
 
-closeee.addEventListener('click', function(){
+closeEditar.addEventListener('click', function(){
     window.parent.postMessage('CloseModalEditarUsuario', '*');
 });
