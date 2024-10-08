@@ -65,5 +65,7 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(error => {
             console.error('Erro ao criar o usuário:', error);
         });
+
+        let bntSave = document.getElementById('save');
     });
 });

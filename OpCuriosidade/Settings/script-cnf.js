@@ -97,4 +97,9 @@ function selecionaPagina(){
 
 window.addEventListener('message', function(event) {
     window.parent.postMessage(event.data, '*');
+    if (event.data === 'AtivarUsuario') {
+        const iframeNeto = document.getElementById('iframe');
+        iframeNeto.contentWindow.postMessage('AtivarUsuario', '*');
+    }
 });
+

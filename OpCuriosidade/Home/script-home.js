@@ -173,43 +173,75 @@ window.addEventListener('message', function(event) {
     if (event.data === 'openCompartModal') {
         document.querySelector('.modal').style.display = 'block';
         document.querySelector('.modal-comp').style.display = 'block';
-    }else if (event.data === 'closeModalCompartilhar') {
+    }
+    else if (event.data === 'closeModalCompartilhar') {
         document.querySelector('.modal').style.display = 'none';
         document.querySelector('.modal-comp').style.display = 'none';
-    }else if (event.data === 'openExcluirModal') {
+    }
+    else if (event.data === 'openExcluirModal') {
         document.getElementsByClassName('modal-excluir')[0].style.display = 'block';
-    }else if(event.data === 'closeModalEditar'){
+    }
+    else if(event.data === 'closeModalEditar'){
         document.getElementsByClassName('modal-editar')[0].style.display = 'none';
-    }else if(event.data === 'openEditarModal'){
+    }
+    else if(event.data === 'openEditarModal'){
         document.getElementsByClassName('modal-editar')[0].style.display = 'block';
-    }else if(event.data === 'openMCModalzinho1'){
+    }
+    else if(event.data === 'openMCModalzinho1'){
         document.getElementsByClassName('modalzinho1-mc')[0].style.display = 'block';
-    }else if(event.data === 'openMCModalzinho2'){
+    }
+    else if(event.data === 'openMCModalzinho2'){
         document.getElementsByClassName('modalzinho2-mc')[0].style.display = 'block';
-    }else if(event.data === 'openMCModalzinho3'){
+    }
+    else if(event.data === 'openMCModalzinho3'){
         document.getElementsByClassName('modalzinho3-mc')[0].style.display = 'block';
-    }else if(event.data === 'openMCModalzinho4'){
+    }
+    else if(event.data === 'openMCModalzinho4'){
         document.getElementsByClassName('modalzinho4-mc')[0].style.display = 'block';
-    }else if(event.data === 'openMCModalzinho5'){
+    }
+    else if(event.data === 'openMCModalzinho5'){
         document.getElementsByClassName('modalzinho5-mc')[0].style.display = 'block';
-    }else if(event.data === 'openMCModalzinho6'){
+    }
+    else if(event.data === 'openMCModalzinho6'){
         document.getElementsByClassName('modalzinho6-mc')[0].style.display = 'block';
-    }else if(event.data === 'abrirRelatorio'){
+    }
+    else if(event.data === 'abrirRelatorio'){
         ifr.src = "../Report/relatorio.html"
-    }else if(event.data === 'abrirRelatorios'){
+    }
+    else if(event.data === 'abrirRelatorios'){
         ifr.src = "../Reports/relatorios.html"
-    }else if(event.data === 'CloseModalCadastrarUsuario'){
+    }
+    else if(event.data === 'CloseModalCadastrarUsuario'){
         document.getElementsByClassName('cadastrar-usuario')[0].style.display = 'none';
-    }else if(event.data === 'OpenModalCadastrarUsuario'){
+    }
+    else if(event.data === 'OpenModalCadastrarUsuario'){
         document.getElementsByClassName('cadastrar-usuario')[0].style.display = 'block';
-    }else if(event.data === 'openAtivarInativarModal'){
+    }
+    else if(event.data === 'openAtivarInativarModal'){
         document.getElementsByClassName('modalAtivarInativar')[0].style.display = 'block';
-    }else if(event.data === 'CloseModalEditarUsuario'){
+    }
+    else if(event.data === 'CloseModalEditarUsuario'){
         document.getElementsByClassName('editar-usuario')[0].style.display = 'none';
-    }else if(event.data === 'openMCModalzinhoAtivo'){
-        document.getElementsByClassName('modal-ativar')[0].style.display = 'block';
-    }else if(event.data === 'openMCModalzinhoInativo'){
-        document.getElementsByClassName('modal-desativar')[0].style.display = 'block';
+    }
+    else if(event.data === 'openModalzinhoInativar'){
+        document.getElementsByClassName('modal-Desativar')[0].style.display = 'block';
+    }
+    else if(event.data === 'openModalzinhoAtivar'){
+        document.getElementsByClassName('modal-Ativar')[0].style.display = 'block';
+    }
+    else if(event.data === 'closeModalzinhoAtivar'){
+        document.getElementsByClassName('modal-Ativar')[0].style.display = 'none';
+    }
+    else if(event.data === 'closeModalzinhoDesativar'){
+        document.getElementsByClassName('modal-Desativar')[0].style.display = 'none';
+    }
+    else if(event.data === 'AtivarUsuarioP'){
+        const iframe = document.getElementById('iframe');
+        iframe.contentWindow.postMessage('AtivarUsuario', '*');
+    }
+    else if(event.data === 'DesativarUsuarioP'){
+        const iframe = document.getElementById('iframe');
+        iframe.contentWindow.postMessage('DesativarUsuario', '*');
     }
 });
 
@@ -394,18 +426,6 @@ var gin1 = document.getElementById('g-in1');
 gin1.addEventListener('click', function() {
     document.getElementsByClassName('modalAtivarInativar')[0].style.display = 'none';
     document.getElementsByClassName('modal-ativar')[0].style.display = 'block';
-});
-
-var closeAtivar = document.getElementById('cancel-close');
-
-closeAtivar.addEventListener('click', function(){
-    document.getElementsByClassName('modal-ativar')[0].style.display = 'none';
-});
-
-var closeDesativar = document.getElementById('cancel-close2');
-
-closeDesativar.addEventListener('click', function(){
-    document.getElementsByClassName('modal-desativar')[0].style.display = 'none';
 });
 
 var gc1 = document.getElementById('g-c1');

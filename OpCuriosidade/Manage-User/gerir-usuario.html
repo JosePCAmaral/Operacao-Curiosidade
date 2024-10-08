@@ -40,9 +40,9 @@
                 </div>
             </div>
             <div class="buttons">
-                <input type="button" value="Limpar" id="limpar">
+                <input type="button" value="Limpar" id="limpar" onclick="Limpar()">
                 <input type="button" value="Filtrar" id="filtrar">
-                <input type="button" value="Cadastrar Usuário" id="cadastrarUsu">
+                <input type="button" value="Cadastrar Usuário" id="cadastrarUsu" onclick="cadastrarUsu()">
             </div>
             </header>
             <main class="listing">
@@ -58,38 +58,12 @@
                         <div id="status"><p>Status<span class="material-symbols-outlined">swap_vert</span></p></div>
                         <div id="tipo"><p>Tipo<span class="material-symbols-outlined">swap_vert</span></p></div>
                     </li>
-                    <li class="user">
-                        <div class="box">
-                            <input type="checkbox" name="selecionar" id="selecionar" class="checkbox-item">
-                        </div>
-                        <div class="container-dados" id="code">
-                            <p class="codigo">24-00016</p>
-                        </div>
-                        <div class="container-dados" id="name">
-                            <p class="nome">Rosangela Maria Pereira</p>
-                        </div>
-                        <div class="container-dados" id="email">
-                            <p class="email">rosangela.pereira@fakemail.br</p>
-                        </div>
-                        <div class="container-dados" id="date">
-                            <p class="data">04/09/2024</p>
-                        </div>
-                        <div class="container-dados" id="status">
-                            <p class="status" id="statusA">Ativo</p>
-                        </div>
-                        <div class="container-dados" id="type">
-                            <p class="tipo" id="typeO">Operador</p>
-                        </div>
-                        <div class="container-dados" id="button">
-                            <p class="botao" id="btn"><span class="material-symbols-outlined">more_vert</span>Detalhes</p>
-                        </div>
-                    </li>
                 </ul>
             </main>
             <footer class="listing">
                 <div class="paginacao">
                     <p class="sele"><label for="ipagina">Itens por página</label> <select name="pagina" id="ipagina">
-                        <option value="1">7</option>
+                        <option value="1">6</option>
                     </select></p>
                     <p class="pag">Página 1 de 10</p>
                     <p class="first"><span class="material-symbols-outlined">first_page</span></p>
