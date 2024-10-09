@@ -1,14 +1,14 @@
+let HomeUserId = null;
+
+let vg = document.getElementById('vg');
+let cc = document.getElementById('cc');
+let mc = document.getElementById('mc');
+let re = document.getElementById('re');
+let co = document.getElementById('cf');
+let ifr = document.getElementById('iframe');
 
 
-var vg = document.getElementById('vg');
-var cc = document.getElementById('cc');
-var mc = document.getElementById('mc');
-var re = document.getElementById('re');
-var co = document.getElementById('cf');
-var ifr = document.getElementById('iframe');
-
-
-var selectedDiv = vg;
+let selectedDiv = vg;
 
 vg.style.backgroundColor = '#6b1bc6';
 vg.style.color = 'white';
@@ -218,7 +218,7 @@ window.addEventListener('message', function(event) {
         document.getElementsByClassName('cadastrar-usuario')[0].style.display = 'block';
     }
     else if(event.data.action === 'openAtivarInativarModal'){
-        
+        HomeUserId = event.data.userId;
         if(event.data.status){
             document.getElementsByClassName('modalInativarUsu')[0].style.display = 'block';
         }else{
@@ -418,10 +418,12 @@ conf.addEventListener('click', function(){
     configuracoes();
 });
 
+let iframeEsitarUsu = document.getElementById('iframeEditarUsu');
 
 function detalheEditarUsuarioAtivar(){
     document.getElementsByClassName('modalAtivarUsu')[0].style.display = 'none';
     document.getElementsByClassName('editar-usuario')[0].style.display = 'block';
+    iframeEsitarUsu.contentWindow.postMessage({ action: 'recebeUserId', userId: HomeUserId }, '*');
 }
 
 function detalheCompartilharUsuarioAtivar(){
@@ -438,6 +440,7 @@ function detalheReativarUsuarioAtivar(){
 function detalheEditarUsuarioInativar(){
     document.getElementsByClassName('modalInativarUsu')[0].style.display = 'none';
     document.getElementsByClassName('editar-usuario')[0].style.display = 'block';
+    iframeEsitarUsu.contentWindow.postMessage({ action: 'recebeUserId', userId: HomeUserId }, '*');
 }
 
 function detalheReativarUsuarioInativar(){

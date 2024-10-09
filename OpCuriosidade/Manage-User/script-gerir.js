@@ -86,7 +86,7 @@ function openAtivarInativarModal(element) {
 
     selectedUserId = userId;
 
-    window.parent.postMessage({ action: 'openAtivarInativarModal', status: currentStatus }, '*');
+    window.parent.postMessage({ action: 'openAtivarInativarModal', status: currentStatus, userId: userId }, '*');
 };
 
 function toggleStatus(element) {
