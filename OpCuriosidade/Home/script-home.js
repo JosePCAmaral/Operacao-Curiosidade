@@ -223,10 +223,12 @@ window.addEventListener('message', function(event) {
     else if(event.data === 'CloseModalEditarUsuario'){
         document.getElementsByClassName('editar-usuario')[0].style.display = 'none';
     }
-    else if(event.data === 'openModalzinhoInativar'){
+    else if (event.data.action === 'openModalzinhoInativar') {
+        console.log('Abrir modal de inativação para o usuário:', event.data.userId);
         document.getElementsByClassName('modal-Desativar')[0].style.display = 'block';
     }
-    else if(event.data === 'openModalzinhoAtivar'){
+    else if (event.data.action === 'openModalzinhoAtivar') {
+        console.log('Abrir modal de ativação para o usuário:', event.data.userId);
         document.getElementsByClassName('modal-Ativar')[0].style.display = 'block';
     }
     else if(event.data === 'closeModalzinhoAtivar'){
@@ -235,13 +237,11 @@ window.addEventListener('message', function(event) {
     else if(event.data === 'closeModalzinhoDesativar'){
         document.getElementsByClassName('modal-Desativar')[0].style.display = 'none';
     }
-    else if(event.data === 'AtivarUsuarioP'){
+    else if(event.data === 'AlterarStatus'){
         const iframe = document.getElementById('iframe');
-        iframe.contentWindow.postMessage('AtivarUsuario', '*');
-    }
-    else if(event.data === 'DesativarUsuarioP'){
-        const iframe = document.getElementById('iframe');
-        iframe.contentWindow.postMessage('DesativarUsuario', '*');
+        iframe.contentWindow.postMessage('AlterarStatusF', '*');
+        document.getElementsByClassName('modal-Desativar')[0].style.display = 'none';
+        document.getElementsByClassName('modal-Ativar')[0].style.display = 'none';
     }
 });
 

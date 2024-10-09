@@ -3,5 +3,5 @@ function closeModal() {
 }
 
 function Desativar() {
-    window.parent.postMessage('DesativarUsuarioP', '*');
+    window.parent.postMessage('AlterarStatus', '*');
 }

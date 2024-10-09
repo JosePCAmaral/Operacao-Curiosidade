@@ -3,5 +3,5 @@ function closeModel() {
 }
 
 function Ativar() {
-    window.parent.postMessage('AtivarUsuarioP', '*');
+    window.parent.postMessage('AlterarStatus', '*');
 }
