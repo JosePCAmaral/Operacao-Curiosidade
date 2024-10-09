@@ -419,40 +419,34 @@ conf.addEventListener('click', function(){
 });
 
 
-let ge1 = document.getElementById('g-e1');
-ge1.addEventListener('click', function() {
+function detalheEditarUsuarioAtivar(){
     document.getElementsByClassName('modalAtivarUsu')[0].style.display = 'none';
     document.getElementsByClassName('editar-usuario')[0].style.display = 'block';
-});
+}
 
-let gin1 = document.getElementById('g-in1');
-gin1.addEventListener('click', function() {
+function detalheCompartilharUsuarioAtivar(){
+    document.getElementsByClassName('modalAtivarUsu')[0].style.display = 'none';
+    document.getElementsByClassName('modal')[0].style.display = 'flex';
+    document.querySelector('.modal-comp').style.display = 'block';
+}
+
+function detalheReativarUsuarioAtivar(){
     document.getElementsByClassName('modalAtivarUsu')[0].style.display = 'none';
     document.getElementsByClassName('modal-Ativar')[0].style.display = 'block';
-});
+}
 
-let gc1 = document.getElementById('g-c1');
-gc1.addEventListener('click', function() {
-    document.getElementsByClassName('modalAtivarUsu')[0].style.display = 'none';
-    document.getElementsByClassName('modal')[0].style.display = 'flex';
-    document.querySelector('.modal-comp').style.display = 'block';
-});
-
-let ge2 = document.getElementById('g-e2');
-ge2.addEventListener('click', function() {
+function detalheEditarUsuarioInativar(){
     document.getElementsByClassName('modalInativarUsu')[0].style.display = 'none';
     document.getElementsByClassName('editar-usuario')[0].style.display = 'block';
-});
+}
 
-let gin2 = document.getElementById('g-in2');
-gin2.addEventListener('click', function() {
+function detalheReativarUsuarioInativar(){
     document.getElementsByClassName('modalInativarUsu')[0].style.display = 'none';
     document.getElementsByClassName('modal-Desativar')[0].style.display = 'block';
-});
+}
 
-let gc2 = document.getElementById('g-c2');
-gc2.addEventListener('click', function() {
+function detalheCompartilharUsuarioInativar(){
     document.getElementsByClassName('modalInativarUsu')[0].style.display = 'none';
     document.getElementsByClassName('modal')[0].style.display = 'flex';
     document.querySelector('.modal-comp').style.display = 'block';
-});
+}

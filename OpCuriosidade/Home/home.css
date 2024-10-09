@@ -870,8 +870,8 @@ div.modalAtivarUsu > div.comporta{
     width: 140px;
     height: 130px;
     position: absolute;
-    top: 45%;
-    left: 80%;
+    top: 59%;
+    left: 81%;
     transform: translate(-50%, -50%);
 }
 
@@ -894,8 +894,8 @@ div.modalInativarUsu > div.comporta{
     width: 140px;
     height: 130px;
     position: absolute;
-    top: 45%;
-    left: 80%;
+    top: 59%;
+    left: 81%;
     transform: translate(-50%, -50%);
 }
 
