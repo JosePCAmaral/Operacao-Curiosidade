@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function() {
                             <p class="tipo" id="${typeId}">${typeText}</p>
                         </div>
                         <div class="container-dados" id="button">
-                            <p class="botao" id="btn" onclick="openAtivarInativarModal()"><span class="material-symbols-outlined">more_vert</span>Detalhes</p>
+                            <p class="botao" id="btn" data-id="${user.id}" data-status="${user.status}" onclick="openAtivarInativarModal(this)"><span class="material-symbols-outlined">more_vert</span>Detalhes</p>
                         </div>`;
                         
                 userList.appendChild(listItem);
@@ -80,8 +80,13 @@ function cadastrarUsu() {
     window.parent.postMessage('OpenModalCadastrarUsuario', '*');
 };
 
-function openAtivarInativarModal() {
-    window.parent.postMessage('openAtivarInativarModal', '*');
+function openAtivarInativarModal(element) {
+    const userId = element.getAttribute('data-id');
+    const currentStatus = element.getAttribute('data-status') === 'true';
+
+    selectedUserId = userId;
+
+    window.parent.postMessage({ action: 'openAtivarInativarModal', status: currentStatus }, '*');
 };
 
 function toggleStatus(element) {

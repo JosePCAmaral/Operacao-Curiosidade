@@ -798,7 +798,22 @@ div.mc-Excluir{
     border: 2px solid red;
 }
 
-div.mc-Excluir#g-in1, div.mc-Excluir#g-in4{
+div.mc-Excluir#g-in2{
+    display: flex;
+    background-color: rgba(255, 0, 0, 0.229);
+    color: red;
+    border-radius: 10px;
+    width: 130px;
+    height: 35px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-top: 5px;
+    padding-top: 5px;
+    padding-left: 10px;
+    border: 2px solid red;
+}
+
+div.mc-Excluir#g-in1{
     color: green;
     background-color: rgba(0, 128, 0, 0.401);
     border: 2px solid green;
@@ -836,7 +851,7 @@ div.cont-casdastro-usuario > iframe{
     border-radius: 10px;
 }
 
-div.modalAtivarInativar{
+div.modalAtivarUsu{
     display: none;
     position: fixed;
     z-index: 1;
@@ -849,7 +864,31 @@ div.modalAtivarInativar{
     align-items: center;
 }
 
-div.modalAtivarInativar > div.comporta{
+div.modalAtivarUsu > div.comporta{
+    background-color: #fff;
+    border-radius: 10px;
+    width: 140px;
+    height: 130px;
+    position: absolute;
+    top: 45%;
+    left: 80%;
+    transform: translate(-50%, -50%);
+}
+
+div.modalInativarUsu{
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+div.modalInativarUsu > div.comporta{
     background-color: #fff;
     border-radius: 10px;
     width: 140px;

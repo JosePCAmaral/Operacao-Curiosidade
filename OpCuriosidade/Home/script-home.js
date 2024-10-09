@@ -217,8 +217,13 @@ window.addEventListener('message', function(event) {
     else if(event.data === 'OpenModalCadastrarUsuario'){
         document.getElementsByClassName('cadastrar-usuario')[0].style.display = 'block';
     }
-    else if(event.data === 'openAtivarInativarModal'){
-        document.getElementsByClassName('modalAtivarInativar')[0].style.display = 'block';
+    else if(event.data.action === 'openAtivarInativarModal'){
+        
+        if(event.data.status){
+            document.getElementsByClassName('modalInativarUsu')[0].style.display = 'block';
+        }else{
+            document.getElementsByClassName('modalAtivarUsu')[0].style.display = 'block';
+        }
     }
     else if(event.data === 'CloseModalEditarUsuario'){
         document.getElementsByClassName('editar-usuario')[0].style.display = 'none';
@@ -414,23 +419,40 @@ conf.addEventListener('click', function(){
 });
 
 
-var ge1 = document.getElementById('g-e1');
-
+let ge1 = document.getElementById('g-e1');
 ge1.addEventListener('click', function() {
-    document.getElementsByClassName('modalAtivarInativar')[0].style.display = 'none';
+    document.getElementsByClassName('modalAtivarUsu')[0].style.display = 'none';
     document.getElementsByClassName('editar-usuario')[0].style.display = 'block';
 });
 
-var gin1 = document.getElementById('g-in1');
-
+let gin1 = document.getElementById('g-in1');
 gin1.addEventListener('click', function() {
-    document.getElementsByClassName('modalAtivarInativar')[0].style.display = 'none';
-    document.getElementsByClassName('modal-ativar')[0].style.display = 'block';
+    document.getElementsByClassName('modalAtivarUsu')[0].style.display = 'none';
+    document.getElementsByClassName('modal-Ativar')[0].style.display = 'block';
 });
 
-var gc1 = document.getElementById('g-c1');
-
+let gc1 = document.getElementById('g-c1');
 gc1.addEventListener('click', function() {
-    document.getElementsByClassName('modalAtivarInativar')[0].style.display = 'none';
+    document.getElementsByClassName('modalAtivarUsu')[0].style.display = 'none';
     document.getElementsByClassName('modal')[0].style.display = 'flex';
+    document.querySelector('.modal-comp').style.display = 'block';
+});
+
+let ge2 = document.getElementById('g-e2');
+ge2.addEventListener('click', function() {
+    document.getElementsByClassName('modalInativarUsu')[0].style.display = 'none';
+    document.getElementsByClassName('editar-usuario')[0].style.display = 'block';
+});
+
+let gin2 = document.getElementById('g-in2');
+gin2.addEventListener('click', function() {
+    document.getElementsByClassName('modalInativarUsu')[0].style.display = 'none';
+    document.getElementsByClassName('modal-Desativar')[0].style.display = 'block';
+});
+
+let gc2 = document.getElementById('g-c2');
+gc2.addEventListener('click', function() {
+    document.getElementsByClassName('modalInativarUsu')[0].style.display = 'none';
+    document.getElementsByClassName('modal')[0].style.display = 'flex';
+    document.querySelector('.modal-comp').style.display = 'block';
 });
