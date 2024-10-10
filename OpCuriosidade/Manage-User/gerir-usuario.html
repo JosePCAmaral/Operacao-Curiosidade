@@ -13,30 +13,28 @@
             <header class="listing">
             <div class="selects">
                 <div>
-                    <p><label for="icodigo">Status</label></p>
-                    <select name="codigo" id="icodigo">
-                        <option value="1">Ativo</option>
-                        <option value="2">Inativo</option>
+                    <p><label for="istatus">Status</label></p>
+                    <select name="codigo" id="istatus">
+                        <option value="1"></option>
+                        <option value="2">Ativo</option>
+                        <option value="3">Inativo</option>
                     </select>
                 </div>
                 <div>
                     <p><label for="itipo">Tipo</label></p>
                     <select name="tipo" id="itipo">
-                        <option value="1" id="ativo">Administrador</option>
-                        <option value="2" id="inativo">Operador</option>
+                        <option value="1"></option>
+                        <option value="2" id="ativo">Administrador</option>
+                        <option value="3" id="inativo">Operador</option>
                     </select>
                 </div>
                 <div>
-                    <p><label for="inome">Código</label></p>
-                    <select name="nome" id="inome">
-                        <option value="1">-</option>
-                    </select>
+                    <p><label for="icode">Código</label></p>
+                    <input type="text" name="code" id="icode">
                 </div>
                 <div>
-                    <p><label for="iperiodo">Período</label></p>
-                    <select name="periodo" id="iperiodo">
-                        <option value="1">00/00/0000 - 00/00/0000</option>
-                    </select>
+                    <p><label for="iperiodo">Período a partir de:</label></p>
+                    <input type="date" name="periodo" id="iperiodo">
                 </div>
             </div>
             <div class="buttons">
@@ -47,17 +45,6 @@
             </header>
             <main class="listing">
                 <ul id="user-list">
-                    <li class="ordem">
-                        <div>
-                            <input type="checkbox" name="selecionar" id="selecionar" onclick="marcarTodos(this)">
-                        </div>
-                        <div><p>Código<span class="material-symbols-outlined">swap_vert</span></p></div>
-                        <div id="nome"><p> Nome<span class="material-symbols-outlined">swap_vert</span></p></div>
-                        <div id="email"><p>E-mail<span class="material-symbols-outlined">swap_vert</span></p></div>
-                        <div id="data"><p>Data de criação<span class="material-symbols-outlined">swap_vert</span></p></div>
-                        <div id="status"><p>Status<span class="material-symbols-outlined">swap_vert</span></p></div>
-                        <div id="tipo"><p>Tipo<span class="material-symbols-outlined">swap_vert</span></p></div>
-                    </li>
                 </ul>
             </main>
             <footer class="listing">

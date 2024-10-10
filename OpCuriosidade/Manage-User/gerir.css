@@ -79,7 +79,19 @@ div.selects > div > select{
     cursor: pointer;
 }
 
-select#icodigo{
+div.selects > div > input{
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 8px;
+    border: 2px solid rgba(128, 128, 128, 0.314);
+    cursor: pointer;
+}
+
+div.selects > div > p > label{
+    cursor: pointer;
+}
+
+select#istatus{
     width: 80px;
 }
 
@@ -87,12 +99,26 @@ select#itipo{
     width: 130px;
 }
 
-select#inome, select#iperiodo{
+input#inome, input#iperiodo{
     width: 200px;
 }
 
 div.selects > div > select:hover{
     border: 2px solid rgba(128, 128, 128, 0.519);
+}
+
+div.selects > div > select:focus{
+    outline: none;
+    border: 2px solid rgba(128, 128, 128, 0.71);
+}
+
+div.selects > div > input:hover{
+    border: 2px solid rgba(128, 128, 128, 0.519);
+}
+
+div.selects > div > input:focus{
+    outline: none;
+    border: 2px solid rgba(128, 128, 128, 0.71);
 }
 
 div.buttons{

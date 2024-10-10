@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById('userForm');
 
     form.addEventListener('submit', function(event) {
+        event.preventDefault(); 
 
         const name = document.getElementById('iName').value;
         const email = document.getElementById('iEmail').value;
@@ -52,20 +53,24 @@ document.addEventListener("DOMContentLoaded", function() {
         })
         .then(response => {
             console.log(response);
+            if (response.status === 400) {
+                return response.text().then(errorMessage => {
+                    throw new Error(errorMessage);
+                });
+            }
             if (!response.ok) {
-                
-                throw new Error('Falha na requisição POST');
+                throw new Error(`Erro: ${response.status} - ${response.statusText}`);
             }
             return response.json();
         })
         .then(data => {
             console.log('Usuário criado com sucesso:', data);
             window.alert('Usuário criado com sucesso!');
+            location.reload();
         })
         .catch(error => {
             console.error('Erro ao criar o usuário:', error);
+            window.alert('Erro: ' + error.message);
         });
-
-        let bntSave = document.getElementById('save');
     });
 });
