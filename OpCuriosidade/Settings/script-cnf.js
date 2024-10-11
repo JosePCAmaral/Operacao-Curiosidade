@@ -100,6 +100,9 @@ window.addEventListener('message', function(event) {
     if (event.data === 'AlterarStatusF') {
         const iframeNeto = document.getElementById('iframe');
         iframeNeto.contentWindow.postMessage('AlterarStatusFi', '*');
+    }else if(event.data === 'AtualizarGerir'){
+        const iframeNeto = document.getElementById('iframe');
+        iframeNeto.contentWindow.postMessage('AtualizarGerir', '*');
     }
 });
 

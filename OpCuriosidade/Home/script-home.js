@@ -213,6 +213,8 @@ window.addEventListener('message', function(event) {
     }
     else if(event.data === 'CloseModalCadastrarUsuario'){
         document.getElementsByClassName('cadastrar-usuario')[0].style.display = 'none';
+        const iframe = document.getElementById('iframe');
+        iframe.contentWindow.postMessage('AtualizarGerir', '*');
     }
     else if(event.data === 'OpenModalCadastrarUsuario'){
         document.getElementsByClassName('cadastrar-usuario')[0].style.display = 'block';
@@ -227,6 +229,8 @@ window.addEventListener('message', function(event) {
     }
     else if(event.data === 'CloseModalEditarUsuario'){
         document.getElementsByClassName('editar-usuario')[0].style.display = 'none';
+        const iframe = document.getElementById('iframe');
+        iframe.contentWindow.postMessage('AtualizarGerir', '*');
     }
     else if (event.data.action === 'openModalzinhoInativar') {
         console.log('Abrir modal de inativação para o usuário:', event.data.userId);

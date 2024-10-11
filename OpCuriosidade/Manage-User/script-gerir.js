@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", function() {
         const tipo = document.getElementById('itipo').value;
         const code = document.getElementById('icode').value;
         const period = document.getElementById('iperiodo').value;
-    
+        
         const filters = {
             status: status !== '1' ? (status === '2' ? 'true' : 'false') : null,
             type: tipo !== '1' ? (tipo === '2' ? 'true' : 'false') : null,
@@ -62,8 +62,8 @@ document.addEventListener("DOMContentLoaded", function() {
             userList.innerHTML = '';
 
             const headerItem = document.createElement('li');
-        headerItem.classList.add('ordem');
-        headerItem.innerHTML = `
+            headerItem.classList.add('ordem');
+            headerItem.innerHTML = `
             <div>
                 <input type="checkbox" name="selecionar" id="selecionar" onclick="marcarTodos(this)">
             </div>
@@ -80,50 +80,57 @@ document.addEventListener("DOMContentLoaded", function() {
             const end = start + itemsPerPage;
             const usersToShow = usersData.slice(start, end);
     
-            usersToShow.forEach(user => {
-                const listItem = document.createElement('li');
-                listItem.classList.add('user');
-    
-                let statusText = user.status === true ? 'Ativo' : 'Inativo';
-                let statusId = user.status === true ? 'statusA' : 'statusI';
-    
-                let typeText = user.type === true ? 'Administrador' : 'Operador';
-                let typeId = user.type === true ? 'typeA' : 'typeO';
-    
-                let data = user.creationDate.substring(0, 10);
-                let partesData = data.split('-');
-                let dataFormatada = `${partesData[2]}/${partesData[1]}/${partesData[0]}`;
-    
-                listItem.innerHTML = `<div class="box">
-                                <input type="checkbox" name="selecionar" id="selecionar" class="checkbox-item">
-                            </div>
-                            <div class="container-dados" id="code">
-                                <p class="codigo">${user.code}</p>
-                            </div>
-                            <div class="container-dados" id="name">
-                                <p class="nome">${user.facts.name}</p>
-                            </div>
-                            <div class="container-dados" id="email">
-                                <p class="email">${user.facts.email}</p>
-                            </div>
-                            <div class="container-dados" id="date">
-                                <p class="data">${dataFormatada}</p>
-                            </div>
-                            <div class="container-dados" id="Id">
-                                <p class="data">${user.id}</p>
-                            </div>
-                            <div class="container-dados" id="status">
-                                <p class="status" id="${statusId}" data-id="${user.id}" data-status="${user.status}" onclick="toggleStatus(this)">${statusText}</p>
-                            </div>
-                            <div class="container-dados" id="type">
-                                <p class="tipo" id="${typeId}">${typeText}</p>
-                            </div>
-                            <div class="container-dados" id="button">
-                                <p class="botao" id="btn" data-id="${user.id}" data-status="${user.status}" onclick="openAtivarInativarModal(this)"><span class="material-symbols-outlined">more_vert</span>Detalhes</p>
-                            </div>`;
-    
-                userList.appendChild(listItem);
-            });
+            if (usersToShow.length === 0) {
+                const noUserItem = document.createElement('li');
+                noUserItem.classList.add('noUser');
+                noUserItem.innerHTML = `<p>Nenhum usuário encontrado</p>`;
+                userList.appendChild(noUserItem);
+            } else {
+                usersToShow.forEach(user => {
+                    const listItem = document.createElement('li');
+                    listItem.classList.add('user');
+        
+                    let statusText = user.status === true ? 'Ativo' : 'Inativo';
+                    let statusId = user.status === true ? 'statusA' : 'statusI';
+        
+                    let typeText = user.type === true ? 'Administrador' : 'Operador';
+                    let typeId = user.type === true ? 'typeA' : 'typeO';
+        
+                    let data = user.creationDate.substring(0, 10);
+                    let partesData = data.split('-');
+                    let dataFormatada = `${partesData[2]}/${partesData[1]}/${partesData[0]}`;
+        
+                    listItem.innerHTML = `<div class="box">
+                                    <input type="checkbox" name="selecionar" id="selecionar" class="checkbox-item">
+                                </div>
+                                <div class="container-dados" id="code">
+                                    <p class="codigo">${user.code}</p>
+                                </div>
+                                <div class="container-dados" id="name">
+                                    <p class="nome">${user.facts.name}</p>
+                                </div>
+                                <div class="container-dados" id="email">
+                                    <p class="email">${user.facts.email}</p>
+                                </div>
+                                <div class="container-dados" id="date">
+                                    <p class="data">${dataFormatada}</p>
+                                </div>
+                                <div class="container-dados" id="Id">
+                                    <p class="data">${user.id}</p>
+                                </div>
+                                <div class="container-dados" id="status">
+                                    <p class="status" id="${statusId}" data-id="${user.id}" data-status="${user.status}" onclick="toggleStatus(this)">${statusText}</p>
+                                </div>
+                                <div class="container-dados" id="type">
+                                    <p class="tipo" id="${typeId}">${typeText}</p>
+                                </div>
+                                <div class="container-dados" id="button">
+                                    <p class="botao" id="btn" data-id="${user.id}" data-status="${user.status}" onclick="openAtivarInativarModal(this)"><span class="material-symbols-outlined">more_vert</span>Detalhes</p>
+                                </div>`;
+        
+                    userList.appendChild(listItem);
+                });
+            }
         }
 
         function updatePaginationControls() {
@@ -213,6 +220,9 @@ window.addEventListener('message', function(event) {
     console.log('Mensagem recebida no neto:', event.data);
     if (event.data === 'AlterarStatusFi') {
         AlterarStatus();
+    }else if (event.data === 'AtualizarGerir') {
+        console.log('Atualizar página');
+        location.reload();
     }
 });
 
