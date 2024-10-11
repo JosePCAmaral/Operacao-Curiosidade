@@ -9,12 +9,14 @@ document.addEventListener("DOMContentLoaded", function() {
         const tipo = document.getElementById('itipo').value;
         const code = document.getElementById('icode').value;
         const period = document.getElementById('iperiodo').value;
+        const periodAte = document.getElementById('iperiodoAte').value;
         
         const filters = {
             status: status !== '1' ? (status === '2' ? 'true' : 'false') : null,
             type: tipo !== '1' ? (tipo === '2' ? 'true' : 'false') : null,
             code: code ? code : null,
-            period: period ? period : null
+            period: period ? period : null,
+            periodAte: periodAte ? periodAte : null
         };
     
         console.log('Filtros:', filters);
@@ -23,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     function fetchFilteredUsers(filters) {
         
-        fetch(`https://localhost:7299/api/user-model/api/users/filter/${filters.status}/${filters.type}/${filters.code}/${filters.period}`)
+        fetch(`https://localhost:7299/api/user-model/api/users/filter/${filters.status}/${filters.type}/${filters.code}/${filters.period}/${filters.periodAte}`)
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Network response was not ok');

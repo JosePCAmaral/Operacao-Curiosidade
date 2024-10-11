@@ -99,8 +99,12 @@ select#itipo{
     width: 130px;
 }
 
-input#inome, input#iperiodo{
-    width: 200px;
+input#icode{
+    width: 100px;
+}
+
+input#iperiodo, input#iperiodoAte{
+    width: 140px;
 }
 
 div.selects > div > select:hover{
