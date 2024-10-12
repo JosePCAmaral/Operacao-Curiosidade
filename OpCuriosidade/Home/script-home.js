@@ -1,3 +1,10 @@
+document.addEventListener("DOMContentLoaded", function() {
+    const params = new URLSearchParams(window.location.search);
+    const userId = params.get('userId');
+    console.log('ID do usuário:', userId);
+});
+
+
 let HomeUserId = null;
 
 let vg = document.getElementById('vg');

@@ -1,11 +1,13 @@
+let usersData = []; // Variável global para armazenar os usuários
+
 document.addEventListener("DOMContentLoaded", function() {
-    let usersData = [];
+    // Buscar os usuários da API
     fetch('https://localhost:7299/api/user-model/api/users')
-        .then(User => {
-            if (!User.ok) {
+        .then(response => {
+            if (!response.ok) {
                 throw new Error('Network response was not ok');
             }
-            return User.json();
+            return response.json();
         })
         .then(users => {
             usersData = users;
@@ -14,6 +16,23 @@ document.addEventListener("DOMContentLoaded", function() {
             console.error('Houve um erro ao buscar os usuários:', error);
         });
 });
+
+function Validacao() {
+    const emailInput = document.getElementById('iemail').value;
+    const senhaInput = document.getElementById('isenha').value;
+
+    const user = usersData.find(user => user.facts.email === emailInput);
+
+    if (user) {
+        if (user.password === senhaInput) {
+            window.location.href = `../Home/home.html?userId=${user.id}`;
+        } else {
+            alert('Senha incorreta. Tente novamente.');
+        }
+    } else {
+        alert('E-mail não encontrado. Verifique o e-mail inserido.');
+    }
+}
 
 let count = 1;
 document.getElementById('radio1').checked = true;
