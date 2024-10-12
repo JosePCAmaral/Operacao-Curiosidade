@@ -21,15 +21,19 @@
                         <hr>
                     </div>
                     <div class="conf-img">
-                        <div class="person">
-                            <span class="material-symbols-outlined">person</span>
+                        <div class="person" id="containerImg">
+                            <span class="material-symbols-outlined" id="spanPerson">person</span>
+                            <img id="personImage" src="" alt="Imagem da pessoa" />
                         </div>
                         <div class="opc-img">
-                            <div class="opc-atu">
-                                <span class="material-symbols-outlined">sync</span>
-                                <p>Atualizar a imagem</p>
-                            </div>
-                            <div class="opc-rem">
+                            <label for="AtualizarImagem">
+                                <div class="opc-atu">
+                                    <span class="material-symbols-outlined">sync</span>
+                                    <p>Adicionar imagem</p>
+                                    <input type="file" name="imageFile" accept="image/*" id="AtualizarImagem">
+                                </div>
+                            </label>
+                            <div class="opc-rem" id="removeImage">
                                 <span class="material-symbols-outlined">delete</span>
                                 <p>Remover a imagem</p>
                             </div>

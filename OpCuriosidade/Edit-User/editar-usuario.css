@@ -135,6 +135,12 @@ div.conf-img > div.person{
     display: inline-block;
 }
 
+div.person > img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
 div.person > span{
     position: absolute;
     top: 50%;
@@ -148,7 +154,7 @@ div.opc-img{
     position: absolute;
 }
 
-div.opc-img > div.opc-atu{
+div.opc-img > label > div.opc-atu{
     display: flex;
     margin-bottom: 20px;
     margin-top: 14px;
@@ -159,8 +165,12 @@ div.opc-img > div.opc-atu{
     cursor: pointer;
 }
 
-div.opc-img > div.opc-atu > span{
+div.opc-img > label > div.opc-atu > span{
     color: #6b1bc6;
+}
+
+input#AtualizarImagem{
+    display: none;
 }
 
 div.opc-img > div.opc-rem{
