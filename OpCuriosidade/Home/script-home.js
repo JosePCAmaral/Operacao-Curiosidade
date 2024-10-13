@@ -2,7 +2,6 @@ let HomeUserId = null;
 
 let params = new URLSearchParams(window.location.search);
 let userId = params.get('userId');
-console.log('ID do usuáriool:', userId);
 
 let vg = document.getElementById('vg');
 let cc = document.getElementById('cc');
@@ -11,6 +10,51 @@ let re = document.getElementById('re');
 let co = document.getElementById('cf');
 let ifr = document.getElementById('iframe');
 ifr.src = `../Overview/perfis.html?userId=${userId}`;
+
+document.addEventListener("DOMContentLoaded", function() {
+
+    fetch(`https://localhost:7299/api/user-model/get-user-id/${userId}`)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(user => {
+
+            const pai = document.getElementById('iHeaderHome');
+            const divcreate = document.createElement('div');
+
+            const nameParts = user.facts.name.split(' ');
+            const firstName = nameParts[0];
+            const lastName = nameParts[nameParts.length - 1];
+
+            const fullName = `${firstName} ${lastName}`;
+
+            const typeText = user.type === true ? 'Administrador' : 'Operador';
+
+
+            divcreate.className = 'perfilzinho';
+            divcreate.innerHTML = `
+                <img src="${user.facts.imagePath}">
+                    <p>${fullName} <br> |${typeText}|</p>
+                    <span class="material-symbols-outlined" id="expan-perfil-opt">expand_circle_down</span>
+            `;
+            pai.appendChild(divcreate);
+
+            const expandOpcPerfil = document.getElementById(`expan-perfil-opt`);
+
+            expandOpcPerfil.addEventListener('click', function(){
+                const photousu = document.getElementById('fotoUsuarioPerfilzinho');
+                photousu.src = user.facts.imagePath;
+                document.getElementsByClassName('modal-perfil')[0].style.display = 'block';
+            });
+
+        })
+        .catch(error => {
+            console.error('Houve um erro ao buscar os dados do usuário:', error);
+        });
+});
 
 
 let selectedDiv = vg;
@@ -290,12 +334,6 @@ contadorNotf.addEventListener('click', function(){
     var iframe = document.getElementById('iframe');
     iframe.contentWindow.postMessage('trocaTela', '*');
     document.getElementsByClassName('modal-notf')[0].style.display = 'none';
-});
-
-var expandOpcPerfil = document.getElementById('expan-perfil-opt');
-
-expandOpcPerfil.addEventListener('click', function(){
-    document.getElementsByClassName('modal-perfil')[0].style.display = 'block';
 });
 
 var closeModalPerfil = document.getElementById('modal-perfil');
