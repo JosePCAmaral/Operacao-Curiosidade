@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", function() {
             console.log('Dados do usuário:', user);
             const caixaDadosSection = document.querySelector('.CaixaDados');
 
-            // Cria a div dados e adiciona à seção CaixaDados
             const dadosDiv = document.createElement('div');
             dadosDiv.className = 'dados';
 
@@ -31,7 +30,6 @@ document.addEventListener("DOMContentLoaded", function() {
             let partesData = data.split('-');
             let dataFormatada = `${partesData[2]}/${partesData[1]}/${partesData[0]}`;
 
-            // Preenche a div com os dados do usuário
             dadosDiv.innerHTML = `
                 <div class="dados">
                 <div class="flex">
@@ -105,16 +103,42 @@ document.addEventListener("DOMContentLoaded", function() {
             `;
             caixaDadosSection.appendChild(dadosDiv);
 
-            user.operation.interrest.forEach(interrest => {
-                const boxOperacoes = document.querySelector('.boxInteresses');
+            console.log('Interesses do usuário:', user.operation.interest);
 
-                const daDiv = document.createElement('div');
-                daDiv.className = 'da';
-                daDiv.innerHTML = `
-                    <p>${interrest.interrests}</p>
+            user.operation.interest.forEach(interest => {
+                const boxInt = document.querySelector('#boxInteresses');
+
+                const daDivInt = document.createElement('div');
+                daDivInt.className = 'da';
+                daDivInt.innerHTML = `
+                    <p>${interest.interests}</p>
                     <span class="material-symbols-outlined">close</span>
             `;
-            boxOperacoes.appendChild(daDiv);
+            boxInt.appendChild(daDivInt);
+            });
+
+            user.operation.feeling.forEach(feeling => {
+                const boxSent = document.querySelector('#boxSentimentos');
+
+                const daDivSent = document.createElement('div');
+                daDivSent.className = 'da';
+                daDivSent.innerHTML = `
+                    <p>${feeling.feelings}</p>
+                    <span class="material-symbols-outlined">close</span>
+            `;
+            boxSent.appendChild(daDivSent);
+            });
+
+            user.operation.value.forEach(value => {
+                const boxVal = document.querySelector('#boxValores');
+
+                const daDivVal = document.createElement('div');
+                daDivVal.className = 'da';
+                daDivVal.innerHTML = `
+                    <p>${value.values}</p>
+                    <span class="material-symbols-outlined">close</span>
+            `;
+            boxVal.appendChild(daDivVal);
             });
         })
         .catch(error => {

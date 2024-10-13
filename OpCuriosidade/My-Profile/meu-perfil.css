@@ -133,31 +133,33 @@ div.box{
     margin-top: 10px;
     margin-bottom: 50px;
     width: 94%;
-    height: 100px;
+    height: auto;
     border: 2px solid rgba(128, 128, 128, 0.485);
     border-radius: 10px;
     display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
 }
 
 div.da{
     margin-top: 10px;
     margin-left: 10px;
+    margin-bottom: 10px;
     display: flex;
     background-color: rgba(143, 143, 254, 0.432);
     height: 25px;
     border-radius: 10px;
     color: #6b1bc6;
-    width: 70px;
 }
 
 div.da > span{
     padding-left: 5px;
+    padding-right: 7px;
     padding-top: 6px;
     font-size: 13px;
     cursor: pointer;
 }
 
 div.da > p{
-    padding-top: 2px;
-    padding-left: 7px;
+    padding-left: 8px;
 }
