@@ -26,20 +26,23 @@
         </section>
         <section class="main" >
             <div class="iframe" id="diframe">
-                <iframe src="../My-Profile/meu-pefil.html" frameborder="0" id="iframe"></iframe>
+                <iframe src="../My-Profile/meu-pefil.html" frameborder="0" id="iframep"></iframe>
             </div>
             <div class="alterar" id="alterar">
                 <h1>Sua Foto</h1>
                 <div class="cont-foto">
-                    <div class="person">
-                        <span class="material-symbols-outlined">person</span>
+                    <div class="person" id="containerImg">
+                        <span class="material-symbols-outlined" id="spanPerson">person</span>
+                        <img id="personImage" src="" alt="Imagem da pessoa" />
                     </div>
                     <div class="opc-img">
-                        <div class="opc-atu">
-                            <span class="material-symbols-outlined">sync</span>
-                            <p>Atualizar a imagem</p>
-                        </div>
-                        <div class="opc-rem">
+                        <label for="AtualizarImagem">
+                            <div class="opc-atu">
+                                <span class="material-symbols-outlined">sync</span>
+                                <p>Adicionar imagem</p>
+                            </div>
+                        </label>
+                        <div class="opc-rem" id="removeImage">
                             <span class="material-symbols-outlined">delete</span>
                             <p>Remover a imagem</p>
                         </div>
@@ -47,23 +50,24 @@
                 </div>
                 <div class="alt-senha">
                     <h1>Altere sua Senha</h1>
-                    <div class="senha" id="atual">
-                        <p><label for="isenhaA">Senha Atual</label></p>
-                        <input type="password" name="senhaA" id="isenhaA">
-                    </div>
-                    <div class="senha" id="nova">
-                        <p><label for="isenhaN">Senha Nova</label></p>
-                        <input type="password" name="senhaN" id="isenhaN">
-                    </div>
-                    <label class="custom-checkbox">
-                        <input type="checkbox" checked>
-                        <span class="checkmark"></span>
-                        Administrador
-                    </label>
-                    <a href="#">
-                        <span class="material-symbols-outlined">save</span>
-                        <p>Salvar</p>
-                    </a>
+                        <input type="file" name="imageFile" accept="image/*" id="AtualizarImagem">
+                        <div class="senha" id="atual">
+                            <p><label for="isenhaA">Senha Atual</label></p>
+                            <input type="password" name="senhaA" id="isenhaA">
+                        </div>
+                        <div class="senha" id="nova">
+                            <p><label for="isenhaN">Senha Nova</label></p>
+                            <input type="password" name="senhaN" id="isenhaN">
+                        </div>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" checked>
+                            <span class="checkmark"></span>
+                            Administrador
+                        </label>
+                        <a href="#" id="btnSalvar">
+                            <span class="material-symbols-outlined">save</span>
+                            <p>Salvar</p>
+                        </a>
                     <div class="img">
                         <img src="../imagens/Sem título.png" alt="">
                     </div>

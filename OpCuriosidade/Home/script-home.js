@@ -1,11 +1,8 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const params = new URLSearchParams(window.location.search);
-    const userId = params.get('userId');
-    console.log('ID do usuário:', userId);
-});
-
-
 let HomeUserId = null;
+
+let params = new URLSearchParams(window.location.search);
+let userId = params.get('userId');
+console.log('ID do usuáriool:', userId);
 
 let vg = document.getElementById('vg');
 let cc = document.getElementById('cc');
@@ -70,6 +67,7 @@ function configuracoes(){
         selectedDiv = co;
         co.style.backgroundColor = '#6b1bc6';
         co.style.color = 'white';
+        
         selecionaPagina();
     }
 }
@@ -171,7 +169,7 @@ function selecionaPagina(){
     }else if(selectedDiv === re){
         ifr.src = "../Reports/relatorios.html";
     }else if(selectedDiv === co){
-        ifr.src = "../Settings/configuracoes.html";
+        ifr.src = `../Settings/configuracoes.html?userId=${userId}`;
     }
 }
 
