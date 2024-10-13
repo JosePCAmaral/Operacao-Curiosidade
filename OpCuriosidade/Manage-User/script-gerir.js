@@ -1,8 +1,17 @@
+
+
 document.addEventListener("DOMContentLoaded", function() {
 
     const itemsPerPage = 6;
     let currentPage = 1;
     let usersData = [];
+    let isSortedByCodeAsc = true;
+    let isSortedByNameAsc = true;
+    let isSortedByEmailAsc = true;
+    let isSortedByStatusAsc = true;
+    let isSortedByTypeAsc = true;
+    let isSortedByDateAsc = true;
+
 
     document.getElementById('filtrar').addEventListener('click', function() {
         const status = document.getElementById('istatus').value;
@@ -67,16 +76,18 @@ document.addEventListener("DOMContentLoaded", function() {
             headerItem.classList.add('ordem');
             headerItem.innerHTML = `
             <div>
-                <input type="checkbox" name="selecionar" id="selecionar" onclick="marcarTodos(this)">
+            <input type="checkbox" name="selecionar" id="selecionar" onclick="marcarTodos(this)">
             </div>
-            <div><p>Código<span class="material-symbols-outlined">swap_vert</span></p></div>
-            <div id="nome"><p>Nome<span class="material-symbols-outlined">swap_vert</span></p></div>
-            <div id="email"><p>E-mail<span class="material-symbols-outlined">swap_vert</span></p></div>
-            <div id="data"><p>Data de criação<span class="material-symbols-outlined">swap_vert</span></p></div>
-            <div id="status"><p>Status<span class="material-symbols-outlined">swap_vert</span></p></div>
-            <div id="tipo"><p>Tipo<span class="material-symbols-outlined">swap_vert</span></p></div>
-        `;
-        userList.appendChild(headerItem);
+            <div><p id="code">Código<span class="material-symbols-outlined">swap_vert</span></p></div>
+            <div id="nome"><p id="name-header">Nome<span class="material-symbols-outlined">swap_vert</span></p></div>
+            <div id="email"><p id="email-header">E-mail<span class="material-symbols-outlined">swap_vert</span></p></div>
+            <div id="data"><p id="date-header">Data de criação<span class="material-symbols-outlined">swap_vert</span></p></div>
+            <div id="status"><p id="status-header">Status<span class="material-symbols-outlined">swap_vert</span></p></div>
+            <div id="tipo"><p id="type-header">Tipo<span class="material-symbols-outlined">swap_vert</span></p></div>
+            `;
+            userList.appendChild(headerItem);
+
+
 
             const start = (page - 1) * itemsPerPage;
             const end = start + itemsPerPage;
@@ -133,6 +144,12 @@ document.addEventListener("DOMContentLoaded", function() {
                     userList.appendChild(listItem);
                 });
             }
+            document.getElementById('name-header').onclick = ordenarPorNome;
+            document.getElementById('email-header').onclick = ordenarPorEmail;
+            document.getElementById('date-header').onclick = ordenarPorData;
+            document.getElementById('status-header').onclick = ordenarPorStatus;
+            document.getElementById('type-header').onclick = ordenarPorTipo;
+            document.getElementById('code').onclick = ordenarPorCodigo;
         }
 
         function updatePaginationControls() {
@@ -174,7 +191,51 @@ document.addEventListener("DOMContentLoaded", function() {
             updatePaginationControls();
         });
 
+        function ordenarPorCodigo() {
+            console.log('Ordenar por código');
+            usersData.sort((a, b) => isSortedByCodeAsc ? a.code.localeCompare(b.code) : b.code.localeCompare(a.code));
+            isSortedByCodeAsc = !isSortedByCodeAsc;
+            renderPage(currentPage);
+        }
+    
+        function ordenarPorNome() {
+            console.log('Ordenar por nome');
+            usersData.sort((a, b) => isSortedByNameAsc ? a.facts.name.localeCompare(b.facts.name) : b.facts.name.localeCompare(a.facts.name));
+            isSortedByNameAsc = !isSortedByNameAsc;
+            renderPage(currentPage);
+        }
+    
+        function ordenarPorEmail() {
+            console.log('Ordenar por e-mail');
+            usersData.sort((a, b) => isSortedByEmailAsc ? a.facts.email.localeCompare(b.facts.email) : b.facts.email.localeCompare(a.facts.email));
+            isSortedByEmailAsc = !isSortedByEmailAsc;
+            renderPage(currentPage);
+        }
+    
+        function ordenarPorData() {
+            console.log('Ordenar por data');
+            usersData.sort((a, b) => isSortedByDateAsc ? new Date(a.creationDate) - new Date(b.creationDate) : new Date(b.creationDate) - new Date(a.creationDate));
+            isSortedByDateAsc = !isSortedByDateAsc;
+            renderPage(currentPage);
+        }
+    
+        function ordenarPorStatus() {
+            console.log('Ordenar por status');
+            usersData.sort((a, b) => isSortedByStatusAsc ? (a.status === b.status ? 0 : (a.status ? -1 : 1)) : (a.status === b.status ? 0 : (b.status ? -1 : 1)));
+            isSortedByStatusAsc = !isSortedByStatusAsc;
+            renderPage(currentPage);
+        }
+    
+        function ordenarPorTipo() {
+            console.log('Ordenar por tipo');
+            usersData.sort((a, b) => isSortedByTypeAsc ? (a.type === b.type ? 0 : (a.type ? -1 : 1)) : (a.type === b.type ? 0 : (b.type ? -1 : 1)));
+            isSortedByTypeAsc = !isSortedByTypeAsc;
+            renderPage(currentPage);
+        }
+
 });
+
+
 
 let selectedUserId = null;
 
@@ -247,3 +308,4 @@ function AlterarStatus() {
         console.error('Houve um erro ao alterar o status do usuário:', error);
     });
 }
+

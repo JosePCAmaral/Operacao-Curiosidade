@@ -3,6 +3,11 @@ document.addEventListener("DOMContentLoaded", function() {
     const itemsPerPage = 6;
     let currentPage = 1;
     let usersData = [];
+    let isSortedByCodeAsc = true;
+    let isSortedByNameAsc = true;
+    let isSortedByEmailAsc = true;
+    let isSortedByTypeAsc = true;
+    let isSortedByDateAsc = true;
 
     document.getElementById('filtrar').addEventListener('click', function() {
         const status = null;
@@ -66,11 +71,11 @@ document.addEventListener("DOMContentLoaded", function() {
             const headerItem = document.createElement('li');
             headerItem.classList.add('ordem');
             headerItem.innerHTML = `
-            <div onclick="PorCodigo()"><p>Código<span class="material-symbols-outlined">swap_vert</span></p></div>
-            <div id="nome" onclick="PorNome()"><p>Nome<span class="material-symbols-outlined">swap_vert</span></p></div>
-            <div id="email" onclick="PorEmail()"><p>E-mail<span class="material-symbols-outlined">swap_vert</span></p></div>
-            <div id="data" onclick="PorData()"><p>Data de criação<span class="material-symbols-outlined">swap_vert</span></p></div>
-            <div id="tipo" onclick="PorTipo()"><p>Tipo<span class="material-symbols-outlined">swap_vert</span></p></div>
+            <div><p id="code">Código<span class="material-symbols-outlined">swap_vert</span></p></div>
+            <div id="nome"><p id="name-header">Nome<span class="material-symbols-outlined">swap_vert</span></p></div>
+            <div id="email"><p id="email-header">E-mail<span class="material-symbols-outlined">swap_vert</span></p></div>
+            <div id="data"><p id="date-header">Data de criação<span class="material-symbols-outlined">swap_vert</span></p></div>
+            <div id="tipo"><p id="type-header">Tipo<span class="material-symbols-outlined">swap_vert</span></p></div>
         `;
         userList.appendChild(headerItem);
 
@@ -121,6 +126,11 @@ document.addEventListener("DOMContentLoaded", function() {
                     userList.appendChild(listItem);
                 });
             }
+            document.getElementById('name-header').onclick = ordenarPorNome;
+            document.getElementById('email-header').onclick = ordenarPorEmail;
+            document.getElementById('date-header').onclick = ordenarPorData;
+            document.getElementById('type-header').onclick = ordenarPorTipo;
+            document.getElementById('code').onclick = ordenarPorCodigo;
         }
 
         function updatePaginationControls() {
@@ -162,6 +172,41 @@ document.addEventListener("DOMContentLoaded", function() {
             updatePaginationControls();
         });
 
+        function ordenarPorCodigo() {
+            console.log('Ordenar por código');
+            usersData.sort((a, b) => isSortedByCodeAsc ? a.code.localeCompare(b.code) : b.code.localeCompare(a.code));
+            isSortedByCodeAsc = !isSortedByCodeAsc;
+            renderPage(currentPage);
+        }
+    
+        function ordenarPorNome() {
+            console.log('Ordenar por nome');
+            usersData.sort((a, b) => isSortedByNameAsc ? a.facts.name.localeCompare(b.facts.name) : b.facts.name.localeCompare(a.facts.name));
+            isSortedByNameAsc = !isSortedByNameAsc;
+            renderPage(currentPage);
+        }
+    
+        function ordenarPorEmail() {
+            console.log('Ordenar por e-mail');
+            usersData.sort((a, b) => isSortedByEmailAsc ? a.facts.email.localeCompare(b.facts.email) : b.facts.email.localeCompare(a.facts.email));
+            isSortedByEmailAsc = !isSortedByEmailAsc;
+            renderPage(currentPage);
+        }
+    
+        function ordenarPorData() {
+            console.log('Ordenar por data');
+            usersData.sort((a, b) => isSortedByDateAsc ? new Date(a.creationDate) - new Date(b.creationDate) : new Date(b.creationDate) - new Date(a.creationDate));
+            isSortedByDateAsc = !isSortedByDateAsc;
+            renderPage(currentPage);
+        }
+    
+        function ordenarPorTipo() {
+            console.log('Ordenar por tipo');
+            usersData.sort((a, b) => isSortedByTypeAsc ? (a.type === b.type ? 0 : (a.type ? -1 : 1)) : (a.type === b.type ? 0 : (b.type ? -1 : 1)));
+            isSortedByTypeAsc = !isSortedByTypeAsc;
+            renderPage(currentPage);
+        }
+
 });
 
 function voltar() {
@@ -170,4 +215,58 @@ function voltar() {
 
 function Limpar(){
     location.reload();
+}
+
+document.getElementById('Imprimir').addEventListener('click', function() {
+    imprimirUsuarios();
+});
+
+function imprimirUsuarios() {
+    const userList = document.getElementById('user-list');
+    const usersToPrint = userList.querySelectorAll('li.user');
+
+    if (usersToPrint.length === 0) {
+        alert("Nenhum usuário encontrado para imprimir.");
+        return;
+    }
+
+    const printWindow = window.open('', '_blank', 'height=600,width=800');
+
+    printWindow.document.write(`
+        <html>
+        <head>
+            <title>Imprimir Usuários</title>
+            <style>
+                body { font-family: Arial, sans-serif; }
+                .user { margin-bottom: 10px; }
+                .codigo { display: inline-block; width: 60px; font-size: 10px; }
+                .nome, .email, .tipo { display: inline-block; width: 150px; font-size: 10px; }
+                .data { display: inline-block; width: 100px; font-size: 10px; }
+            </style>
+        </head>
+        <body>
+            <h1>Lista de Usuários</h1>
+            <ul>
+    `);
+
+    usersToPrint.forEach(user => {
+        printWindow.document.write(`
+            <li class="user">
+                <span class="codigo">${user.querySelector('.codigo').textContent}</span>
+                <span class="nome">${user.querySelector('.nome').textContent}</span>
+                <span class="email">${user.querySelector('.email').textContent}</span>
+                <span class="data">${user.querySelector('.data').textContent}</span>
+                <span class="tipo">${user.querySelector('.tipo').textContent}</span>
+            </li>
+        `);
+    });
+
+    printWindow.document.write(`
+            </ul>
+        </body>
+        </html>
+    `);
+
+    printWindow.document.close();
+    printWindow.print();
 }
