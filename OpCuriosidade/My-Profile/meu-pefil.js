@@ -104,19 +104,49 @@ document.addEventListener("DOMContentLoaded", function() {
             caixaDadosSection.appendChild(dadosDiv);
 
             console.log('Interesses do usuário:', user.operation.interest);
-
+            let contInt = 1;
             user.operation.interest.forEach(interest => {
                 const boxInt = document.querySelector('#boxInteresses');
 
                 const daDivInt = document.createElement('div');
                 daDivInt.className = 'da';
+                daDivInt.id = `interest-${contInt}`;
                 daDivInt.innerHTML = `
                     <p>${interest.interests}</p>
                     <span class="material-symbols-outlined">close</span>
-            `;
-            boxInt.appendChild(daDivInt);
+                `;
+
+                (function(currentIndex) {
+                    const closeButton = daDivInt.querySelector('span');
+                    closeButton.addEventListener('click', () => {
+                        handleInterestClick(currentIndex);
+                    });
+                })(contInt);
+            
+                contInt++;
+                boxInt.appendChild(daDivInt);
             });
 
+            function handleInterestClick(IdInt) {
+                console.log('O índice do interesse clicado é:', IdInt);
+                console.log('ID do usuário:', userIdp);
+                fetch(`https://localhost:7299/api/operation-model/delete-interest/${userIdp}/${IdInt}`, {
+                    method: 'DELETE',
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erro ao deletar interesse');
+                    }
+                    console.log(`Interesse com ID ${IdInt} foi deletado com sucesso!`);
+                    location.reload();
+                })
+                .catch(error => {
+                    console.error('Houve um erro ao deletar o interesse:', error);
+                });
+            }
+
+
+            let contFeel = 1;
             user.operation.feeling.forEach(feeling => {
                 const boxSent = document.querySelector('#boxSentimentos');
 
@@ -126,9 +156,24 @@ document.addEventListener("DOMContentLoaded", function() {
                     <p>${feeling.feelings}</p>
                     <span class="material-symbols-outlined">close</span>
             `;
-            boxSent.appendChild(daDivSent);
+            
+                (function(currentIndex) {
+                    const closeButton = daDivSent.querySelector('span');
+                    closeButton.addEventListener('click', () => {
+                        handleFeelingClick(currentIndex);
+                    });
+                })(contFeel);
+        
+                contFeel++;
+
+                boxSent.appendChild(daDivSent);
             });
 
+            function handleFeelingClick(IdFeel) {
+                console.log('O índice do interesse clicado é:', IdFeel);
+            }
+
+            let contVal = 1;
             user.operation.value.forEach(value => {
                 const boxVal = document.querySelector('#boxValores');
 
@@ -138,8 +183,24 @@ document.addEventListener("DOMContentLoaded", function() {
                     <p>${value.values}</p>
                     <span class="material-symbols-outlined">close</span>
             `;
+
+            (function(currentIndex) {
+                const closeButton = daDivVal.querySelector('span');
+                closeButton.addEventListener('click', () => {
+                    handleValueClick(currentIndex);
+                });
+            })(contVal);
+    
+            contVal++;    
+
             boxVal.appendChild(daDivVal);
             });
+
+            
+            function handleValueClick(IdVal) {
+                console.log('O índice do interesse clicado é:', IdVal);
+            }
+
         })
         .catch(error => {
             console.error('Houve um erro ao buscar os dados do usuário:', error);
