@@ -1,7 +1,6 @@
-let usersData = []; // Variável global para armazenar os usuários
+let usersData = [];
 
 document.addEventListener("DOMContentLoaded", function() {
-    // Buscar os usuários da API
     fetch('https://localhost:7299/api/user-model/api/users')
         .then(response => {
             if (!response.ok) {

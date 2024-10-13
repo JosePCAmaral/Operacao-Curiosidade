@@ -59,6 +59,25 @@ div.cadastro > div.user-info{
     display: flex;
 }
 
+div.person{
+    background-color: #6b1bc65e;
+    width: 90px;
+    height: 90px;
+    border-radius: 10px;
+    margin-top: 15px;
+    margin-left: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+div.person > span{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 45px;
+}
+
 div.cadastro > div.user-info > img{
     margin-top: 15px;
     margin-left: 20px;
@@ -85,7 +104,7 @@ div.user-info > div.user-details > p{
     margin-bottom: 10px;
 }
 
-div.user-info > div.user-details > span{
+div.user-info > div.user-details > span#ativo{
     margin-top: 10px;
     margin-left: 20px;
     padding-left: 5px;
@@ -102,6 +121,13 @@ div.user-info > div.user-details > span#inativo{
     color: rgb(186, 6, 6);
     background-color: rgba(255, 0, 0, 0.232);
     border: 2px solid rgb(110, 10, 10);
+    margin-top: 10px;
+    margin-left: 20px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 2px;
+    border-radius: 20px;
+    font-size: 0.9em;
 }
 
 span.user-id{
@@ -112,7 +138,7 @@ span.user-id{
     border: 2px solid #6b1bc6;
     height: 25px;
     width: 78px;
-    padding-left: 7px;
+    padding-left: 11px;
     border-radius: 20px;
     font-size: 0.9em;
 }

@@ -1,9 +1,58 @@
-var uc = document.getElementById('uc');
-var cm = document.getElementById('cm');
-var cc = document.getElementById('cc');
-var ifr = document.getElementById('iframe');
+let uc = document.getElementById('uc');
+let cm = document.getElementById('cm');
+let cc = document.getElementById('cc');
+let ifr = document.getElementById('iframe');
+let params = new URLSearchParams(window.location.search);
+let userId = params.get('userId');
+console.log('ID do usuáriooOverview:', userId);
+ifr.src = `../Last-Shared/perfis-ult.html?userId=${userId}`;
 
-var selectedDiv = uc;
+document.addEventListener("DOMContentLoaded", function() {
+
+    fetch(`https://localhost:7299/api/user-model/api/users`)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erro na requisição');
+        }
+        return response.json();
+    })
+    .then(users => {
+
+        let totalUsers = users.length;
+        let usersWithOperations = users.filter(user => user.operation !== null).length;
+        let usersWithoutOperations = totalUsers - usersWithOperations;
+
+        const ContUserT = document.getElementById('total');
+        const divcriadaT = document.createElement('div');
+        divcriadaT.classList.add('quantidade');
+        divcriadaT.innerHTML = `
+            <p>${totalUsers}</p>
+            `;
+        ContUserT.appendChild(divcriadaT);
+
+        const ContUserS = document.getElementById('totalSem');
+        const divcriadaS = document.createElement('div');
+        divcriadaS.classList.add('quantidade');
+        divcriadaS.innerHTML = `
+            <p>${usersWithoutOperations}</p>
+            `;
+        ContUserS.appendChild(divcriadaS);
+
+        const ContUserC = document.getElementById('totalCom');
+        const divcriadaC = document.createElement('div');
+        divcriadaC.classList.add('quantidade');
+        divcriadaC.innerHTML = `
+            <p>${usersWithOperations}</p>
+            `;
+        ContUserC.appendChild(divcriadaC);
+    })
+    .catch(error => {
+        console.error('Houve um erro ao buscar os dados dos usuários:', error);
+    });
+
+});
+
+let selectedDiv = uc;
 
 uc.style.backgroundColor = 'rgba(143, 143, 254, 0.432)';
 

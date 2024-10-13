@@ -171,6 +171,20 @@ document.addEventListener("DOMContentLoaded", function() {
 
             function handleFeelingClick(IdFeel) {
                 console.log('O índice do interesse clicado é:', IdFeel);
+                console.log('ID do usuário:', userIdp);
+                fetch(`https://localhost:7299/api/operation-model/delete-feeling/${userIdp}/${IdFeel}`, {
+                    method: 'DELETE',
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erro ao deletar interesse');
+                    }
+                    console.log(`Interesse com ID ${IdFeel} foi deletado com sucesso!`);
+                    location.reload();
+                })
+                .catch(error => {
+                    console.error('Houve um erro ao deletar o interesse:', error);
+                });
             }
 
             let contVal = 1;
@@ -199,6 +213,20 @@ document.addEventListener("DOMContentLoaded", function() {
             
             function handleValueClick(IdVal) {
                 console.log('O índice do interesse clicado é:', IdVal);
+                console.log('ID do usuário:', userIdp);
+                fetch(`https://localhost:7299/api/operation-model/delete-value/${userIdp}/${IdVal}`, {
+                    method: 'DELETE',
+                })
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Erro ao deletar interesse');
+                    }
+                    console.log(`Interesse com ID ${IdVal} foi deletado com sucesso!`);
+                    location.reload();
+                })
+                .catch(error => {
+                    console.error('Houve um erro ao deletar o interesse:', error);
+                });
             }
 
         })
