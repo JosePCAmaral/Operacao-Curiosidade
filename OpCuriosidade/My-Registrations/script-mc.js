@@ -222,9 +222,7 @@ function Limpar(){
 
 function openModal(element){
     const userId = element.getAttribute('data-id');
-
     selectedUserId = userId;
-    openMCModalzinho1
     window.parent.postMessage({ action: 'openMCModalzinho1', userId: userId }, '*');  
 }
 

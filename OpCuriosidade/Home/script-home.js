@@ -1,4 +1,5 @@
 let HomeUserId = null;
+let userIdExcluir = null;
 
 let params = new URLSearchParams(window.location.search);
 let userId = params.get('userId');
@@ -232,7 +233,8 @@ window.addEventListener('message', function(event) {
         document.querySelector('.modal').style.display = 'none';
         document.querySelector('.modal-comp').style.display = 'none';
     }
-    else if (event.data === 'openExcluirModal') {
+    else if (event.data.action === 'openExcluirModal') {
+        userIdExcluir = event.data.userId;
         document.getElementsByClassName('modal-excluir')[0].style.display = 'block';
     }
     else if(event.data === 'closeModalEditar'){
@@ -308,8 +310,8 @@ can.addEventListener('click', function(){
 });
 
 rem.addEventListener('click', function(){
-    console.log('Remover operação', userIdModalzinho1);
-    fetch(`https://localhost:7299/api/operation-model/delete-operation/${userIdModalzinho1}`, {
+    console.log('Remover operação', userIdExcluir);
+    fetch(`https://localhost:7299/api/operation-model/${userIdExcluir}`, {
         method: 'DELETE'
     })
     .then(response => {
