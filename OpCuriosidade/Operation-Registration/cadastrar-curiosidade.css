@@ -40,7 +40,7 @@ main{
 
 section.cor{
     width: 5%;
-    background-color: red;
+    background-color: #6b1bc6;
     border-radius: 10px 10px 10px 10px;
     height: auto;
     align-self: stretch;
@@ -51,14 +51,39 @@ section.cadastrar{
     height: 100%;
 }
 
-div.cont-botao{
-    padding-top: 35px;
-    width: 10%;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-content: flex-start;
-    align-self: center;
+div.procurar{
+    color: #6b1bc6;
+    font-weight: bold;
+    margin-left: 30px;
+}
+
+div.procurar > p > label{
+    margin-left: 40px;
+}
+
+div.procurar > input{
+    height: 40px;
+    border: 2px solid rgba(98, 98, 98, 0.314);
+    border-radius: 7px;
+    margin-top: 5px;
+    padding-left: 10px;
+    width: 150px;
+}
+
+div.procurar > input[type="button"]{
+    height: 40px;
+    border: 2px solid rgba(98, 98, 98, 0.314);
+    border-radius: 7px;
+    margin-top: 5px;
+    width: 150px;
+    background-color: #6b1bc6;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+div.procurar > input[type="button"]:hover{
+    background-color: #7f50a9;
 }
 
 #toggleBt{
@@ -128,7 +153,7 @@ div.conf-img > div.person{
     width: 100px;
     height: 100px;
     border-radius: 10px;
-    margin-left: 30px;
+    margin-left: 980px;
     position: relative;
     display: inline-block;
 }
@@ -233,7 +258,7 @@ div.frase > p{
 div.quant{
     position: absolute;
     top: 50%;
-    right: 8%;
+    left: 78%;
     transform: translate(-50%, -50%);
     background-color: #e9e3f0;
     color: #6b1bc6;
@@ -268,6 +293,21 @@ div.add{
     position: absolute;
     top: 50%;
     right: 5%;
+    transform: translate(-50%, -50%);
+    color: #6b1bc6;
+    cursor: pointer;
+}
+
+div.remove{
+    background-color: #e9e3f0;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    padding-left: 3px;
+    padding-top: 3px;
+    position: absolute;
+    top: 50%;
+    right: 10%;
     transform: translate(-50%, -50%);
     color: #6b1bc6;
     cursor: pointer;
@@ -356,22 +396,27 @@ footer{
     padding-right: 40px;
 }
 
-footer > a{
-    display: flex;
+footer > button{
     background-color: #6b1bc6;
     color: white;
-    width: 100px;
-    height: 40px;
-    float: right;
-    padding-top: 7px;
-    padding-left: 15px;
+    border: none;
     border-radius: 10px;
+    width: 110px;
+    height: 50px;
     cursor: pointer;
-    text-decoration: none;
+    float: right;
+    position: relative;
+    padding-left: 30px;
+    padding-right: 10px;
+    padding-top: 3px;
+    font-weight: bold;
 }
 
-footer > a > span{
-    padding-right: 2px;
+footer > button > span{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
 }
 
 ul {
@@ -415,4 +460,11 @@ input.curiosidade{
 
 input.curiosidade:focus{
     outline: none;
+}
+
+img#PhotoUser{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: none;
 }

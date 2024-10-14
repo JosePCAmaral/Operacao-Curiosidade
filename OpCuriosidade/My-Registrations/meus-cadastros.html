@@ -8,113 +8,65 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"/>
 </head>
 <body>
-    <header class="filtro">
-        <div class="form">
+    <main>
+        <section class="listing">
+            <header class="listing">
             <div class="selects">
                 <div>
-                    <p><label for="icodigo">Código</label></p>
-                    <select name="codigo" id="icodigo">
-                        <option value="1">24-00012</option>
-                    </select>
-                </div>
-                <div>
                     <p><label for="istatus">Status</label></p>
-                    <select name="status" id="istatus">
-                        <option value="1" id="ativo">Ativo</option>
-                        <option value="2" id="inativo">Inativo</option>
+                    <select name="codigo" id="istatus">
+                        <option value="1"></option>
+                        <option value="2">Ativo</option>
+                        <option value="3">Inativo</option>
                     </select>
                 </div>
                 <div>
-                    <p><label for="inome">Nome</label></p>
-                    <select name="nome" id="inome">
-                        <option value="1">-</option>
+                    <p><label for="itipo">Tipo</label></p>
+                    <select name="tipo" id="itipo">
+                        <option value="1"></option>
+                        <option value="2" id="ativo">Administrador</option>
+                        <option value="3" id="inativo">Operador</option>
                     </select>
                 </div>
                 <div>
-                    <p><label for="iperiodo">Período</label></p>
-                    <select name="periodo" id="iperiodo">
-                        <option value="1">00/00/0000 - 00/00/0000</option>
-                    </select>
+                    <p><label for="icode">Código</label></p>
+                    <input type="text" name="code" id="icode">
+                </div>
+                <div>
+                    <p><label for="iperiodo">Período a partir de:</label></p>
+                    <input type="date" name="periodo" id="iperiodo">
+                </div>
+                <div>
+                    <p><label for="iperiodo">Período até:</label></p>
+                    <input type="date" name="periodo" id="iperiodoAte">
                 </div>
             </div>
             <div class="buttons">
-                <input type="button" value="Limpar" id="limpar">
+                <input type="button" value="Limpar" id="limpar" onclick="Limpar()">
                 <input type="button" value="Filtrar" id="filtrar">
             </div>
-        </div>
-    </header>
-    <main>
-        <div class="ordem">
-            <div><p>Código<span class="material-symbols-outlined">swap_vert</span></p></div>
-            <div id="nome"><p> Nome<span class="material-symbols-outlined">swap_vert</span></p></div>
-            <div id="email"><p>E-mail<span class="material-symbols-outlined">swap_vert</span></p></div>
-            <div id="data"><p>Data de criação<span class="material-symbols-outlined">swap_vert</span></p></div>
-            <div id="status"><p>Status<span class="material-symbols-outlined">swap_vert</span></p></div>
-        </div>
-        <div class="cadastros">
-            <div class="dados">
-                <p class="codigo">24-00016</p>
-                <p class="nome">Rosangela Maria Pereira</p>
-                <p class="email">rosangela.pereira@fakemail.br</p>
-                <p class="data">04/09/2024</p>
-                <p class="status">Ativo</p>
-                <p class="botao" id="btn1"><span class="material-symbols-outlined">more_vert</span>Detalhes</p>
-            </div>
-            <div class="dados">
-                <p class="codigo">24-00017</p>
-                <p class="nome">Lisa Kin Almeida</p>
-                <p class="email">lisa.almeida@fakemail.br</p>
-                <p class="data">04/09/2024</p>
-                <p class="status" id="inativo">Inativo</p>
-                <p class="botaoInativo"  id="btn2"><span class="material-symbols-outlined">more_vert</span>Detalhes</p>
-            </div>
-            <div class="dados">
-                <p class="codigo">24-00018</p>
-                <p class="nome">Paulo Rosa de Oliveira</p>
-                <p class="email">paulo.oliveira@fakemail.br</p>
-                <p class="data">04/09/2024</p>
-                <p class="status" id="inativo">Inativo</p>
-                <p class="botaoInativo"  id="btn3"><span class="material-symbols-outlined">more_vert</span>Detalhes</p>
-            </div>
-            <div class="dados">
-                <p class="codigo">24-00019</p>
-                <p class="nome">Rogério da Silva</p>
-                <p class="email">rogerio.silva@fakemail.br</p>
-                <p class="data">04/09/2024</p>
-                <p class="status">Ativo</p>
-                <p class="botao" id="btn4"><span class="material-symbols-outlined">more_vert</span>Detalhes</p>
-            </div>
-            <div class="dados">
-                <p class="codigo">24-00020</p>
-                <p class="nome">Fernando de Paula Silva</p>
-                <p class="email">fernando.silva@fakemail.br</p>
-                <p class="data">04/09/2024</p>
-                <p class="status">Ativo</p>
-                <p class="botao" id="btn5"><span class="material-symbols-outlined">more_vert</span>Detalhes</p>
-            </div>
-            <div class="dados">
-                <p class="codigo">24-83564</p>
-                <p class="nome">Eduardo Junior</p>
-                <p class="email">eduardo.junior@fakemail.br</p>
-                <p class="data">05/04/2024</p>
-                <p class="status">Ativo</p>
-                <p class="botao" id="btn6"><span class="material-symbols-outlined">more_vert</span>Detalhes</p>
-            </div>
-        </div>
+            </header>
+            <main class="listing">
+                <ul id="user-list">
+                </ul>
+            </main>
+            <footer class="listing">
+                <div class="paginacao">
+                    <p class="sele"><label for="ipagina">Itens por página</label> <select name="pagina" id="ipagina">
+                        <option value="1">6</option>
+                    </select></p>
+                    <p class="pag">Página 1 de 10</p>
+                    <p class="first"><span class="material-symbols-outlined">first_page</span></p>
+                    <p class="back"><span class="material-symbols-outlined">chevron_left</span></p>
+                    <p class="next"><span class="material-symbols-outlined">chevron_right</span></p>
+                    <p class="last"><span class="material-symbols-outlined">last_page</span></p>
+                </div>
+            </footer>
+        </section>
     </main>
-    <footer class="paginas">
-        <div class="selecionar">
-            <p class="sele"><label for="ipagina">Itens por página</label> <select name="pagina" id="ipagina">
-                <option value="1">100</option>
-            </select></p>
-            <p class="pag">Página 1 de 10</p>
-            <p class="first"><span class="material-symbols-outlined">first_page</span></p>
-            <p class="back"><span class="material-symbols-outlined">chevron_left</span></p>
-            <p class="next"><span class="material-symbols-outlined">chevron_right</span></p>
-            <p class="last"><span class="material-symbols-outlined">last_page</span></p>
-        </div>
+    <footer class="baixo">
+        <img src="../imagens/Sem título.png" alt="">
     </footer>
-    <img src="../imagens/Sem título.png" alt="">
     <script src="script-mc.js"></script>
 </body>
 </html>

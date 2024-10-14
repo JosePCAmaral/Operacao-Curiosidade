@@ -29,27 +29,35 @@ body, html{
     font-family: normal;
 }
 
-header{
+main{
+    height: 90%;
     width: 100%;
-    height: 22%;
     position: relative;
 }
 
-header > div.form{
-    display: flex;
-    background-color: rgba(128, 128, 128, 0.086);
+section.listing{
     position: absolute;
-    margin-left: 3%;
+    top: 50%;
+    left: 48%;
+    transform: translate(-50%, -50%);
     width: 90%;
-    height: 60%;
-    top: 40%;
-    border-radius: 10px;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+}
+
+section.listing > header{
+    width: 100%;
+    height: 15%;
+    background-color: rgba(128, 128, 128, 0.086);
     border : 2px solid rgba(128, 128, 128, 0.314);
+    display: flex;
+    border-radius: 5px;
 }
 
 div.selects{
     display: flex;
-    width: 78%;
+    width: 67%;
     height: 100%;
     padding-top: 13px;
     padding-left: 20px;
@@ -71,24 +79,54 @@ div.selects > div > select{
     cursor: pointer;
 }
 
-select#icodigo{
-    width: 100px;
+div.selects > div > input{
+    height: 30px;
+    padding-left: 10px;
+    border-radius: 8px;
+    border: 2px solid rgba(128, 128, 128, 0.314);
+    cursor: pointer;
+}
+
+div.selects > div > p > label{
+    cursor: pointer;
 }
 
 select#istatus{
-    width: 90px;
+    width: 80px;
 }
 
-select#inome, select#iperiodo{
-    width: 200px;
+select#itipo{
+    width: 130px;
+}
+
+input#icode{
+    width: 100px;
+}
+
+input#iperiodo, input#iperiodoAte{
+    width: 140px;
 }
 
 div.selects > div > select:hover{
     border: 2px solid rgba(128, 128, 128, 0.519);
 }
 
+div.selects > div > select:focus{
+    outline: none;
+    border: 2px solid rgba(128, 128, 128, 0.71);
+}
+
+div.selects > div > input:hover{
+    border: 2px solid rgba(128, 128, 128, 0.519);
+}
+
+div.selects > div > input:focus{
+    outline: none;
+    border: 2px solid rgba(128, 128, 128, 0.71);
+}
+
 div.buttons{
-    width: 22%;
+    width: 33%;
     height: 100%;
     display: flex;
 }
@@ -97,12 +135,19 @@ div.buttons > input#limpar{
     background-color: white;
     color: #6b1bc6;
     border: 2px solid #6b1bc6;
-    margin-right: 10px;
+    width: 150px;
+}
+
+div.buttons > input#filtrar{
+    background-color: white;
+    color: #6b1bc6;
+    border: 2px solid #6b1bc6;
+    width: 150px;
 }
 
 div.buttons > input{
     margin-top: 40px;
-    width: 45%;
+    width: 100%;
     height: 40%;
     background-color: #6b1bc6;
     color: white;
@@ -110,9 +155,14 @@ div.buttons > input{
     border-radius: 10px;
     font-size: 1em;
     cursor: pointer;
+    margin-right: 5px;
 }
 
 div.buttons > input#limpar:hover{
+    background-color: rgba(128, 128, 128, 0.086);
+}
+
+div.buttons > input#filtrar:hover{
     background-color: rgba(128, 128, 128, 0.086);
 }
 
@@ -120,83 +170,135 @@ div.buttons > input:hover{
     background-color: #7f42c4;
 }
 
-main{
-    padding-top: 10px;
+section.listing > main{
     width: 100%;
-    height: 63%;
-    padding-left: 37px;
+    height: 79%;
+    overflow-x: scroll;
+    overflow-y: hidden;
 }
 
-div.ordem{
+section.listing > main > ul{
+    list-style-type: none;
+    height: 100%;
+}
+
+li.ordem{
     display: flex;
-    width: 93%;
+    width: 1220px;
     height: 12%;
     border-radius: 5px;
     border:2px solid rgba(128, 128, 128, 0.314);
 }
 
-div.ordem > div#nome{
+li.ordem > div#nome{
     padding-left: 45px;
 }
 
-div.ordem > div#email{
+li.ordem > div#email{
     padding-left: 200px;
 }
 
-div.ordem > div#data{
+li.ordem > div#data{
     padding-left: 180px;
 }
 
-div.ordem > div{
+li.ordem > div#status{
+    padding-left: 80px;
+}
+
+li.ordem > div#tipo{
+    padding-left: 100px;
+}
+
+li.ordem > div{
     padding-top: 10px;
     padding-left: 25px;
     padding-right: 25px;
 }
 
-div.ordem > div > p{
+li.ordem > div > p{
     position: relative;
     cursor: pointer;
 }
 
-div.ordem > div > P > span{
+li.ordem > div > P > span{
     position: absolute;
     top: 20%;
     padding-left: 3px;
     font-size: 16px;
 }
 
-div.cadastros{
-    margin-top: 5px;
-    width: 93%;
-    height: 85%;
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    border: 2px solid #6b1bc6;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 2px;
 }
 
-div.cadastros > div.dados{
+input[type="checkbox"]:checked {
+    background-color: #6b1bc6;
+    border: none;
+    position: relative;
+}
+
+input[type="checkbox"]:checked::before {
+    content: '✔';
+    color: white;
+    font-size: 16px;
+    display: block;
+    text-align: center;
+    position: absolute;
+    top: -2px;
+    left: 3px;
+}
+
+li.user{
+    margin-top: 5px;
     display: flex;
-    margin-top: 1px;
-    margin-bottom: 1px;
-    width: 100%;
-    height: 16%;
-    border: 2px solid rgba(128, 128, 128, 0.314);
-    border-radius: 10px;
+    width: 1220px;
+    height: 13.4%;
+    border-radius: 8px;
+    border:2px solid rgba(128, 128, 128, 0.314);
     padding-top: 15px;
     padding-left: 25px;
 }
 
-div.dados > p.nome{
-    padding-left: 53px;
-    width: 320px;
+li.user > div.box{
+    margin-right: 50px;
 }
 
-div.dados > p.email{
-    width: 255px;
+li.user > div#code{
+    width: 120px;
 }
 
-div.dados > p.data{
+li.user > div#name{
+    width: 270px;
+}
+
+li.user > div#email{
+    width: 250px;
+}
+
+li.user > div#date{
+    width: 215px;
+}
+
+li.user > div#status{
+    width: 165px;
+}
+
+li.user > div#type{
     width: 160px;
 }
 
-div.dados > p.status{
+li.user > div#Id{
+    display: none;
+}
+
+li.user > div#status > p#statusA {
     width: 50px;
     padding-left: 5px;
     height: 70%;
@@ -204,32 +306,42 @@ div.dados > p.status{
     background-color: rgba(0, 128, 0, 0.193);
     border: 2px solid rgb(68, 174, 68);
     border-radius: 20px;
+    margin-right: 110px;
+    cursor: pointer;
 }
 
-div.dados > p.status#inativo{
+li.user > div#status > p#statusI{
     color: red;
     background-color: rgba(255, 0, 0, 0.232);
     border: 2px solid red;
     width: 60px;
-}
-
-div.dados > p.botaoInativo{
-    margin-left: 35px;
-    position: relative;
-    background-color: #6b1bc6;
-    color: white;
     height: 70%;
-    width: 110px;
-    padding-left: 25px;
-    border-radius: 5px;
+    padding-left: 5px;
+    margin-right: 100px;
+    border-radius: 20px;
     cursor: pointer;
 }
 
-div.dados > p.botaoInativo:hover{
+li.user > div#type > p#typeO{
+    width: 90px;
+    padding-left: 8px;
+    height: 70%;
+    color: white;
     background-color: #7f42c4;
+    border: 2px solid #6b1bc6;
+    border-radius: 20px;
 }
 
-div.dados > p.botao{
+li.user > div#type > p#typeA{
+    color: white;
+    background-color: #6b1bc6;
+    border: 2px solid #6b1bc6;
+    padding-left: 7px;
+    width: 120px;
+    border-radius: 20px;
+}
+
+li.user > div#button > p.botao{
     position: relative;
     background-color: #6b1bc6;
     color: white;
@@ -238,54 +350,74 @@ div.dados > p.botao{
     padding-left: 25px;
     border-radius: 5px;
     cursor: pointer;
-    margin-left: 45px;
 }
 
-div.dados > p > span{
+li.user > div#button >  p > span{
     position: absolute;
     font-size: 20px;
     top: 9%;
     left: 5%;
 }
 
-div.dados > p.botao:hover{
+li.user > div#button > p.botao:hover{
     background-color: #7f42c4;
 }
 
-footer.paginas{
-    width: 100%;
-    height: 5%;
-    padding-left: 40px;
+li.noUser{
+    margin-top: 5px;
+    display: flex;
+    width: 1250px;
+    height: 87%;
+    border-radius: 8px;
+    padding-top: 15px;
+    padding-left: 25px;
+    position: relative;
 }
 
-footer.paginas > div{
+li.noUser > p{
+    position: absolute;
+    top: 50%;
+    left: 43%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    color: rgba(128, 128, 128, 0.71);
+}
+
+section.listing > footer{
+    width: 100%;
+    height: 6%;
+    background-color: blue;
     display: flex;
-    width: 93%;
-    height: 100%;
     border-radius: 5px;
     border: 2px solid rgba(128, 128, 128, 0.314);
     background-color: rgba(128, 128, 128, 0.086);
-    padding-top: 4px;
 }
 
-div.selecionar > p.sele{
-    padding-left: 20px;
+section.listing > footer > div.paginacao{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
-div.selecionar > p.sele > select{
+div.paginacao > p.sele{
+    padding-left: 30px;
+}
+
+div.paginacao > p.sele > select{
     border-radius: 5px;
     border: 2px solid rgba(128, 128, 128, 0.314);
 }
 
-div.selecionar > p.sele > select:hover{
+div.paginacao > p.sele > select:hover{
     border: 2px solid rgba(128, 128, 128, 0.519);
 }
 
-div.selecionar > p.pag{
-    padding-left: 600px;
+div.paginacao > p.pag{
+    padding-left: 630px;
 }
 
-div.selecionar > p.first{
+div.paginacao > p.first{
     background-color: rgba(128, 128, 128, 0.086);
     border: 2px solid rgba(128, 128, 128, 0.314);
     border-radius: 5px;
@@ -296,15 +428,15 @@ div.selecionar > p.first{
     cursor: pointer;
 }
 
-div.selecionar > p.first:hover{
+div.paginacao > p.first:hover{
     background-color: rgba(128, 128, 128, 0.314);
 }
 
-div.selecionar > p.first > span{
+div.paginacao > p.first > span{
     font-size: 16px;
 }
 
-div.selecionar > p.back{
+div.paginacao > p.back{
     background-color: rgba(128, 128, 128, 0.086);
     border: 2px solid rgba(128, 128, 128, 0.314);
     border-radius: 5px;
@@ -315,15 +447,15 @@ div.selecionar > p.back{
     cursor: pointer;
 }
 
-div.selecionar > p.back:hover{
+div.paginacao > p.back:hover{
     background-color: rgba(128, 128, 128, 0.314);
 }
 
-div.selecionar > p.back > span{
+div.paginacao > p.back > span{
     font-size: 20px;
 }
 
-div.selecionar > p.next{
+div.paginacao > p.next{
     background-color: #6b1bc6;
     border-radius: 5px;
     width: 20px;
@@ -333,16 +465,16 @@ div.selecionar > p.next{
     cursor: pointer;
 }
 
-div.selecionar > p.next:hover{
+div.paginacao > p.next:hover{
     background-color: #7f42c4;
 }
 
-div.selecionar > p.next > span{
+div.paginacao > p.next > span{
     padding-top: 1px;
     font-size: 20px;
 }
 
-div.selecionar > p.last{
+div.paginacao > p.last{
     background-color: #6b1bc6;
     border-radius: 5px;
     width: 20px;
@@ -352,17 +484,21 @@ div.selecionar > p.last{
     cursor: pointer;
 }
 
-div.selecionar > p.last:hover{
+div.paginacao > p.last:hover{
     background-color: #7f42c4;
 }
 
-div.selecionar > p.last > span{
+div.paginacao > p.last > span{
     padding-top: 3px;
     font-size: 16px;
 }
 
-img{
+footer.baixo{
+    height: 10%;
+    width: 100%;
+}
+
+footer > img{
     float: right;
-    padding-top: 15px;
-    padding-right: 72px;
+    margin-right: 80px;
 }

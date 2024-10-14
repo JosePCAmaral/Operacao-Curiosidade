@@ -206,7 +206,7 @@ co.onmouseout = function() {
 
 function selecionaPagina(){
     if(selectedDiv === vg){
-        ifr.src = "../Overview/perfis.html";
+    ifr.src = `../Overview/perfis.html?userId=${userId}`;
     }else if(selectedDiv === cc){
         ifr.src = "../Operation-Registration/cadastrar-curiosidade.html";
     }else if(selectedDiv === mc){
@@ -220,7 +220,11 @@ function selecionaPagina(){
 
 window.addEventListener('message', function(event) {
     console.log('Mensagem recebida:', event.data);
-    if (event.data === 'openCompartModal') {
+    if (event.data.action === 'openCompartModal') {
+        const idUserComp = event.data.userId;
+        console.log('Abrir modal de compartilhamento para o usuário:', idUserComp);
+        const iframeCompart = document.getElementById('iframeCompart');
+        iframeCompart.contentWindow.postMessage({action: 'passandoIdParaCompartilhar', userId: idUserComp }, '*');
         document.querySelector('.modal').style.display = 'block';
         document.querySelector('.modal-comp').style.display = 'block';
     }
@@ -234,26 +238,16 @@ window.addEventListener('message', function(event) {
     else if(event.data === 'closeModalEditar'){
         document.getElementsByClassName('modal-editar')[0].style.display = 'none';
     }
-    else if(event.data === 'openEditarModal'){
+    else if(event.data.action === 'openEditarModal'){
+        const idUserEditar = event.data.userId;
+        console.log('Abrir modal de editar para o usuário:', idUserEditar);
+        const iframeEditarOp = document.getElementById('iframeEditarOp');
+        iframeEditarOp.contentWindow.postMessage({action: 'passandoIdParaEditarOp', userId: idUserEditar }, '*');
         document.getElementsByClassName('modal-editar')[0].style.display = 'block';
     }
-    else if(event.data === 'openMCModalzinho1'){
+    else if(event.data.action === 'openMCModalzinho1'){
+        let userIdModalzinho1 = event.data.userId;
         document.getElementsByClassName('modalzinho1-mc')[0].style.display = 'block';
-    }
-    else if(event.data === 'openMCModalzinho2'){
-        document.getElementsByClassName('modalzinho2-mc')[0].style.display = 'block';
-    }
-    else if(event.data === 'openMCModalzinho3'){
-        document.getElementsByClassName('modalzinho3-mc')[0].style.display = 'block';
-    }
-    else if(event.data === 'openMCModalzinho4'){
-        document.getElementsByClassName('modalzinho4-mc')[0].style.display = 'block';
-    }
-    else if(event.data === 'openMCModalzinho5'){
-        document.getElementsByClassName('modalzinho5-mc')[0].style.display = 'block';
-    }
-    else if(event.data === 'openMCModalzinho6'){
-        document.getElementsByClassName('modalzinho6-mc')[0].style.display = 'block';
     }
     else if(event.data === 'abrirRelatorio'){
         ifr.src = "../Report/relatorio.html"
@@ -314,6 +308,21 @@ can.addEventListener('click', function(){
 });
 
 rem.addEventListener('click', function(){
+    console.log('Remover operação', userIdModalzinho1);
+    fetch(`https://localhost:7299/api/operation-model/delete-operation/${userIdModalzinho1}`, {
+        method: 'DELETE'
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Erro ao remover a operação');
+        }
+        console.log('Operação removida com sucesso');
+        alert('Operação removida com sucesso!');
+    })
+    .catch(error => {
+        console.error('Houve um erro ao remover a operação:', error);
+        alert('Houve um erro ao remover a operação');
+    });
     document.getElementsByClassName('modal-excluir')[0].style.display = 'none';
 });
 
@@ -343,115 +352,31 @@ closeModalPerfil.addEventListener('click', function(){
 });
 
 var mce1 = document.getElementById('mc-e1');
-var mce2 = document.getElementById('mc-e2');
-var mce3 = document.getElementById('mc-e3');
-var mce4 = document.getElementById('mc-e4');
-var mce5 = document.getElementById('mc-e5');
-var mce6 = document.getElementById('mc-e6');
+
 
 mce1.addEventListener('click', function() {
     document.getElementsByClassName('modalzinho1-mc')[0].style.display = 'none';
     document.getElementsByClassName('modal-editar')[0].style.display = 'block';
 });
 
-mce2.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho2-mc')[0].style.display = 'none';
-    document.getElementsByClassName('modal-editar')[0].style.display = 'block';
-});
-
-mce3.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho3-mc')[0].style.display = 'none';
-    document.getElementsByClassName('modal-editar')[0].style.display = 'block';
-});
-
-mce4.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho4-mc')[0].style.display = 'none';
-    document.getElementsByClassName('modal-editar')[0].style.display = 'block';
-});
-
-mce5.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho5-mc')[0].style.display = 'none';
-    document.getElementsByClassName('modal-editar')[0].style.display = 'block';
-});
-
-mce6.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho6-mc')[0].style.display = 'none';
-    document.getElementsByClassName('modal-editar')[0].style.display = 'block';
-});
 
 var mcc1 = document.getElementById('mc-c1');
-var mcc2 = document.getElementById('mc-c2');
-var mcc3 = document.getElementById('mc-c3');
-var mcc4 = document.getElementById('mc-c4');
-var mcc5 = document.getElementById('mc-c5');
-var mcc6 = document.getElementById('mc-c6');
+
 
 mcc1.addEventListener('click', function() {
     document.getElementsByClassName('modalzinho1-mc')[0].style.display = 'none';
     document.querySelector('.modal').style.display = 'flex';
 });
 
-mcc2.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho2-mc')[0].style.display = 'none';
-    document.querySelector('.modal').style.display = 'flex';
-});
-
-mcc3.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho3-mc')[0].style.display = 'none';
-    document.querySelector('.modal').style.display = 'flex';
-});
-
-mcc4.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho4-mc')[0].style.display = 'none';
-    document.querySelector('.modal').style.display = 'flex';
-});
-
-mcc5.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho5-mc')[0].style.display = 'none';
-    document.querySelector('.modal').style.display = 'flex';
-});
-
-mcc6.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho6-mc')[0].style.display = 'none';
-    document.querySelector('.modal').style.display = 'flex';
-});
 
 var mcex1 = document.getElementById('mc-ex1');
-var mcex2 = document.getElementById('mc-ex2');
-var mcex3 = document.getElementById('mc-ex3');
-var mcex4 = document.getElementById('mc-ex4');
-var mcex5 = document.getElementById('mc-ex5');
-var mcex6 = document.getElementById('mc-ex6');
+
 
 mcex1.addEventListener('click', function() {
     document.getElementsByClassName('modalzinho1-mc')[0].style.display = 'none';
     document.getElementsByClassName('modal-excluir')[0].style.display = 'block';
 });
 
-mcex2.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho2-mc')[0].style.display = 'none';
-    document.getElementsByClassName('modal-excluir')[0].style.display = 'block';
-});
-
-mcex3.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho3-mc')[0].style.display = 'none';
-    document.getElementsByClassName('modal-excluir')[0].style.display = 'block';
-});
-
-mcex4.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho4-mc')[0].style.display = 'none';
-    document.getElementsByClassName('modal-excluir')[0].style.display = 'block';
-});
-
-mcex5.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho5-mc')[0].style.display = 'none';
-    document.getElementsByClassName('modal-excluir')[0].style.display = 'block';
-});
-
-mcex6.addEventListener('click', function() {
-    document.getElementsByClassName('modalzinho6-mc')[0].style.display = 'none';
-    document.getElementsByClassName('modal-excluir')[0].style.display = 'block';
-});
 
 var conf = document.getElementById('Configurações');
 var perf = document.getElementById('perfil');

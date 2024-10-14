@@ -39,7 +39,7 @@ main{
 
 section.cor{
     width: 5%;
-    background-color: red;
+    background-color: #6b1bc6;
     border-radius: 10px 10px 10px 10px;
     height: auto;
     align-self: stretch;
@@ -235,7 +235,7 @@ div.frase > p{
 div.quant{
     position: absolute;
     top: 50%;
-    right: 8%;
+    left: 75%;
     transform: translate(-50%, -50%);
     background-color: #e9e3f0;
     color: #6b1bc6;
@@ -270,6 +270,21 @@ div.add{
     position: absolute;
     top: 50%;
     right: 5%;
+    transform: translate(-50%, -50%);
+    color: #6b1bc6;
+    cursor: pointer;
+}
+
+div.remove{
+    background-color: #e9e3f0;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    padding-left: 3px;
+    padding-top: 3px;
+    position: absolute;
+    top: 50%;
+    right: 10%;
     transform: translate(-50%, -50%);
     color: #6b1bc6;
     cursor: pointer;
@@ -358,22 +373,27 @@ footer{
     padding-right: 40px;
 }
 
-footer > a{
-    display: flex;
+footer > button{
     background-color: #6b1bc6;
     color: white;
-    width: 100px;
-    height: 40px;
-    float: right;
-    padding-top: 7px;
-    padding-left: 15px;
+    border: none;
     border-radius: 10px;
+    width: 110px;
+    height: 50px;
     cursor: pointer;
-    text-decoration: none;
+    float: right;
+    position: relative;
+    padding-left: 30px;
+    padding-right: 10px;
+    padding-top: 3px;
+    font-weight: bold;
 }
 
-footer > a > span{
-    padding-right: 2px;
+footer > button > span{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+    transform: translate(-50%, -50%);
 }
 
 ul {
@@ -417,4 +437,11 @@ input.curiosidade{
 
 input.curiosidade:focus{
     outline: none;
+}
+
+img#PhotoUser{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: none;
 }

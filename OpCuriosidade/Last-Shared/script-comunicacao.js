@@ -72,15 +72,15 @@ document.addEventListener("DOMContentLoaded", function() {
             const editarButton = document.getElementById(`edit-${users.code}`);
             
             compartButton.addEventListener('click', function() {
-                window.parent.postMessage('openCompartModal', '*');
+                window.parent.postMessage({action: 'openCompartModal', userId: users.id }, '*');
             });
             
             excluirButton.addEventListener('click', function() {
-                window.parent.postMessage('openExcluirModal', '*');
+                window.parent.postMessage({action: 'openExcluirModal', userId: users.id }, '*');
             });
             
             editarButton.addEventListener('click', function() {
-                window.parent.postMessage('openEditarModal', '*');
+                window.parent.postMessage({action: 'openEditarModal', userId: users.id }, '*');
             });
 
         });

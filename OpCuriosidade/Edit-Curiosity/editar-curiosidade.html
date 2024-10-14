@@ -20,25 +20,9 @@
                     <hr>
                 </div>
                 <div class="conf-img">
-                    <div class="person">
-                        <span class="material-symbols-outlined">person</span>
-                    </div>
-                    <div class="opc-img">
-                        <div class="opc-atu">
-                            <span class="material-symbols-outlined">sync</span>
-                            <p>Atualizar a imagem</p>
-                        </div>
-                        <div class="opc-rem">
-                            <span class="material-symbols-outlined">delete</span>
-                            <p>Remover a imagem</p>
-                        </div>
-                    </div>
-                    <div class="cont-botao">
-                        <p>Inativo</p>
-                        <div id="toggleBt">
-                            <a href="javascript:void(0);" id="toggle">
-                            </a>
-                        </div>
+                    <div class="person" id="containerImg">
+                        <span class="material-symbols-outlined" id="spanPerson">person</span>
+                        <img src="" id="PhotoUser">
                     </div>
                 </div>
             </div>
@@ -103,34 +87,18 @@
                         <p>Interesses</p>
                     </div>
                     <div class="quant">
-                        <p id="pi"><span>1</span>Interesses</p>
+                        <p id="pi"><span>0</span>Interesses</p>
+                    </div>
+                    <div class="remove">
+                        <span class="material-symbols-outlined" id="remove-interesse">remove</span>
                     </div>
                     <div class="add">
-                        <span class="material-symbols-outlined" id="add-interesse">add_box</span>
+                        <span class="material-symbols-outlined" id="add-interesse">add</span>
                     </div>
                 </div>
                 <div class="forms">
                     <ul id="uli">
-                        <li><label for="ii1" class="custom-marker">1</label><input class="curiosidade" type="text" name="i1" id="ii1"></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="caixa" id="valores">
-                <div class="parte-colorido">
-                    <div class="frase">
-                        <span class="material-symbols-outlined">favorite</span>
-                        <p>Sentimentos</p>
-                    </div>
-                    <div class="quant" id="v">
-                        <p id="pv"><span>1</span>Valores</p>
-                    </div>
-                    <div class="add" >
-                        <span class="material-symbols-outlined" id="add-valor">add_box</span>
-                    </div>
-                </div>
-                <div class="forms">
-                    <ul id="ulv">
-                        <li><label for="iv1" class="custom-marker">1</label><input class="curiosidade" type="text" name="v1" id="iv1"></li>
+                        
                     </ul>
                 </div>
             </div>
@@ -138,26 +106,48 @@
                 <div class="parte-colorido">
                     <div class="frase">
                         <span class="material-symbols-outlined">psychiatry</span>
-                        <p>Valores</p>
+                        <p>Sentimentos</p>
                     </div>
                     <div class="quant" id="s">
-                        <p id="ps"><span>1</span>Sentimentos</p>
+                        <p id="ps"><span>0</span>Sentimentos</p>
+                    </div>
+                    <div class="remove">
+                        <span class="material-symbols-outlined" id="remove-sentimento">remove</span>
                     </div>
                     <div class="add" >
-                        <span class="material-symbols-outlined" id="add-sentimento">add_box</span>
+                        <span class="material-symbols-outlined" id="add-sentimento">add</span>
                     </div>
                 </div>
                 <div class="forms">
                     <ul id="uls">
-                        <li><label for="is1" class="custom-marker">1</label><input class="curiosidade" type="text" name="s1" id="is1"></li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="caixa" id="valores">
+                <div class="parte-colorido">
+                    <div class="frase">
+                        <span class="material-symbols-outlined">favorite</span>
+                        <p>Valores</p>
+                    </div>
+                    <div class="quant" id="v">
+                        <p id="pv"><span>0</span>Valores</p>
+                    </div>
+                    <div class="remove">
+                        <span class="material-symbols-outlined" id="remove-valor">remove</span>
+                    </div>
+                    <div class="add" >
+                        <span class="material-symbols-outlined" id="add-valor">add</span>
+                    </div>
+                </div>
+                <div class="forms">
+                    <ul id="ulv">
+                        
                     </ul>
                 </div>
             </div>
             <footer>
-                <a href="#">
-                    <span class="material-symbols-outlined">save</span>
-                    <p>Salvar</p>
-                </a>
+                <button type="submit" id="EditarOp"><span class="material-symbols-outlined">save</span>Cadastrar</button>
             </footer>
         </section>
     </main>

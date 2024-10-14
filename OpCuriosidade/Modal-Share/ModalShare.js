@@ -1,8 +1,19 @@
 const btnclosemodalCompart = document.getElementById('closeModalCompart')
 
-
 btnclosemodalCompart.addEventListener('click', function(){
         window.parent.postMessage('closeModalCompartilhar', '*');
+});
+
+window.addEventListener('message', function(event) {
+
+    const { action, userId } = event.data;
+
+    if (action === 'openCompartModal') {
+        console.log('Ação recebida:', action);
+        console.log('ID do usuário para compartilhamento:', userId);
+
+        openCompartModal(userId);
+    }
 });
 
 const elementsV = document.querySelectorAll('[id^="v"]');
